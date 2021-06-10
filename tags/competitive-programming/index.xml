@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Competitive Programming on kevin</title>
+    <link>https://blog.chenjr.top/tags/competitive-programming/</link>
+    <description>Recent content in Competitive Programming on kevin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 09 Jun 2021 23:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 244 场周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-weekly-244/</link>
+      <pubDate>Wed, 09 Jun 2021 23:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-weekly-244/</guid>
+      <description>判断矩阵经轮转后是否一致 思路 容易发现，旋转四次 mat 即回到了原始状态。
+所以我们只需要至多旋转三次 mat ，每次判断是否和 target 一致即可。
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  class Solution { public: bool findRotation(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; mat, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; target) { // Algorithm: simulation  // Time Complexity: O(n^2), n = mat.size()  // Space Complexity: O(n^2), n = mat.size()  // Corner Case:  if (mat == target) return true; // Normal Case:  int n = static_cast&amp;lt;int&amp;gt;(mat.</description>
+    </item>
+    
+  </channel>
+</rss>
