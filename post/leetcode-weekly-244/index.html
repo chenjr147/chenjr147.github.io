@@ -61,11 +61,11 @@
     </article>
 
     <div class="article-post">
-    <h1 id="判断矩阵经轮转后是否一致httpsleetcode-cncomproblemsdetermine-whether-matrix-can-be-obtained-by-rotation"><a href="https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/">判断矩阵经轮转后是否一致</a></h1>
-<h2 id="思路">思路</h2>
+    <h2 id="q1-判断矩阵经轮转后是否一致httpsleetcode-cncomproblemsdetermine-whether-matrix-can-be-obtained-by-rotation">Q1. <a href="https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/">判断矩阵经轮转后是否一致</a></h2>
+<h3 id="思路">思路</h3>
 <p>容易发现，旋转四次 <code>mat</code> 即回到了原始状态。</p>
 <p>所以我们只需要至多旋转三次 <code>mat</code> ，每次判断是否和 <code>target</code> 一致即可。</p>
-<h2 id="代码">代码</h2>
+<h3 id="代码">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -124,11 +124,11 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="使数组元素相等的减少操作次数httpsleetcode-cncomproblemsreduction-operations-to-make-the-array-elements-equal"><a href="https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/">使数组元素相等的减少操作次数</a></h1>
-<h2 id="思路-1">思路</h2>
+</div><h2 id="q2-使数组元素相等的减少操作次数httpsleetcode-cncomproblemsreduction-operations-to-make-the-array-elements-equal">Q2. <a href="https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/">使数组元素相等的减少操作次数</a></h2>
+<h3 id="思路-1">思路</h3>
 <p>使用 <code>map</code> 来模拟这一过程即可。</p>
 <p><code>map</code> 可以带上自定义的排序规则，使用 <code>greater&lt;&gt;</code> 使得 <code>map</code> 逆序，更加方便。</p>
-<h2 id="代码-1">代码</h2>
+<h3 id="代码-1">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -169,12 +169,12 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="使二进制字符串字符交替的最少反转次数httpsleetcode-cncomproblemsminimum-number-of-flips-to-make-the-binary-string-alternating"><a href="https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/">使二进制字符串字符交替的最少反转次数</a></h1>
-<h2 id="思路-2">思路</h2>
+</div><h2 id="q3-使二进制字符串字符交替的最少反转次数httpsleetcode-cncomproblemsminimum-number-of-flips-to-make-the-binary-string-alternating">Q3. <a href="https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/">使二进制字符串字符交替的最少反转次数</a></h2>
+<h3 id="思路-2">思路</h3>
 <p>遇到这种多种类型操作的问题，尽量地去把操作简化为一种。</p>
 <p>对于类型 1 的操作，我们可以使用 <code>T = S + S</code> 的方法进行模拟。</p>
 <p>对于类型 2 的操作，结合最终所需要的交替字符串，很容易想到只有两种交替情况，枚举即可。</p>
-<h2 id="代码-2">代码</h2>
+<h3 id="代码-2">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -239,10 +239,11 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="装包裹的最小浪费空间httpsleetcode-cncomproblemsminimum-space-wasted-from-packaging"><a href="https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/">装包裹的最小浪费空间</a></h1>
-<h2 id="思路-3">思路</h2>
+</div><h2 id="q4-装包裹的最小浪费空间httpsleetcode-cncomproblemsminimum-space-wasted-from-packaging">Q4. <a href="https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/">装包裹的最小浪费空间</a></h2>
+<h3 id="思路-3">思路</h3>
 <p>遍历每个供应商，将其提供的箱子进行排序，贪心选择尽可能小的箱子装包裹。</p>
-<h2 id="代码-3">代码</h2>
+<p>在遍历之前，我们提前计算好 <code>packages</code> 的前缀和；遍历过程中，借助前缀和计算浪费的空间即可。</p>
+<h3 id="代码-3">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
