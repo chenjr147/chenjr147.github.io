@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="984px" preserveAspectRatio="none" style="width:601px;height:984px;" version="1.1" viewBox="0 0 601 984" width="601px" zoomAndPan="magnify"><defs><filter height="300%" id="f1b05fs2yyngg5" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="343.5" cy="16" fill="#000000" filter="url(#f1b05fs2yyngg5)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><g id="state1"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="104" x="301.5" y="105"/><line style="stroke:#A80036;stroke-width:1.5;" x1="301.5" x2="405.5" y1="134.1201" y2="134.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="334" y="126.0439">state1</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="306.5" y="152.8721">第一次符号状态</text></g><g id="state2"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="104" x="166.5" y="240"/><line style="stroke:#A80036;stroke-width:1.5;" x1="166.5" x2="270.5" y1="269.1201" y2="269.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="199" y="261.0439">state2</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="171.5" y="287.8721">第一次数字状态</text></g><g id="state3"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="80" x="331.5" y="375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="331.5" x2="411.5" y1="404.1201" y2="404.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="352" y="396.0439">state3</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="60" x="336.5" y="422.8721">小数点状态</text></g><g id="state4"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="104" x="117.5" y="510"/><line style="stroke:#A80036;stroke-width:1.5;" x1="117.5" x2="221.5" y1="539.1201" y2="539.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="150" y="531.0439">state4</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="122.5" y="557.8721">第二次数字状态</text></g><g id="state5"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="68" x="268.5" y="645"/><line style="stroke:#A80036;stroke-width:1.5;" x1="268.5" x2="336.5" y1="674.1201" y2="674.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="283" y="666.0439">state5</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="273.5" y="692.8721">指数状态</text></g><g id="state6"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="68" x="424.5" y="780"/><line style="stroke:#A80036;stroke-width:1.5;" x1="424.5" x2="492.5" y1="809.1201" y2="809.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="439" y="801.0439">state6</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="429.5" y="827.8721">符号状态</text></g><g id="state7"><rect fill="#FEFECE" filter="url(#f1b05fs2yyngg5)" height="55.5088" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="104" x="281.5" y="915"/><line style="stroke:#A80036;stroke-width:1.5;" x1="281.5" x2="385.5" y1="944.1201" y2="944.1201"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="314" y="936.0439">state7</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="286.5" y="962.8721">第三次数字状态</text></g><path d="M6,254 L6,281.7544 A0,0 0 0 0 6,281.7544 L131,281.7544 A0,0 0 0 0 131,281.7544 L131,272 L166.32,268 L131,264 L131,264 L121,254 L6,254 A0,0 0 0 0 6,254 " fill="#FBFB77" filter="url(#f1b05fs2yyngg5)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M121,254 L121,264 L131,264 L121,254 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="12" y="273.8979">可以在此状态结束</text><path d="M107,389 L107,416.7544 A0,0 0 0 0 107,416.7544 L165.5,416.7544 L169.5,509.81 L173.5,416.7544 L232,416.7544 A0,0 0 0 0 232,416.7544 L232,399 L222,389 L107,389 A0,0 0 0 0 107,389 " fill="#FBFB77" filter="url(#f1b05fs2yyngg5)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M222,389 L222,399 L232,399 L222,389 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="113" y="408.8979">可以在此状态结束</text><path d="M121,929 L121,956.7544 A0,0 0 0 0 121,956.7544 L246,956.7544 A0,0 0 0 0 246,956.7544 L246,947 L281.32,943 L246,939 L246,939 L236,929 L121,929 A0,0 0 0 0 121,929 " fill="#FBFB77" filter="url(#f1b05fs2yyngg5)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M236,929 L236,939 L246,939 L236,929 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="127" y="948.8979">可以在此状态结束</text><!--MD5=[f868e2d08dd9946760ca6ea59e8d7f06]
+link *start to state1--><path d="M342.61,25.97 C341.88,33.87 340.9,45.69 340.5,56 C340.18,64.44 339.56,66.61 340.5,75 C341.42,83.19 343.07,91.91 344.88,100.01 " fill="none" id="*start-to-state1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="346.03,104.96,347.8955,95.2894,344.9015,100.089,340.102,97.095,346.03,104.96" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="341.5" y="71.8979">符号（±）[type0]</text><!--MD5=[5da10e831480c502eb99811dbf41fd5c]
+link *start to state2--><path d="M333.56,18.4 C302.42,23.37 206.51,43.34 168.5,105 C143.15,146.12 170.86,201.11 194.01,235.27 " fill="none" id="*start-to-state2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="197.1,239.75,195.2974,230.0675,194.2674,235.6298,188.7051,234.5997,197.1,239.75" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="169.5" y="139.3979">数字（0..9）[type1]</text><!--MD5=[53b98c0697a2d37c3f54f32e8aff3a9c]
+link *start to state3--><path d="M353.56,17.34 C374.84,18.66 424.22,25.08 445.5,56 C518.55,162.14 480.35,229.87 422.5,345 C417.84,354.28 411.26,363.21 404.38,371.13 " fill="none" id="*start-to-state3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="400.99,374.94,409.9676,370.8899,404.3198,371.2101,403.9997,365.5623,400.99,374.94" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="484.5" y="206.8979">小数点（.）[type2]</text><!--MD5=[e8ab5236574affaea70cdd313057216c]
+link state1 to state2--><path d="M325.85,161.24 C303.74,183.02 272.74,213.57 249.73,236.23 " fill="none" id="state1-to-state2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="246.11,239.8,255.3236,236.3202,249.6669,236.286,249.7012,230.6292,246.11,239.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="294.5" y="206.8979">数字（0..9）[type1]</text><!--MD5=[af871db5fd04c303a6423cf5c3bc0e84]
+link state2 to state2--><path d="M270.74,255.64 C289.85,255.31 305.5,259.43 305.5,268 C305.5,275.77 292.64,279.88 276.01,280.33 " fill="none" id="state2-to-state2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="270.74,280.36,279.7514,284.3343,275.74,280.3457,279.7285,276.3343,270.74,280.36" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="311.5" y="274.3979">数字（0..9）[type1]</text><!--MD5=[4c1219af98e0400cc8f056d34a626cfb]
+link state2 to state3--><path d="M249.83,296.24 C275,318.11 310.32,348.82 336.43,371.51 " fill="none" id="state2-to-state3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="340.21,374.8,336.0516,365.8721,336.44,371.5156,330.7965,371.904,340.21,374.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="304.5" y="341.8979">小数点（.）[type2]</text><!--MD5=[63fdc0cf9ffd76188c2e63289c3a2ab8]
+link state3 to state4--><path d="M331.11,430.59 C297.47,452.74 249.61,484.25 214.71,507.24 " fill="none" id="state3-to-state4" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="210.51,510,220.2301,508.4128,214.6921,507.2595,215.8454,501.7215,210.51,510" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="283.5" y="476.8979">数字（0..9）[type1]</text><!--MD5=[b4bb3b06f5ece075e77b9af92b2b2086]
+link state3 to state5--><path d="M392.43,431.26 C398.14,440.24 403.56,450.61 406.5,461 C408.8,469.13 407.6,471.63 406.5,480 C398.33,542.17 400.58,563.02 365.5,615 C358.64,625.16 349.59,634.74 340.5,643.03 " fill="none" id="state3-to-state5" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="336.61,646.5,345.9877,643.4903,340.3399,643.1702,340.6601,637.5224,336.61,646.5" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="403.5" y="544.3979">指数（e/E）[type3]</text><!--MD5=[822b710578e5af5c510bee5535d87cb2]
+link state4 to state5--><path d="M196.74,566.24 C218.52,588.02 249.07,618.57 271.73,641.23 " fill="none" id="state4-to-state5" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="275.3,644.8,271.7645,635.6076,271.7645,641.2645,266.1076,641.2645,275.3,644.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="244.5" y="611.8979">指数（e/E）[type3]</text><!--MD5=[5610d3a432486fc14ee36af251a8d6e0]
+link state5 to state6--><path d="M334.45,701.24 C360.1,723.11 396.12,753.82 422.74,776.51 " fill="none" id="state5-to-state6" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="426.6,779.8,422.3506,770.9151,422.7967,776.5543,417.1574,777.0004,426.6,779.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="390.5" y="746.8979">符号（±）[type0]</text><!--MD5=[569729fa7bec7c778158e8fca3f9bc19]
+link state5 to state7--><path d="M296.46,701.2 C290.22,733.59 282.57,789.2 291.5,836 C296.47,862.03 307.73,889.82 317.34,910.42 " fill="none" id="state5-to-state7" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="319.49,914.96,319.2441,905.1142,317.3459,910.4431,312.017,908.5448,319.49,914.96" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="292.5" y="814.3979">数字（0..9）[type1]</text><!--MD5=[8f72ef5bde7b13bac563d79ad3090043]
+link state6 to state7--><path d="M432.9,836.24 C412.51,857.93 383.96,888.32 362.68,910.95 " fill="none" id="state6-to-state7" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="359.06,914.8,368.1411,910.9877,362.4868,911.159,362.3155,905.5047,359.06,914.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="403.5" y="881.8979">数字（0..9）[type1]</text><!--MD5=[190e63d39389ee81f18f57437c58e73f]
+link state7 to state7--><path d="M385.74,930.64 C404.85,930.31 420.5,934.43 420.5,943 C420.5,950.77 407.64,954.88 391.01,955.33 " fill="none" id="state7-to-state7" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="385.74,955.36,394.7514,959.3343,390.74,955.3457,394.7285,951.3343,385.74,955.36" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="426.5" y="949.3979">数字（0..9）[type1]</text><!--MD5=[31f4854071642854c55b60b006a48210]
+link state4 to state4--><path d="M221.74,525.64 C240.85,525.31 256.5,529.43 256.5,538 C256.5,545.77 243.64,549.88 227.01,550.33 " fill="none" id="state4-to-state4" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="221.74,550.36,230.7514,554.3343,226.74,550.3457,230.7285,546.3343,221.74,550.36" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="262.5" y="544.3979">数字（0..9）[type1]</text><!--MD5=[f4e8353178df1e43135382922d9ce524]
+@startuml
+
+[*] - -> state1 : 符号（±）[type0]
+[*] - -> state2 : 数字（0..9）[type1]
+[*] - -> state3 : 小数点（.）[type2]
+state1 - -> state2: 数字（0..9）[type1]
+state2 - -> state2: 数字（0..9）[type1]
+state2 - -> state3: 小数点（.）[type2]
+state3 - -> state4: 数字（0..9）[type1]
+state3 - -> state5: 指数（e/E）[type3]
+state4 - -> state5: 指数（e/E）[type3]
+state5 - -> state6: 符号（±）[type0]
+state5 - -> state7: 数字（0..9）[type1]
+state6 - -> state7: 数字（0..9）[type1]
+state7 - -> state7: 数字（0..9）[type1]
+state4 - -> state4: 数字（0..9）[type1]
+
+state1 : 第一次符号状态
+state2 : 第一次数字状态
+state3 : 小数点状态
+state4 : 第二次数字状态
+state5 : 指数状态
+state6 : 符号状态
+state7 : 第三次数字状态
+note left of state2 : 可以在此状态结束
+note top of state4 : 可以在此状态结束
+note left of state7 : 可以在此状态结束
+' State1 - -> [*]
+' State1 : this is a string
+' State1 : this is another string
+
+' State0 -> State1
+' 0 - -> [*]
+
+@enduml
+
+@startuml
+
+[*] - -> state1 : 符号（±）[type0]
+[*] - -> state2 : 数字（0..9）[type1]
+[*] - -> state3 : 小数点（.）[type2]
+state1 - -> state2: 数字（0..9）[type1]
+state2 - -> state2: 数字（0..9）[type1]
+state2 - -> state3: 小数点（.）[type2]
+state3 - -> state4: 数字（0..9）[type1]
+state3 - -> state5: 指数（e/E）[type3]
+state4 - -> state5: 指数（e/E）[type3]
+state5 - -> state6: 符号（±）[type0]
+state5 - -> state7: 数字（0..9）[type1]
+state6 - -> state7: 数字（0..9）[type1]
+state7 - -> state7: 数字（0..9）[type1]
+state4 - -> state4: 数字（0..9）[type1]
+
+state1 : 第一次符号状态
+state2 : 第一次数字状态
+state3 : 小数点状态
+state4 : 第二次数字状态
+state5 : 指数状态
+state6 : 符号状态
+state7 : 第三次数字状态
+note left of state2 : 可以在此状态结束
+note top of state4 : 可以在此状态结束
+note left of state7 : 可以在此状态结束
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 18:25:05 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: GBK
+Language: zh
+Country: CN
+--></g></svg>
