@@ -6,7 +6,17 @@
     <description>Recent content in Posts on kevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 10 Jun 2021 23:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jun 2021 23:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 54 场双周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-biweekly-54/</link>
+      <pubDate>Sun, 13 Jun 2021 23:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-biweekly-54/</guid>
+      <description>Q1. 检查是否区域内所有整数都被覆盖 思路 模拟
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def isCovered(self, ranges: List[List[int]], left: int, right: int) -&amp;gt; bool: # Algorithm: simulation # Time Complexity: O(n * m), n = right - left + 1, m = len(ranges) # Space Complexity: O(1) for cur in range(left, right + 1): ok = False for begin, end in ranges: if begin &amp;lt;= cur &amp;lt;= end: ok = True break if not ok: return False return True   Q2.</description>
+    </item>
+    
     <item>
       <title>剑指 offer</title>
       <link>https://blog.chenjr.top/post/sword-to-offer/</link>
