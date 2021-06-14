@@ -1,4 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> 剑指 offer | kevin</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css">
+</head>
 
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        🤪
+                    </span>
+                    
+                    kevin
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>剑指 offer</h1>
+                    <div class="post-meta">
+                        <div>
+                            By kevin on <time>June 10, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/algorithm/">Algorithm</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+        <p>顺序参考<a href="https://www.nowcoder.com/ta/coding-interviews">牛客网 - 剑指 offer</a></p>
+<h2 id="jz1-二维数组中的查找">JZ1. 二维数组中的查找</h2>
+<h3 id="思路">思路</h3>
+<p>从数组的右上或左下开始查找，可以有效地进行减治。</p>
+<h3 id="代码">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">Find</span><span class="p">(</span><span class="kt">int</span> <span class="n">target</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: decrease and conquer
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n), n = array.size()
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(1)
+</span><span class="c1"></span>        <span class="c1">// Corner Case:
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="n">or</span> <span class="n">array</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Normal Case:
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="n">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="jz53-表示数值的字符串">JZ53. 表示数值的字符串</h2>
+<h3 id="思路-1">思路</h3>
+<p>对于这种比较复杂的状态转移，硬编码 <code>if-else</code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 <abbr title="Deterministic finite automaton">DFA</abbr>。</p>
+<p>这里我们先定义可能出现的几种符号所属类型：</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>&lsquo;+&rsquo; / &lsquo;-&rsquo;</th>
+<th>&lsquo;0&rsquo; ~ &lsquo;9&rsquo;</th>
+<th>&lsquo;.&rsquo;</th>
+<th>&lsquo;e&rsquo; / &lsquo;E&rsquo;</th>
+<th>others</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p>那么，我们可以根据题意得到以下状态转移图：</p>
+<div style="text-align:center"><img src="dfa.svg" /></div>
+<p>参考状态转移图，我们可以得出以下状态转移矩阵：</p>
+<table>
+<thead>
+<tr>
+<th>状态／字符类型</th>
+<th>type0</th>
+<th>type1</th>
+<th>type2</th>
+<th>type3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state0</td>
+<td>state1</td>
+<td>state2</td>
+<td>state3</td>
+<td>state0</td>
+</tr>
+<tr>
+<td>state1</td>
+<td>state0</td>
+<td>state2</td>
+<td>state3</td>
+<td>state0</td>
+</tr>
+<tr>
+<td><mark>state2</mark></td>
+<td>state0</td>
+<td>state2</td>
+<td>state3</td>
+<td>state5</td>
+</tr>
+<tr>
+<td>state3</td>
+<td>state0</td>
+<td>state4</td>
+<td>state0</td>
+<td>state5</td>
+</tr>
+<tr>
+<td><mark>state4</mark></td>
+<td>state0</td>
+<td>state4</td>
+<td>state0</td>
+<td>state5</td>
+</tr>
+<tr>
+<td>state5</td>
+<td>state6</td>
+<td>state7</td>
+<td>state0</td>
+<td>state0</td>
+</tr>
+<tr>
+<td>state6</td>
+<td>state0</td>
+<td>state7</td>
+<td>state0</td>
+<td>state0</td>
+</tr>
+<tr>
+<td><mark>state7</mark></td>
+<td>state0</td>
+<td>state7</td>
+<td>state0</td>
+<td>state0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明</strong>：</p>
+<ul>
+<li><code>0</code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。</li>
+<li><code>2</code>, <code>4</code>, <code>7</code> 为合法的结束状态。</li>
+</ul>
+<h3 id="代码-1">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">isNumeric</span><span class="p">(</span><span class="n">string</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: dfa
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n), n = str.size()
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(1)
+</span><span class="c1"></span>        <span class="c1">// [+/-, 0..9, ., e/E]
+</span><span class="c1"></span>        <span class="k">constexpr</span> <span class="k">static</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">8</span><span class="o">&gt;</span> <span class="n">transfer</span><span class="p">{</span>
+            <span class="p">{{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+             <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">}}};</span>
+        <span class="k">auto</span> <span class="n">char2type</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="kt">char</span><span class="o">&amp;</span> <span class="n">ch</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;+&#39;</span> <span class="n">or</span> <span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;e&#39;</span> <span class="n">or</span> <span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;E&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">};</span>
+        <span class="kt">int</span> <span class="n">state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="nl">ch</span> <span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">type</span> <span class="o">=</span> <span class="n">char2type</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">type</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">transfer</span><span class="p">[</span><span class="n">state</span><span class="p">][</span><span class="n">type</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">2</span> <span class="n">or</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">4</span> <span class="n">or</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/leetcode-weekly-244/" title="Previous post (older)">
+            <span>Previous</span>
+            LeetCode 第 244 场周赛
+        </a>
+        
+
+        
+    </nav>
+    
+</div>
+</main>
 
 <div class="article-container">
     
@@ -26,3 +368,17 @@
 </section>
 
 </div>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
+</html>

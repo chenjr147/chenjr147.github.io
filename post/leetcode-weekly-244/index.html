@@ -1,4 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> LeetCode 第 244 场周赛 | kevin</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css">
+</head>
 
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        🤪
+                    </span>
+                    
+                    kevin
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button"></button>
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>LeetCode 第 244 场周赛</h1>
+                    <div class="post-meta">
+                        <div>
+                            By kevin on <time>June 09, 2021</time>
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/leetcode/">LeetCode</a>
+                            
+                            <a href="/tags/competitive-programming/">Competitive Programming</a>
+                            
+                            <a href="/tags/algorithm/">Algorithm</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+        <h2 id="q1-判断矩阵经轮转后是否一致httpsleetcode-cncomproblemsdetermine-whether-matrix-can-be-obtained-by-rotation">Q1. <a href="https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/">判断矩阵经轮转后是否一致</a></h2>
+<h3 id="思路">思路</h3>
+<p>容易发现，旋转四次 <code>mat</code> 即回到了原始状态。</p>
+<p>所以我们只需要至多旋转三次 <code>mat</code> ，每次判断是否和 <code>target</code> 一致即可。</p>
+<h3 id="代码">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">findRotation</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">mat</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: simulation
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n^2), n = mat.size()
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(n^2), n = mat.size()
+</span><span class="c1"></span>        <span class="c1">// Corner Case:
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="c1">// Normal Case:
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mat</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="k">auto</span> <span class="n">rotate</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">]()</span> <span class="p">{</span>
+            <span class="k">auto</span> <span class="n">rotation</span> <span class="o">=</span> <span class="n">mat</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+                    <span class="n">rotation</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+            <span class="n">mat</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">rotation</span><span class="p">);</span>
+        <span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">_</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">_</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="n">_</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">rotate</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">mat</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="q2-使数组元素相等的减少操作次数httpsleetcode-cncomproblemsreduction-operations-to-make-the-array-elements-equal">Q2. <a href="https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/">使数组元素相等的减少操作次数</a></h2>
+<h3 id="思路-1">思路</h3>
+<p>使用 <code>map</code> 来模拟这一过程即可。</p>
+<p><code>map</code> 可以带上自定义的排序规则，使用 <code>greater&lt;&gt;</code> 使得 <code>map</code> 逆序，更加方便。</p>
+<h3 id="代码-1">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">reductionOperations</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: simulation
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n log n), n = nums.size()
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(n)
+</span><span class="c1"></span>        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="n">greater</span><span class="o">&lt;&gt;&gt;</span> <span class="n">mp</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="nl">num</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span>
+            <span class="n">mp</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="p">[</span><span class="n">num</span><span class="p">,</span> <span class="n">cnt</span><span class="p">]</span> <span class="o">:</span> <span class="n">mp</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="n">tot</span><span class="p">;</span>
+            <span class="n">tot</span> <span class="o">+=</span> <span class="n">cnt</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="q3-使二进制字符串字符交替的最少反转次数httpsleetcode-cncomproblemsminimum-number-of-flips-to-make-the-binary-string-alternating">Q3. <a href="https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/">使二进制字符串字符交替的最少反转次数</a></h2>
+<h3 id="思路-2">思路</h3>
+<p>遇到这种多种类型操作的问题，尽量地去把操作简化为一种。</p>
+<p>对于类型 1 的操作，我们可以使用 <code>T = S + S</code> 的方法进行模拟。</p>
+<p>对于类型 2 的操作，结合最终所需要的交替字符串，很容易想到只有两种交替情况，枚举即可。</p>
+<h3 id="代码-2">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">minFlips</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: sliding windows
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n), n = s.size()
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(1)
+</span><span class="c1"></span>        <span class="c1">// Possible Cases:
+</span><span class="c1"></span>        <span class="c1">// 0101...
+</span><span class="c1"></span>        <span class="c1">// 1010...
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">cnt0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cnt1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="n">s</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">n</span><span class="p">]</span> <span class="o">!=</span> <span class="p">((</span><span class="n">i</span> <span class="o">-</span> <span class="n">n</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span>
+                    <span class="n">cnt0</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="k">else</span>
+                    <span class="n">cnt1</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span>
+                <span class="n">cnt0</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">cnt1</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">ans</span> <span class="o">=</span> <span class="n">min</span><span class="p">({</span><span class="n">ans</span><span class="p">,</span> <span class="n">cnt0</span><span class="p">,</span> <span class="n">cnt1</span><span class="p">});</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="q4-装包裹的最小浪费空间httpsleetcode-cncomproblemsminimum-space-wasted-from-packaging">Q4. <a href="https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/">装包裹的最小浪费空间</a></h2>
+<h3 id="思路-3">思路</h3>
+<p>遍历每个供应商，将其提供的箱子进行排序，贪心选择尽可能小的箱子装包裹。</p>
+<p>在遍历之前，我们提前计算好 <code>packages</code> 的前缀和；遍历过程中，借助前缀和计算浪费的空间即可。</p>
+<h3 id="代码-3">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="n">ull</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">minWastedSpace</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">packages</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">boxes</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Algorithm: greed
+</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(m log m + m log n + n log n), n = packages.size(), m = sum(boxes[i].size())
+</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(n), n = packages.size()
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">packages</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">packages</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="n">packages</span><span class="p">));</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">ull</span><span class="o">&gt;</span> <span class="n">prefix</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">packages</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">ull</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">ull</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="nl">box</span> <span class="p">:</span> <span class="n">boxes</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ull</span> <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">sort</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">box</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="n">box</span><span class="p">));</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">back</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">back</span><span class="p">())</span>
+                <span class="k">continue</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="nl">b</span> <span class="p">:</span> <span class="n">box</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">auto</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">upper_bound</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">packages</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="n">packages</span><span class="p">),</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">begin</span><span class="p">(</span><span class="n">packages</span><span class="p">);</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="p">(</span><span class="n">curr</span> <span class="o">-</span> <span class="n">last</span><span class="p">)</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">prefix</span><span class="p">[</span><span class="n">curr</span><span class="p">]</span> <span class="o">-</span> <span class="n">prefix</span><span class="p">[</span><span class="n">last</span><span class="p">]);</span>
+                <span class="n">last</span> <span class="o">=</span> <span class="n">curr</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">&gt;=</span> <span class="n">n</span><span class="p">)</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span> <span class="o">==</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">ull</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="n">ans</span> <span class="o">%</span> <span class="mi">1&#39;000&#39;000&#39;007</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/summer-camp/" title="Previous post (older)">
+            <span>Previous</span>
+            2019年计算机专业保研夏令营经历
+        </a>
+        
+
+        
+        <a rel="next" href="/post/sword-to-offer/" title="Next post (newer)">
+            <span>Next</span>
+            剑指 offer
+        </a>
+        
+    </nav>
+    
+</div>
+</main>
 
 <div class="article-container">
     
@@ -26,3 +365,17 @@
 </section>
 
 </div>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</footer>
+    </body>
+</html>
