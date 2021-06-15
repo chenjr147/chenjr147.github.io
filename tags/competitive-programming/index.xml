@@ -6,7 +6,17 @@
     <description>Recent content in Competitive Programming on kevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 13 Jun 2021 23:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Jun 2021 11:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 245 场周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-weekly-245/</link>
+      <pubDate>Tue, 15 Jun 2021 11:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-weekly-245/</guid>
+      <description>Q1. 重新分配字符使所有字符串都相等 思路 字符串间的移动是任意的，那么我们只需要统计所有字符出现的次数，检查其是否为 $\texttt{words.size()}$ 的整数倍即可。
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  class Solution { public: bool makeEqual(vector&amp;lt;string&amp;gt;&amp;amp; words) { // Algorithm: transform and conquer  // Time Complexity: O(n), n = sum(len(words[i]))  // Space Complexity: O(1)  array&amp;lt;int, 26&amp;gt; cnt{}; for (auto&amp;amp;&amp;amp; word : words) { for (auto&amp;amp;&amp;amp; ch : word) { cnt[ch - &amp;#39;a&amp;#39;] += 1; } } int n = static_cast&amp;lt;int&amp;gt;(words.</description>
+    </item>
+    
     <item>
       <title>LeetCode 第 54 场双周赛</title>
       <link>https://blog.chenjr.top/post/leetcode-biweekly-54/</link>
