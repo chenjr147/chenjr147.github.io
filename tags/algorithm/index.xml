@@ -6,7 +6,18 @@
     <description>Recent content in Algorithm on kevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Jun 2021 11:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jun 2021 13:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 246 场周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-weekly-246/</link>
+      <pubDate>Sun, 20 Jun 2021 13:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-weekly-246/</guid>
+      <description>Q1. 字符串中的最大奇数 思路 从后往前找到第一个奇数即可。
+代码 1 2 3 4 5 6 7 8 9  class Solution: def largestOddNumber(self, num: str) -&amp;gt; str: # Algorithm: tranform and conquer # Time Complexity: O(n), n = len(num) # Space Complexity: O(1) for i in range(len(num) - 1, -1, -1): if int(num[i]) % 2 == 1: return num[:i + 1] return &amp;#34;&amp;#34;   Q2. 你完成的完整对局数 思路 模拟即可。
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32  class Solution: # Algorithm: simulation # Time Complexity: O(1) # Space Complexity: O(1) def isOver(self, startHour: int, startMinute: int, finishHour: int, finishMinute: int) -&amp;gt; int: return (startHour * 60 + startMinute) &amp;gt; (finishHour * 60 + finishMinute) def numberOfRounds(self, startTime: str, finishTime: str) -&amp;gt; int: startHour, startMinute = map(int, startTime.</description>
+    </item>
+    
     <item>
       <title>LeetCode 第 245 场周赛</title>
       <link>https://blog.chenjr.top/post/leetcode-weekly-245/</link>
