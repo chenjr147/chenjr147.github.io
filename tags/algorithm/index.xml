@@ -13,7 +13,7 @@
       <pubDate>Sun, 27 Jun 2021 13:52:42 +0800</pubDate>
       
       <guid>https://blog.chenjr.top/post/leetcode-biweekly-55/</guid>
-      <description>Q1. 删除一个元素使数组严格递增 思路 双指针两次遍历。从前往后找到第一个非递增的下标 increase，从后往前找到第一个非递减的下标 decrease，简单判断即可。
+      <description>Q1. 删除一个元素使数组严格递增 思路 观察并分析，可以发现仅存在两种合法情况，逐一考虑即可。
 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  // Algorithm: two pointer // Time Complexity: O(n), n = nums.size() // Space Complexity: O(1) class Solution { public: bool canBeIncreasing(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); // if remove index(x), whether array is increasing  auto check = [&amp;amp;](int x) { int last = 0; for (int i = 0; i &amp;lt; n; ++i) { if (i !</description>
     </item>
     

@@ -15,7 +15,7 @@
     <description>
         &lt;h2 id=&#34;q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing&#34;&gt;Q1. &lt;a href=&#34;https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/&#34;&gt;删除一个元素使数组严格递增&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;思路&#34;&gt;思路&lt;/h3&gt;
-&lt;p&gt;双指针两次遍历。从前往后找到第一个非递增的下标 &lt;code&gt;increase&lt;/code&gt;，从后往前找到第一个非递减的下标 &lt;code&gt;decrease&lt;/code&gt;，简单判断即可。&lt;/p&gt;
+&lt;p&gt;观察并分析，可以发现仅存在两种合法情况，逐一考虑即可。&lt;/p&gt;
 &lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
