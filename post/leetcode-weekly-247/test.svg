@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="438px" preserveAspectRatio="none" style="width:623px;height:438px;background:#FFFFFF;" version="1.1" viewBox="0 0 623 438" width="623px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tfv92467nzp2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1tfv92467nzp2)" height="118.9844" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="265" x="10" y="158.9844"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="24" y="185.0283">root</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="20" y="204.1484"/><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="203" x="20" y="224.3965">1. 有 dp[root] 种方案构建房间</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="245" x="20" y="244.6445">2. 有 sz[root] 个子节点（包括自己）</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="24" y="264.8926"/><rect fill="#FEFECE" filter="url(#f1tfv92467nzp2)" height="118.9844" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="279" x="325" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="339" y="46.0439">child1</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="335" y="65.1641"/><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="217" x="335" y="85.4121">1. 有 dp[child1] 种方案构建房间</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="259" x="335" y="105.6602">2. 有 sz[child1] 个子节点（包括自己）</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="339" y="125.9082"/><path d="M275,218.4766 L285,218.4766 C300,218.4766 300,79.4922 315,79.4922 L325,79.4922 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#f1tfv92467nzp2)" height="118.9844" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="279" x="325" y="158.9844"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="339" y="185.0283">child2</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="335" y="204.1484"/><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="217" x="335" y="224.3965">1. 有 dp[child2] 种方案构建房间</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="259" x="335" y="244.6445">2. 有 sz[child2] 个子节点（包括自己）</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="339" y="264.8926"/><path d="M275,218.4766 L285,218.4766 C300,218.4766 300,218.4766 315,218.4766 L325,218.4766 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#f1tfv92467nzp2)" height="118.9844" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="279" x="325" y="297.9688"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="339" y="324.0127">child3</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="335" y="343.1328"/><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="217" x="335" y="363.3809">1. 有 dp[child3] 种方案构建房间</text><text fill="#000000" font-family="monospace" font-size="14" lengthAdjust="spacing" textLength="259" x="335" y="383.6289">2. 有 sz[child3] 个子节点（包括自己）</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="339" y="403.877"/><path d="M275,218.4766 L285,218.4766 C300,218.4766 300,357.4609 315,357.4609 L325,357.4609 " fill="none" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cd09384f42d52bd1c738d73a8b653841]
+@startmindmap
+*: root
+<code>
+
+1. 有 dp[root] 种方案构建房间
+2. 有 sz[root] 个子节点（包括自己）
+</code>
+;
+**: child1
+<code>
+
+1. 有 dp[child1] 种方案构建房间
+2. 有 sz[child1] 个子节点（包括自己）
+</code>
+;
+**: child2
+<code>
+
+1. 有 dp[child2] 种方案构建房间
+2. 有 sz[child2] 个子节点（包括自己）
+</code>
+;
+**: child3
+<code>
+
+1. 有 dp[child3] 种方案构建房间
+2. 有 sz[child3] 个子节点（包括自己）
+</code>
+;
+@endmindmap
+
+PlantUML version 1.2021.7(Sun May 23 20:40:07 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: GBK
+Language: zh
+Country: CN
+--></g></svg>
