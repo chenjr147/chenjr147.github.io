@@ -231,7 +231,7 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Algorithm: tree type dynamic programming
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Time Complexity: O(n)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Time Complexity: O(n), n = prevRoom.size()
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Space Complexity: O(n)
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
