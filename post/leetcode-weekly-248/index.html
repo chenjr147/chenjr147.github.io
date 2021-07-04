@@ -159,9 +159,9 @@
 <p>根据排列组合原理可知这是乘法关系。</p>
 <p>题目种说明可以包括前导零，所以好数字的数目即</p>
 <p>$$
-ans = \left( 4^{\lfloor \frac{n}{2} \rfloor} * 5 ^{\lceil \frac{n}{2} \rceil} \right) %  mod
+ans = 4^{\lfloor \frac{n}{2} \rfloor} * 5 ^{\lceil \frac{n}{2} \rceil}
 $$</p>
-<p>只需要简单地进行快速幂处理即可。</p>
+<p>只需要简单地进行快速幂处理并取模即可。</p>
 <h3 id="代码-2">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

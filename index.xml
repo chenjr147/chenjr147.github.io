@@ -109,9 +109,9 @@
 &lt;p&gt;根据排列组合原理可知这是乘法关系。&lt;/p&gt;
 &lt;p&gt;题目种说明可以包括前导零，所以好数字的数目即&lt;/p&gt;
 &lt;p&gt;$$
-ans = \left( 4^{\lfloor \frac{n}{2} \rfloor} * 5 ^{\lceil \frac{n}{2} \rceil} \right) %  mod
+ans = 4^{\lfloor \frac{n}{2} \rfloor} * 5 ^{\lceil \frac{n}{2} \rceil}
 $$&lt;/p&gt;
-&lt;p&gt;只需要简单地进行快速幂处理即可。&lt;/p&gt;
+&lt;p&gt;只需要简单地进行快速幂处理并取模即可。&lt;/p&gt;
 &lt;h3 id=&#34;代码-2&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
