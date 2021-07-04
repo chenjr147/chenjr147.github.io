@@ -6,7 +6,18 @@
     <description>Recent content in LeetCode on kevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Jul 2021 13:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 13:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 248 场周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-weekly-248/</link>
+      <pubDate>Sun, 04 Jul 2021 13:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-weekly-248/</guid>
+      <description>起晚了没赶上:(
+Q1. 基于排列构建数组 思路 阅读理解。
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14  // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } };   Q2. 消灭怪物的最大数量 思路 在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, t_0 + 1]$ 的怪物。</description>
+    </item>
+    
     <item>
       <title>LeetCode 第 247 场周赛</title>
       <link>https://blog.chenjr.top/post/leetcode-weekly-247/</link>
@@ -37,17 +48,6 @@
       <description>Q1. 字符串中的最大奇数 思路 从后往前找到第一个奇数即可。
 代码 1 2 3 4 5 6 7 8 9  class Solution: def largestOddNumber(self, num: str) -&amp;gt; str: # Algorithm: tranform and conquer # Time Complexity: O(n), n = len(num) # Space Complexity: O(1) for i in range(len(num) - 1, -1, -1): if int(num[i]) % 2 == 1: return num[:i + 1] return &amp;#34;&amp;#34;   Q2. 你完成的完整对局数 思路 模拟即可。
 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32  class Solution: # Algorithm: simulation # Time Complexity: O(1) # Space Complexity: O(1) def isOver(self, startHour: int, startMinute: int, finishHour: int, finishMinute: int) -&amp;gt; int: return (startHour * 60 + startMinute) &amp;gt; (finishHour * 60 + finishMinute) def numberOfRounds(self, startTime: str, finishTime: str) -&amp;gt; int: startHour, startMinute = map(int, startTime.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode 第 248 场周赛</title>
-      <link>https://blog.chenjr.top/post/leetcode-weekly-248/</link>
-      <pubDate>Sun, 20 Jun 2021 13:52:42 +0800</pubDate>
-      
-      <guid>https://blog.chenjr.top/post/leetcode-weekly-248/</guid>
-      <description>起晚了没赶上:(
-Q1. 基于排列构建数组 思路 阅读理解。
-代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14  // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } };   Q2. 消灭怪物的最大数量 思路 在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, t_0 + 1]$ 的怪物。</description>
     </item>
     
     <item>
