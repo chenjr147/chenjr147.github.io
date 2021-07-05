@@ -15,7 +15,7 @@
       <guid>https://blog.chenjr.top/post/leetcode-weekly-248/</guid>
       <description>起晚了没赶上:(
 Q1. 基于排列构建数组 思路 阅读理解。
-代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14  // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } };   Q2. 消灭怪物的最大数量 思路 在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, \infty]$ 的怪物。</description>
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14  // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } };   Q2. 消灭怪物的最大数量 思路 在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, \infty)$ 的怪物。</description>
     </item>
     
     <item>
