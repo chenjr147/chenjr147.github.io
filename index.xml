@@ -107,7 +107,7 @@
 &lt;h3 id=&#34;思路-2&#34;&gt;思路&lt;/h3&gt;
 &lt;p&gt;奇数位置有 &lt;code&gt;2, 3, 5, 7&lt;/code&gt; 四种选择，偶数位置有 &lt;code&gt;0, 2, 4, 6, 8&lt;/code&gt; 五种选择。&lt;/p&gt;
 &lt;p&gt;根据排列组合原理可知这是乘法关系。&lt;/p&gt;
-&lt;p&gt;题目种说明可以包括前导零，所以好数字的数目即&lt;/p&gt;
+&lt;p&gt;题目中说明可以包括前导零，所以好数字的数目即&lt;/p&gt;
 &lt;p&gt;$$
 ans = 4^{\lfloor \dfrac{n}{2} \rfloor} * 5 ^{\lceil \dfrac{n}{2} \rceil}
 $$&lt;/p&gt;
