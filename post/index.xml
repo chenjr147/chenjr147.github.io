@@ -6,7 +6,16 @@
     <description>Recent content in Posts on kevin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 16 Jul 2021 13:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 13:52:42 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 第 249 场周赛</title>
+      <link>https://blog.chenjr.top/post/leetcode-weekly-249/</link>
+      <pubDate>Mon, 19 Jul 2021 13:52:42 +0800</pubDate>
+      
+      <guid>https://blog.chenjr.top/post/leetcode-weekly-249/</guid>
+      <description>Q1. 数组串联 代码 1 2 3 4 5 6  # Algorithm: simulation # Time Comlexity: O(n), n = len(nums) # Space Complexity: O(n) class Solution: def getConcatenation(self, nums: List[int]) -&amp;gt; List[int]: return nums + nums   Q2. 长度为 3 的不同回文子序列 思路 代码    Q3. 用三种不同颜色为网格涂色 思路 代码    Q4. 合并多棵二叉搜索树 思路 代码    注意 </description>
+    </item>
+    
     <item>
       <title>LeetCode 第 56 场双周赛</title>
       <link>https://blog.chenjr.top/post/leetcode-biweekly-56/</link>
