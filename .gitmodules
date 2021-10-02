@@ -1,0 +1,3 @@
+[submodule "themes/tania"]
+	path = themes/tania
+	url = https://github.com/WingLim/hugo-tania.git
