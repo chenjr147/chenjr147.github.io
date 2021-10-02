@@ -1,0 +1,21 @@
+baseurl: "https://blog.chenjr.top"
+languageCode: "zh-cn"
+title: "kevin"
+theme: "tania"
+paginate: 6
+disqusShortname: kevinchen147
+
+params:
+  titleEmoji: '🤪'
+  socialOptions:
+    github: https://github.com/kevinchen147
+    email: xxgj@outlook.com
+  enableFootnotes: true
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+  goldmark:
+    renderer:
+      unsafe: true
