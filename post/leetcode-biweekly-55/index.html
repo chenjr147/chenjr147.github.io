@@ -1,221 +1,335 @@
-<!doctype html><html lang=zh-cn>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
 <head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=theme-color content="dark">
-<title>LeetCode 第 55 场双周赛 | kevin</title>
-<meta property="og:site_name" content>
-<meta property="og:title" content="LeetCode 第 55 场双周赛 | kevin">
-<meta itemprop=name content="LeetCode 第 55 场双周赛 | kevin">
-<meta name=twitter:title content="LeetCode 第 55 场双周赛 | kevin">
-<meta name=application-name content="LeetCode 第 55 场双周赛 | kevin">
-<meta name=description content>
-<meta name=twitter:description content>
-<meta itemprop=description content>
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="article:publisher" content>
-<meta property="og:article:published_time" content="2021-06-27T13:52:42+0800">
-<meta property="article:published_time" content="2021-06-27T13:52:42+0800">
-<meta property="og:article:author" content="Kevin">
-<meta property="article:author" content="Kevin">
-<meta name=author content="Kevin">
-<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 55 场双周赛","author":{"@type":"Person","name":""},"datePublished":"2021-06-27","description":"","wordCount":548,"mainEntityOfPage":"True","dateModified":"2021-06-27","publisher":{"@type":"Organization","name":"","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
-<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
-<link rel=stylesheet href=/sass/main.min.dd11f3be48cfdaa9c10fb49890780a9d09a5712371241d8ecb075729bd020ed2.css>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>LeetCode 第 55 场双周赛 | kevin</title>
+
+    
+    
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="LeetCode 第 55 场双周赛 | kevin"/>
+    <meta itemprop="name" content="LeetCode 第 55 场双周赛 | kevin" />
+    <meta name="twitter:title" content="LeetCode 第 55 场双周赛 | kevin" />
+    <meta name="application-name" content="LeetCode 第 55 场双周赛 | kevin" />
+
+
+    <meta name="description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta itemprop="description" content=""/>
+    <meta property="og:description" content="" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="" />
+<meta property="og:article:published_time" content=2021-06-27T13:52:42&#43;0800 />
+<meta property="article:published_time" content=2021-06-27T13:52:42&#43;0800 />
+
+
+  <meta property="og:article:author" content="Kevin" />
+  <meta property="article:author" content="Kevin" />
+  <meta name="author" content="Kevin" />
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "LeetCode 第 55 场双周赛",
+    "author": {
+      "@type": "Person",
+      "name": ""
+    },
+    "datePublished": "2021-06-27",
+    "description": "",
+    "wordCount":  548 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2021-06-27",
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "imageObject",
+        "url": "https:\/\/blog.chenjr.top\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.dd11f3be48cfdaa9c10fb49890780a9d09a5712371241d8ecb075729bd020ed2.css">
+    
 </head>
-<script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
-<body class=dark>
-<nav class=navbar>
-<div class=container>
-<div class=flex>
-<div>
-<a class=brand href=/>
-<span class=emoji>
-🤪
-</span>
-kevin
-</a>
-</div>
-<div class=flex>
-<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
-</button>
-</div>
-</div>
-</div>
+    <script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        🤪
+                    </span>
+                    
+                    
+                    kevin
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <button id="dark-mode-button">
+                  <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                  <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                </button>
+            </div>
+            </div>
+    </div>
 </nav>
-<main>
-<div class=container>
-<article>
-<header class=article-header>
-<div class=thumb>
-<div>
-<h1>LeetCode 第 55 场双周赛</h1>
-<div class=post-meta>
-<div>
-By kevin | <time>June 27, 2021</time>
-| 3 minutes
-</div>
-<div class=tags>
-<a href=/tags/leetcode/>LeetCode</a>
-<a href=/tags/competitive-programming/>Competitive Programming</a>
-<a href=/tags/algorithm/>Algorithm</a>
-</div>
-</div>
-</div>
-</div>
-</header>
-</article>
-<div class=article-post>
-<h2 id=q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing>
-<a href=#q1-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%85%83%e7%b4%a0%e4%bd%bf%e6%95%b0%e7%bb%84%e4%b8%a5%e6%a0%bc%e9%80%92%e5%a2%9ehttpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q1. &lt;a href="https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">删除一个元素使数组严格递增&lt;/a>
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>LeetCode 第 55 场双周赛</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                            By kevin | <time>June 27, 2021</time>
+                            | 3 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/leetcode/">LeetCode</a>
+                            
+                            <a href="/tags/competitive-programming/">Competitive Programming</a>
+                            
+                            <a href="/tags/algorithm/">Algorithm</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing">
+    <a href="#q1-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%85%83%e7%b4%a0%e4%bd%bf%e6%95%b0%e7%bb%84%e4%b8%a5%e6%a0%bc%e9%80%92%e5%a2%9ehttpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q1. &lt;a href=&#34;https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/&#34;&gt;删除一个元素使数组严格递增&lt;/a&gt;
 </h2>
-<h3 id=思路>
-<a href=#%e6%80%9d%e8%b7%af class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路">
+    <a href="#%e6%80%9d%e8%b7%af" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>观察并分析，可以发现仅存在两种合法情况，逐一考虑即可。</p>
-<h3 id=代码>
-<a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码">
+    <a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: two pointer
-</span><span class=c1>// Time Complexity: O(n), n = nums.size()
-</span><span class=c1>// Space Complexity: O(1)
-</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
-<span class=k>public</span><span class=o>:</span>
-    <span class=kt>bool</span> <span class=n>canBeIncreasing</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>nums</span><span class=p>)</span> <span class=p>{</span>
-        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: two pointer
+</span><span class="c1">// Time Complexity: O(n), n = nums.size()
+</span><span class="c1">// Space Complexity: O(1)
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">canBeIncreasing</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
         
-        <span class=c1>// if we remove nums[x], whether array is increasing
-</span><span class=c1></span>        <span class=k>auto</span> <span class=n>check</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int</span> <span class=n>x</span><span class=p>)</span> <span class=p>{</span>
-            <span class=kt>int</span> <span class=n>last</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
-            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
-                <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>!=</span> <span class=n>x</span><span class=p>)</span> <span class=p>{</span>
-                    <span class=k>if</span> <span class=p>(</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&lt;=</span> <span class=n>last</span><span class=p>)</span> <span class=p>{</span>
-                        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
-                    <span class=p>}</span>
-                    <span class=n>last</span> <span class=o>=</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
-                <span class=p>}</span>
-            <span class=p>}</span>
-            <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
-        <span class=p>};</span>
+        <span class="c1">// if we remove nums[x], whether array is increasing
+</span><span class="c1"></span>        <span class="k">auto</span> <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="n">last</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">};</span>
 
-        <span class=c1>// find invalid index
-</span><span class=c1></span>        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
-            <span class=k>if</span> <span class=p>(</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>])</span> <span class=p>{</span>
-                <span class=k>return</span> <span class=nf>check</span><span class=p>(</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=n>or</span> <span class=n>check</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
-            <span class=p>}</span>
-        <span class=p>}</span>
-        <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
-    <span class=p>}</span>
-<span class=p>};</span>
+        <span class="c1">// find invalid index
+</span><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nf">check</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">or</span> <span class="n">check</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q2-删除一个字符串中所有出现的给定子字符串httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring>
-<a href=#q2-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e6%89%80%e6%9c%89%e5%87%ba%e7%8e%b0%e7%9a%84%e7%bb%99%e5%ae%9a%e5%ad%90%e5%ad%97%e7%ac%a6%e4%b8%b2httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q2. &lt;a href="https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/">删除一个字符串中所有出现的给定子字符串&lt;/a>
+</div><h2 id="q2-删除一个字符串中所有出现的给定子字符串httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring">
+    <a href="#q2-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e6%89%80%e6%9c%89%e5%87%ba%e7%8e%b0%e7%9a%84%e7%bb%99%e5%ae%9a%e5%ad%90%e5%ad%97%e7%ac%a6%e4%b8%b2httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q2. &lt;a href=&#34;https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/&#34;&gt;删除一个字符串中所有出现的给定子字符串&lt;/a&gt;
 </h2>
-<h3 id=思路-1>
-<a href=#%e6%80%9d%e8%b7%af-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-1">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>数据量较小，暴力即可。</p>
 <p>(TODO: KMP)</p>
-<h3 id=代码-1>
-<a href=#%e4%bb%a3%e7%a0%81-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码-1">
+    <a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: brute-force
-</span><span class=c1>// Time Complexity: O(n^2), n = s.size()
-</span><span class=c1>// Space Complexity: O(n)
-</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
-<span class=k>public</span><span class=o>:</span>
-    <span class=n>string</span> <span class=n>removeOccurrences</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>,</span> <span class=n>string</span> <span class=n>part</span><span class=p>)</span> <span class=p>{</span>
-        <span class=n>string</span> <span class=n>ans</span><span class=p>;</span>
-        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>c</span> <span class=p>:</span> <span class=n>s</span><span class=p>)</span> <span class=p>{</span>
-            <span class=n>ans</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>c</span><span class=p>);</span>
-            <span class=k>if</span> <span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&gt;=</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>substr</span><span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>())</span> <span class=o>==</span> <span class=n>part</span><span class=p>)</span> <span class=p>{</span>
-                <span class=n>ans</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>());</span>
-            <span class=p>}</span>
-        <span class=p>}</span>
-        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
-    <span class=p>}</span>
-<span class=p>};</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: brute-force
+</span><span class="c1">// Time Complexity: O(n^2), n = s.size()
+</span><span class="c1">// Space Complexity: O(n)
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">removeOccurrences</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">part</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">string</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">c</span> <span class="p">:</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="o">==</span> <span class="n">part</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q3-最大子序列交替和httpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum>
-<a href=#q3-%e6%9c%80%e5%a4%a7%e5%ad%90%e5%ba%8f%e5%88%97%e4%ba%a4%e6%9b%bf%e5%92%8chttpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q3. &lt;a href="https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/">最大子序列交替和&lt;/a>
+</div><h2 id="q3-最大子序列交替和httpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum">
+    <a href="#q3-%e6%9c%80%e5%a4%a7%e5%ad%90%e5%ba%8f%e5%88%97%e4%ba%a4%e6%9b%bf%e5%92%8chttpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q3. &lt;a href=&#34;https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/&#34;&gt;最大子序列交替和&lt;/a&gt;
 </h2>
-<h3 id=思路-2>
-<a href=#%e6%80%9d%e8%b7%af-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-2">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>子序列问题可以考虑用动态规划来进行求解。</p>
 <p>考虑前 <code>i - 1</code> 个数字，维护两个值：</p>
@@ -225,197 +339,242 @@ Q3. &lt;a href="https://leetcode-cn.com/problems/maximum-alternating-subsequence
 </ul>
 <p>那么对第 <code>i</code> 个数字做决策时，可以得到前 <code>i</code> 个数字对应两个值。</p>
 <p>最终返回 <code>max(odd, even)</code> 即可。</p>
-<h3 id=代码-2>
-<a href=#%e4%bb%a3%e7%a0%81-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码-2">
+    <a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span><span class=lnt>9
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=c1># Algorithm: dynamic programming</span>
-<span class=c1># Time Complexity: O(n), n = len(nums)</span>
-<span class=c1># Space Complexity: O(1)</span>
-<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
-    <span class=k>def</span> <span class=nf>maxAlternatingSum</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
-        <span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>nums</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
-        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)):</span>
-            <span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>-</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]),</span> <span class=nb>max</span><span class=p>(</span><span class=n>even</span><span class=p>,</span> <span class=n>odd</span> <span class=o>+</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>])</span>
-        <span class=k>return</span> <span class=nb>max</span><span class=p>(</span><span class=n>odd</span><span class=p>,</span> <span class=n>even</span><span class=p>)</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Algorithm: dynamic programming</span>
+<span class="c1"># Time Complexity: O(n), n = len(nums)</span>
+<span class="c1"># Space Complexity: O(1)</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxAlternatingSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">even</span><span class="p">,</span> <span class="n">odd</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">odd</span><span class="p">,</span> <span class="n">even</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q4-设计电影租借系统httpsleetcode-cncomproblemsdesign-movie-rental-system>
-<a href=#q4-%e8%ae%be%e8%ae%a1%e7%94%b5%e5%bd%b1%e7%a7%9f%e5%80%9f%e7%b3%bb%e7%bb%9fhttpsleetcode-cncomproblemsdesign-movie-rental-system class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q4. &lt;a href="https://leetcode-cn.com/problems/design-movie-rental-system/">设计电影租借系统&lt;/a>
+</div><h2 id="q4-设计电影租借系统httpsleetcode-cncomproblemsdesign-movie-rental-system">
+    <a href="#q4-%e8%ae%be%e8%ae%a1%e7%94%b5%e5%bd%b1%e7%a7%9f%e5%80%9f%e7%b3%bb%e7%bb%9fhttpsleetcode-cncomproblemsdesign-movie-rental-system" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q4. &lt;a href=&#34;https://leetcode-cn.com/problems/design-movie-rental-system/&#34;&gt;设计电影租借系统&lt;/a&gt;
 </h2>
-<h3 id=思路-3>
-<a href=#%e6%80%9d%e8%b7%af-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-3">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>明确题意，模拟即可。</p>
-<h3 id=代码-3>
-<a href=#%e4%bb%a3%e7%a0%81-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码-3">
+    <a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span><span class=lnt>51
-</span><span class=lnt>52
-</span><span class=lnt>53
-</span><span class=lnt>54
-</span><span class=lnt>55
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: simulation
-</span><span class=c1>// Time Complexity:
-</span><span class=c1>//      MovieRentingSystem: O(n \log n), n = entries.size()
-</span><span class=c1>//      search: O(1)
-</span><span class=c1>//      rent: O(n \log n)
-</span><span class=c1>//      drop: O(n \log n)
-</span><span class=c1>//      report: O(1)
-</span><span class=c1>// Space Complexity: O(n)
-</span><span class=c1></span><span class=k>class</span> <span class=nc>MovieRentingSystem</span> <span class=p>{</span>
-<span class=k>private</span><span class=o>:</span>
-    <span class=c1>//price, shop, movie
-</span><span class=c1></span>    <span class=n>set</span><span class=o>&lt;</span><span class=n>tuple</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>rented</span><span class=p>;</span>
-    <span class=c1>//movie, price, shop
-</span><span class=c1></span>    <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=n>set</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;&gt;</span> <span class=n>movies</span><span class=p>;</span>
-    <span class=c1>// shop, movie -&gt; price
-</span><span class=c1></span>    <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>shopMovie2price</span><span class=p>;</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: simulation
+</span><span class="c1">// Time Complexity:
+</span><span class="c1">//      MovieRentingSystem: O(n \log n), n = entries.size()
+</span><span class="c1">//      search: O(1)
+</span><span class="c1">//      rent: O(n \log n)
+</span><span class="c1">//      drop: O(n \log n)
+</span><span class="c1">//      report: O(1)
+</span><span class="c1">// Space Complexity: O(n)
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">MovieRentingSystem</span> <span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="c1">//price, shop, movie
+</span><span class="c1"></span>    <span class="n">set</span><span class="o">&lt;</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">rented</span><span class="p">;</span>
+    <span class="c1">//movie, price, shop
+</span><span class="c1"></span>    <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">set</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">movies</span><span class="p">;</span>
+    <span class="c1">// shop, movie -&gt; price
+</span><span class="c1"></span>    <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">shopMovie2price</span><span class="p">;</span>
 
-<span class=k>public</span><span class=o>:</span>
-    <span class=n>MovieRentingSystem</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=o>&amp;</span><span class=n>entries</span><span class=p>)</span> <span class=p>{</span>
-        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>entry</span> <span class=p>:</span> <span class=n>entries</span><span class=p>)</span> <span class=p>{</span>
-            <span class=kt>int</span> <span class=n>shop</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>movie</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=n>price</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>2</span><span class=p>];</span>
-            <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>);</span>
-            <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>]</span> <span class=o>=</span> <span class=n>price</span><span class=p>;</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MovieRentingSystem</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">entries</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">entry</span> <span class="p">:</span> <span class="n">entries</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">shop</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">price</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+            <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">);</span>
+            <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>search</span><span class=p>(</span><span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
-        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>ans</span><span class=p>;</span>
-        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=n>it</span> <span class=o>=</span> <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>begin</span><span class=p>();</span> <span class=n>it</span> <span class=o>!=</span> <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>end</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=o>++</span><span class=n>it</span><span class=p>)</span> <span class=p>{</span>
-            <span class=n>ans</span><span class=p>.</span><span class=n>emplace_back</span><span class=p>(</span><span class=n>it</span><span class=o>-&gt;</span><span class=n>second</span><span class=p>);</span>
-        <span class=p>}</span>
-        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
-    <span class=p>}</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">end</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    <span class=kt>void</span> <span class=nf>rent</span><span class=p>(</span><span class=kt>int</span> <span class=n>shop</span><span class=p>,</span> <span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
-        <span class=kt>int</span> <span class=n>price</span> <span class=o>=</span> <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>];</span>
-        <span class=n>rented</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>);</span>
-        <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>erase</span><span class=p>(</span><span class=n>make_pair</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>));</span>
-    <span class=p>}</span>
+    <span class="kt">void</span> <span class="nf">rent</span><span class="p">(</span><span class="kt">int</span> <span class="n">shop</span><span class="p">,</span> <span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">];</span>
+        <span class="n">rented</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">);</span>
+        <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">erase</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">));</span>
+    <span class="p">}</span>
 
-    <span class=kt>void</span> <span class=nf>drop</span><span class=p>(</span><span class=kt>int</span> <span class=n>shop</span><span class=p>,</span> <span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
-        <span class=kt>int</span> <span class=n>price</span> <span class=o>=</span> <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>];</span>
-        <span class=n>rented</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>make_tuple</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>));</span>
-        <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>);</span>
-    <span class=p>}</span>
+    <span class="kt">void</span> <span class="nf">drop</span><span class="p">(</span><span class="kt">int</span> <span class="n">shop</span><span class="p">,</span> <span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">];</span>
+        <span class="n">rented</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">));</span>
+        <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>report</span><span class=p>()</span> <span class=p>{</span>
-        <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>ans</span><span class=p>;</span>
-        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=n>it</span> <span class=o>=</span> <span class=n>rented</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span> <span class=n>it</span> <span class=o>!=</span> <span class=n>rented</span><span class=p>.</span><span class=n>end</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=o>++</span><span class=n>it</span><span class=p>)</span> <span class=p>{</span>
-            <span class=k>auto</span> <span class=p>[</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>]</span> <span class=o>=</span> <span class=o>*</span><span class=n>it</span><span class=p>;</span>
-            <span class=n>ans</span><span class=p>.</span><span class=n>push_back</span><span class=p>({</span><span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>});</span>
-        <span class=p>}</span>
-        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
-    <span class=p>}</span>
-<span class=p>};</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">report</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">rented</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">rented</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">auto</span> <span class="p">[</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">]</span> <span class="o">=</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">});</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id=注意>
-<a href=#%e6%b3%a8%e6%84%8f class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-注意
+</div><h3 id="注意">
+    <a href="#%e6%b3%a8%e6%84%8f" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    注意
 </h3>
 <p>合适的变量名以及适当的注释可以让代码写起来清晰很多，思路也不容易出错。</p>
+
+    </div>
 </div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/leetcode-weekly-246/" title="Previous post (older)">
+            <span>Previous</span>
+            LeetCode 第 246 场周赛
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/leetcode-weekly-247/" title="Next post (newer)">
+            <span>Next</span>
+            LeetCode 第 247 场周赛
+            </a> 
+        
+    </nav>
+    
 </div>
-<div class=container>
-<nav class="flex container suggested">
-<a rel=prev href=/post/leetcode-weekly-246/ title="Previous post (older)">
-<span>Previous</span>
-LeetCode 第 246 场周赛
-</a>
-<a rel=next href=/post/leetcode-weekly-247/ title="Next post (newer)">
-<span>Next</span>
-LeetCode 第 247 场周赛
-</a>
-</nav>
+ 
+<div class="container">
+    
 </div>
-<div class=container>
-</div>
+
 </main>
-</main>
-<footer class="footer flex">
-<section class=container>
-<nav class=footer-links>
-</nav>
-</section>
-<script defer src=/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js data-enable-footnotes=true></script>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js" 
+    data-enable-footnotes="true"
+    ></script>
 </footer>
-</body>
+
+    </body>
 </html>
