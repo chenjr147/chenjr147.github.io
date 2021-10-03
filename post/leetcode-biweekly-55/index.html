@@ -1,185 +1,169 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-    
+<!doctype html><html lang=zh-cn>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="dark">
-    <title> LeetCode 第 55 场双周赛 | kevin</title>
-    
-    
-    
-    <link rel="stylesheet" href="/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=theme-color content="dark">
+<title> LeetCode 第 55 场双周赛 | kevin</title>
+<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
 </head>
-
-    <body class="dark">
-        <nav class="navbar">
-    <div class="container">
-        <div class="flex">
-            <div>
-                <a class="brand" href="/">
-                    
-                    <span class="emoji">
-                        🤪
-                    </span>
-                    
-                    kevin
-                    </a>
-            </div>
-            <div class="flex">
-                
-                <button id="dark-mode-button"></button>
-            </div>
-            </div>
-    </div>
+<body class=dark>
+<nav class=navbar>
+<div class=container>
+<div class=flex>
+<div>
+<a class=brand href=/>
+<span class=emoji>
+🤪
+</span>
+kevin
+</a>
+</div>
+<div class=flex>
+<button id=dark-mode-button></button>
+</div>
+</div>
+</div>
 </nav>
-        <main>
-            
-
-<div class="container">
-    <article>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>LeetCode 第 55 场双周赛</h1>
-                    <div class="post-meta">
-                        <div>
-                            By kevin on <time>June 27, 2021</time>
-                        </div>
-                        <div class="tags">
-                            
-                            <a href="/tags/leetcode/">LeetCode</a>
-                            
-                            <a href="/tags/competitive-programming/">Competitive Programming</a>
-                            
-                            <a href="/tags/algorithm/">Algorithm</a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </article>
-
-    <div class="article-post">
-        <h2 id="q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing">Q1. <a href="https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">删除一个元素使数组严格递增</a></h2>
-<h3 id="思路">思路</h3>
+<main>
+<div class=container>
+<article>
+<header class=article-header>
+<div class=thumb>
+<div>
+<h1>LeetCode 第 55 场双周赛</h1>
+<div class=post-meta>
+<div>
+By kevin on <time>June 27, 2021</time>
+</div>
+<div class=tags>
+<a href=/tags/leetcode/>LeetCode</a>
+<a href=/tags/competitive-programming/>Competitive Programming</a>
+<a href=/tags/algorithm/>Algorithm</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+</article>
+<div class=article-post>
+<h2 id=q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing>Q1. <a href=https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/>删除一个元素使数组严格递增</a></h2>
+<h3 id=思路>思路</h3>
 <p>观察并分析，可以发现仅存在两种合法情况，逐一考虑即可。</p>
-<h3 id="代码">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
+<h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: two pointer
-</span><span class="c1">// Time Complexity: O(n), n = nums.size()
-</span><span class="c1">// Space Complexity: O(1)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">bool</span> <span class="n">canBeIncreasing</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: two pointer
+</span><span class=c1>// Time Complexity: O(n), n = nums.size()
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>bool</span> <span class=n>canBeIncreasing</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>nums</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
         
-        <span class="c1">// if we remove nums[x], whether array is increasing
-</span><span class="c1"></span>        <span class="k">auto</span> <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-                    <span class="p">}</span>
-                    <span class="n">last</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="p">};</span>
+        <span class=c1>// if we remove nums[x], whether array is increasing
+</span><span class=c1></span>        <span class=k>auto</span> <span class=n>check</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int</span> <span class=n>x</span><span class=p>)</span> <span class=p>{</span>
+            <span class=kt>int</span> <span class=n>last</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>!=</span> <span class=n>x</span><span class=p>)</span> <span class=p>{</span>
+                    <span class=k>if</span> <span class=p>(</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&lt;=</span> <span class=n>last</span><span class=p>)</span> <span class=p>{</span>
+                        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+                    <span class=p>}</span>
+                    <span class=n>last</span> <span class=o>=</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>];</span>
+                <span class=p>}</span>
+            <span class=p>}</span>
+            <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+        <span class=p>};</span>
 
-        <span class="c1">// find invalid index
-</span><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="nf">check</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">or</span> <span class="n">check</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+        <span class=c1>// find invalid index
+</span><span class=c1></span>        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>if</span> <span class=p>(</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>])</span> <span class=p>{</span>
+                <span class=k>return</span> <span class=nf>check</span><span class=p>(</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=n>or</span> <span class=n>check</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q2-删除一个字符串中所有出现的给定子字符串httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring">Q2. <a href="https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/">删除一个字符串中所有出现的给定子字符串</a></h2>
-<h3 id="思路-1">思路</h3>
+</div><h2 id=q2-删除一个字符串中所有出现的给定子字符串httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring>Q2. <a href=https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/>删除一个字符串中所有出现的给定子字符串</a></h2>
+<h3 id=思路-1>思路</h3>
 <p>数据量较小，暴力即可。</p>
 <p>(TODO: KMP)</p>
-<h3 id="代码-1">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
+<h3 id=代码-1>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: brute-force
-</span><span class="c1">// Time Complexity: O(n^2), n = s.size()
-</span><span class="c1">// Space Complexity: O(n)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">string</span> <span class="n">removeOccurrences</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">part</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">string</span> <span class="n">ans</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">c</span> <span class="p">:</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="o">==</span> <span class="n">part</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">ans</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">part</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: brute-force
+</span><span class=c1>// Time Complexity: O(n^2), n = s.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=n>string</span> <span class=n>removeOccurrences</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>,</span> <span class=n>string</span> <span class=n>part</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>string</span> <span class=n>ans</span><span class=p>;</span>
+        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>c</span> <span class=p>:</span> <span class=n>s</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>ans</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>c</span><span class=p>);</span>
+            <span class=k>if</span> <span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&gt;=</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>substr</span><span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>())</span> <span class=o>==</span> <span class=n>part</span><span class=p>)</span> <span class=p>{</span>
+                <span class=n>ans</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=n>part</span><span class=p>.</span><span class=n>size</span><span class=p>());</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q3-最大子序列交替和httpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum">Q3. <a href="https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/">最大子序列交替和</a></h2>
-<h3 id="思路-2">思路</h3>
+</div><h2 id=q3-最大子序列交替和httpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum>Q3. <a href=https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/>最大子序列交替和</a></h2>
+<h3 id=思路-2>思路</h3>
 <p>子序列问题可以考虑用动态规划来进行求解。</p>
 <p>考虑前 <code>i - 1</code> 个数字，维护两个值：</p>
 <ul>
@@ -188,204 +172,180 @@
 </ul>
 <p>那么对第 <code>i</code> 个数字做决策时，可以得到前 <code>i</code> 个数字对应两个值。</p>
 <p>最终返回 <code>max(odd, even)</code> 即可。</p>
-<h3 id="代码-2">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<h3 id=代码-2>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Algorithm: dynamic programming</span>
-<span class="c1"># Time Complexity: O(n), n = len(nums)</span>
-<span class="c1"># Space Complexity: O(1)</span>
-<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">maxAlternatingSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
-            <span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">odd</span><span class="p">,</span> <span class="n">even</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">even</span><span class="p">,</span> <span class="n">odd</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">odd</span><span class="p">,</span> <span class="n">even</span><span class="p">)</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=c1># Algorithm: dynamic programming</span>
+<span class=c1># Time Complexity: O(n), n = len(nums)</span>
+<span class=c1># Space Complexity: O(1)</span>
+<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>maxAlternatingSum</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+        <span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>nums</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)):</span>
+            <span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>=</span> <span class=nb>max</span><span class=p>(</span><span class=n>odd</span><span class=p>,</span> <span class=n>even</span> <span class=o>-</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]),</span> <span class=nb>max</span><span class=p>(</span><span class=n>even</span><span class=p>,</span> <span class=n>odd</span> <span class=o>+</span> <span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>])</span>
+        <span class=k>return</span> <span class=nb>max</span><span class=p>(</span><span class=n>odd</span><span class=p>,</span> <span class=n>even</span><span class=p>)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q4-设计电影租借系统httpsleetcode-cncomproblemsdesign-movie-rental-system">Q4. <a href="https://leetcode-cn.com/problems/design-movie-rental-system/">设计电影租借系统</a></h2>
-<h3 id="思路-3">思路</h3>
+</div><h2 id=q4-设计电影租借系统httpsleetcode-cncomproblemsdesign-movie-rental-system>Q4. <a href=https://leetcode-cn.com/problems/design-movie-rental-system/>设计电影租借系统</a></h2>
+<h3 id=思路-3>思路</h3>
 <p>明确题意，模拟即可。</p>
-<h3 id="代码-3">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
+<h3 id=代码-3>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: simulation
-</span><span class="c1">// Time Complexity:
-</span><span class="c1">//      MovieRentingSystem: O(n \log n), n = entries.size()
-</span><span class="c1">//      search: O(1)
-</span><span class="c1">//      rent: O(n \log n)
-</span><span class="c1">//      drop: O(n \log n)
-</span><span class="c1">//      report: O(1)
-</span><span class="c1">// Space Complexity: O(n)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">MovieRentingSystem</span> <span class="p">{</span>
-<span class="k">private</span><span class="o">:</span>
-    <span class="c1">//price, shop, movie
-</span><span class="c1"></span>    <span class="n">set</span><span class="o">&lt;</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">rented</span><span class="p">;</span>
-    <span class="c1">//movie, price, shop
-</span><span class="c1"></span>    <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">set</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">movies</span><span class="p">;</span>
-    <span class="c1">// shop, movie -&gt; price
-</span><span class="c1"></span>    <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">shopMovie2price</span><span class="p">;</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: simulation
+</span><span class=c1>// Time Complexity:
+</span><span class=c1>//      MovieRentingSystem: O(n \log n), n = entries.size()
+</span><span class=c1>//      search: O(1)
+</span><span class=c1>//      rent: O(n \log n)
+</span><span class=c1>//      drop: O(n \log n)
+</span><span class=c1>//      report: O(1)
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>MovieRentingSystem</span> <span class=p>{</span>
+<span class=k>private</span><span class=o>:</span>
+    <span class=c1>//price, shop, movie
+</span><span class=c1></span>    <span class=n>set</span><span class=o>&lt;</span><span class=n>tuple</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>rented</span><span class=p>;</span>
+    <span class=c1>//movie, price, shop
+</span><span class=c1></span>    <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=n>set</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;&gt;</span> <span class=n>movies</span><span class=p>;</span>
+    <span class=c1>// shop, movie -&gt; price
+</span><span class=c1></span>    <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=n>unordered_map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>shopMovie2price</span><span class=p>;</span>
 
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">MovieRentingSystem</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">entries</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">entry</span> <span class="p">:</span> <span class="n">entries</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">shop</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">price</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-            <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">);</span>
-            <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=n>MovieRentingSystem</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=o>&amp;</span><span class=n>entries</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>entry</span> <span class=p>:</span> <span class=n>entries</span><span class=p>)</span> <span class=p>{</span>
+            <span class=kt>int</span> <span class=n>shop</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>movie</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=n>price</span> <span class=o>=</span> <span class=n>entry</span><span class=p>[</span><span class=mi>2</span><span class=p>];</span>
+            <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>);</span>
+            <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>]</span> <span class=o>=</span> <span class=n>price</span><span class=p>;</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
 
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">search</span><span class="p">(</span><span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">end</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ans</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>search</span><span class=p>(</span><span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
+        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>ans</span><span class=p>;</span>
+        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=n>it</span> <span class=o>=</span> <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>begin</span><span class=p>();</span> <span class=n>it</span> <span class=o>!=</span> <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>end</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=o>++</span><span class=n>it</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>ans</span><span class=p>.</span><span class=n>emplace_back</span><span class=p>(</span><span class=n>it</span><span class=o>-&gt;</span><span class=n>second</span><span class=p>);</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
 
-    <span class="kt">void</span> <span class="nf">rent</span><span class="p">(</span><span class="kt">int</span> <span class="n">shop</span><span class="p">,</span> <span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">];</span>
-        <span class="n">rented</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">);</span>
-        <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">erase</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">));</span>
-    <span class="p">}</span>
+    <span class=kt>void</span> <span class=nf>rent</span><span class=p>(</span><span class=kt>int</span> <span class=n>shop</span><span class=p>,</span> <span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>price</span> <span class=o>=</span> <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>];</span>
+        <span class=n>rented</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>);</span>
+        <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>erase</span><span class=p>(</span><span class=n>make_pair</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>));</span>
+    <span class=p>}</span>
 
-    <span class="kt">void</span> <span class="nf">drop</span><span class="p">(</span><span class="kt">int</span> <span class="n">shop</span><span class="p">,</span> <span class="kt">int</span> <span class="n">movie</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">price</span> <span class="o">=</span> <span class="n">shopMovie2price</span><span class="p">[</span><span class="n">shop</span><span class="p">][</span><span class="n">movie</span><span class="p">];</span>
-        <span class="n">rented</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">make_tuple</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">));</span>
-        <span class="n">movies</span><span class="p">[</span><span class="n">movie</span><span class="p">].</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">);</span>
-    <span class="p">}</span>
+    <span class=kt>void</span> <span class=nf>drop</span><span class=p>(</span><span class=kt>int</span> <span class=n>shop</span><span class=p>,</span> <span class=kt>int</span> <span class=n>movie</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>price</span> <span class=o>=</span> <span class=n>shopMovie2price</span><span class=p>[</span><span class=n>shop</span><span class=p>][</span><span class=n>movie</span><span class=p>];</span>
+        <span class=n>rented</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>make_tuple</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>));</span>
+        <span class=n>movies</span><span class=p>[</span><span class=n>movie</span><span class=p>].</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>);</span>
+    <span class=p>}</span>
 
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">report</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">rented</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">rented</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="n">and</span> <span class="n">ans</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="o">++</span><span class="n">it</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">auto</span> <span class="p">[</span><span class="n">price</span><span class="p">,</span> <span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">]</span> <span class="o">=</span> <span class="o">*</span><span class="n">it</span><span class="p">;</span>
-            <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">shop</span><span class="p">,</span> <span class="n">movie</span><span class="p">});</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+    <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>report</span><span class=p>()</span> <span class=p>{</span>
+        <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>ans</span><span class=p>;</span>
+        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=n>it</span> <span class=o>=</span> <span class=n>rented</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span> <span class=n>it</span> <span class=o>!=</span> <span class=n>rented</span><span class=p>.</span><span class=n>end</span><span class=p>()</span> <span class=n>and</span> <span class=n>ans</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=o>++</span><span class=n>it</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>auto</span> <span class=p>[</span><span class=n>price</span><span class=p>,</span> <span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>]</span> <span class=o>=</span> <span class=o>*</span><span class=n>it</span><span class=p>;</span>
+            <span class=n>ans</span><span class=p>.</span><span class=n>push_back</span><span class=p>({</span><span class=n>shop</span><span class=p>,</span> <span class=n>movie</span><span class=p>});</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="注意">注意</h3>
+</div><h3 id=注意>注意</h3>
 <p>合适的变量名以及适当的注释可以让代码写起来清晰很多，思路也不容易出错。</p>
-
-    </div>
 </div>
-
-<div class="container">
-    
-    <nav class="flex container suggested">
-        
-        <a rel="prev" href="/post/leetcode-weekly-246/" title="Previous post (older)">
-            <span>Previous</span>
-            LeetCode 第 246 场周赛
-        </a>
-        
-
-        
-        <a rel="next" href="/post/leetcode-weekly-247/" title="Next post (newer)">
-            <span>Next</span>
-            LeetCode 第 247 场周赛
-        </a>
-        
-    </nav>
-    
 </div>
-
-<div class="container">
-    <script src="https://utteranc.es/client.js" repo="kevinchen147/kevinchen147.github.io" issue-term="pathname"
-    theme="github-light" crossorigin="anonymous" async>
-    </script>
+<div class=container>
+<nav class="flex container suggested">
+<a rel=prev href=/post/leetcode-weekly-246/ title="Previous post (older)">
+<span>Previous</span>
+LeetCode 第 246 场周赛
+</a>
+<a rel=next href=/post/leetcode-weekly-247/ title="Next post (newer)">
+<span>Next</span>
+LeetCode 第 247 场周赛
+</a>
+</nav>
 </div>
-
+<div class=container>
+<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</div>
 </main>
-
-
-
-        </main>
-        <footer class="footer flex">
-    <section class="container">
-        <nav class="footer-links">
-            
-        </nav>
-    </section>
-    <script type="text/javascript">
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$','$'], ['\\(','\\)']],
-            }
-        };
-    </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-    
-    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</main>
+<footer class="footer flex">
+<section class=container>
+<nav class=footer-links>
+</nav>
+</section>
+<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
+<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
+<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
 </footer>
-    </body>
+</body>
 </html>

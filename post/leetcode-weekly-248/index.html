@@ -1,160 +1,144 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-    
+<!doctype html><html lang=zh-cn>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="dark">
-    <title> LeetCode 第 248 场周赛 | kevin</title>
-    
-    
-    
-    <link rel="stylesheet" href="/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=theme-color content="dark">
+<title> LeetCode 第 248 场周赛 | kevin</title>
+<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
 </head>
-
-    <body class="dark">
-        <nav class="navbar">
-    <div class="container">
-        <div class="flex">
-            <div>
-                <a class="brand" href="/">
-                    
-                    <span class="emoji">
-                        🤪
-                    </span>
-                    
-                    kevin
-                    </a>
-            </div>
-            <div class="flex">
-                
-                <button id="dark-mode-button"></button>
-            </div>
-            </div>
-    </div>
+<body class=dark>
+<nav class=navbar>
+<div class=container>
+<div class=flex>
+<div>
+<a class=brand href=/>
+<span class=emoji>
+🤪
+</span>
+kevin
+</a>
+</div>
+<div class=flex>
+<button id=dark-mode-button></button>
+</div>
+</div>
+</div>
 </nav>
-        <main>
-            
-
-<div class="container">
-    <article>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>LeetCode 第 248 场周赛</h1>
-                    <div class="post-meta">
-                        <div>
-                            By kevin on <time>July 04, 2021</time>
-                        </div>
-                        <div class="tags">
-                            
-                            <a href="/tags/leetcode/">LeetCode</a>
-                            
-                            <a href="/tags/competitive-programming/">Competitive Programming</a>
-                            
-                            <a href="/tags/algorithm/">Algorithm</a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </article>
-
-    <div class="article-post">
-        <p>起晚了没赶上:(</p>
-<h2 id="q1-基于排列构建数组httpsleetcode-cncomproblemsbuild-array-from-permutation">Q1. <a href="https://leetcode-cn.com/problems/build-array-from-permutation/">基于排列构建数组</a></h2>
-<h3 id="思路">思路</h3>
+<main>
+<div class=container>
+<article>
+<header class=article-header>
+<div class=thumb>
+<div>
+<h1>LeetCode 第 248 场周赛</h1>
+<div class=post-meta>
+<div>
+By kevin on <time>July 04, 2021</time>
+</div>
+<div class=tags>
+<a href=/tags/leetcode/>LeetCode</a>
+<a href=/tags/competitive-programming/>Competitive Programming</a>
+<a href=/tags/algorithm/>Algorithm</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+</article>
+<div class=article-post>
+<p>起晚了没赶上:(</p>
+<h2 id=q1-基于排列构建数组httpsleetcode-cncomproblemsbuild-array-from-permutation>Q1. <a href=https://leetcode-cn.com/problems/build-array-from-permutation/>基于排列构建数组</a></h2>
+<h3 id=思路>思路</h3>
 <p>阅读理解。</p>
-<h3 id="代码">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
+<h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: simulation
-</span><span class="c1">// Time Complexity: O(n), n = nums.size()
-</span><span class="c1">// Space Complexity: O(n)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">buildArray</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: simulation
+</span><span class=c1>// Time Complexity: O(n), n = nums.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>buildArray</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>nums</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>nums</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
+        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>ans</span><span class=p>(</span><span class=n>n</span><span class=p>);</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>ans</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>nums</span><span class=p>[</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]];</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters">Q2. <a href="https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/">消灭怪物的最大数量</a></h2>
-<h3 id="思路-1">思路</h3>
+</div><h2 id=q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters>Q2. <a href=https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/>消灭怪物的最大数量</a></h2>
+<h3 id=思路-1>思路</h3>
 <p>在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, \infty)$ 的怪物。</p>
 <p>只需要将怪物的到达时间向上取整并排序，贪心消灭即可。</p>
-<h3 id="代码-1">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
+<h3 id=代码-1>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: sort + greed
-</span><span class="c1">// Time Complexity: O(n), n = dist.size()
-</span><span class="c1">// Space Complexity: O(n)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">eliminateMaximum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">dist</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">speed</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">dist</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">time</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="mf">1.</span> <span class="o">*</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">speed</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-        <span class="p">}</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">time</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: sort + greed
+</span><span class=c1>// Time Complexity: O(n), n = dist.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>int</span> <span class=n>eliminateMaximum</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>dist</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>speed</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>dist</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
+        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>double</span><span class=o>&gt;</span> <span class=n>time</span><span class=p>(</span><span class=n>n</span><span class=p>);</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>time</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>ceil</span><span class=p>(</span><span class=mf>1.</span> <span class=o>*</span> <span class=n>dist</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>/</span> <span class=n>speed</span><span class=p>[</span><span class=n>i</span><span class=p>]);</span>
+        <span class=p>}</span>
+        <span class=n>sort</span><span class=p>(</span><span class=n>time</span><span class=p>.</span><span class=n>begin</span><span class=p>(),</span> <span class=n>time</span><span class=p>.</span><span class=n>end</span><span class=p>());</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>if</span> <span class=p>(</span><span class=n>time</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>&lt;=</span> <span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>return</span> <span class=n>i</span><span class=p>;</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>n</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers">Q3. <a href="https://leetcode-cn.com/problems/count-good-numbers/">统计好数字的数目</a></h2>
-<h3 id="思路-2">思路</h3>
+</div><h2 id=q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers>Q3. <a href=https://leetcode-cn.com/problems/count-good-numbers/>统计好数字的数目</a></h2>
+<h3 id=思路-2>思路</h3>
 <p>奇数位置有 <code>2, 3, 5, 7</code> 四种选择，偶数位置有 <code>0, 2, 4, 6, 8</code> 五种选择。</p>
 <p>根据排列组合原理可知这是乘法关系。</p>
 <p>题目中说明可以包括前导零，所以好数字的数目即</p>
@@ -162,233 +146,210 @@
 ans = 4^{\lfloor \dfrac{n}{2} \rfloor} * 5 ^{\lceil \dfrac{n}{2} \rceil}
 $$</p>
 <p>只需要简单地进行快速幂处理并取模即可。</p>
-<h3 id="代码-2">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
+<h3 id=代码-2>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: math + quick pow
-</span><span class="c1">// Time Complexity: O(\log n)
-</span><span class="c1">// Space Complexity: O(1)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">private</span><span class="o">:</span>
-    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">mod</span> <span class="o">=</span> <span class="mi">1&#39;000&#39;000&#39;007</span><span class="p">;</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: math + quick pow
+</span><span class=c1>// Time Complexity: O(\log n)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>private</span><span class=o>:</span>
+    <span class=k>static</span> <span class=k>constexpr</span> <span class=kt>int</span> <span class=n>mod</span> <span class=o>=</span> <span class=mi>1&#39;000&#39;000&#39;007</span><span class=p>;</span>
 
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">countGoodNumbers</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// quick pow
-</span><span class="c1"></span>        <span class="k">auto</span> <span class="n">qpow</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int64_t</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int64_t</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int64_t</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">ans</span> <span class="o">=</span> <span class="p">(</span><span class="n">ans</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-                <span class="p">}</span>
-                <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-                <span class="n">y</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-        <span class="p">};</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>int</span> <span class=n>countGoodNumbers</span><span class=p>(</span><span class=kt>long</span> <span class=kt>long</span> <span class=n>n</span><span class=p>)</span> <span class=p>{</span>
+        <span class=c1>// quick pow
+</span><span class=c1></span>        <span class=k>auto</span> <span class=n>qpow</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int64_t</span> <span class=n>x</span><span class=p>,</span> <span class=kt>int64_t</span> <span class=n>y</span><span class=p>)</span> <span class=p>{</span>
+            <span class=kt>int64_t</span> <span class=n>ans</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=k>while</span> <span class=p>(</span><span class=n>y</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>y</span> <span class=o>&amp;</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+                    <span class=n>ans</span> <span class=o>=</span> <span class=p>(</span><span class=n>ans</span> <span class=o>*</span> <span class=n>x</span><span class=p>)</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+                <span class=p>}</span>
+                <span class=n>x</span> <span class=o>=</span> <span class=p>(</span><span class=n>x</span> <span class=o>*</span> <span class=n>x</span><span class=p>)</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+                <span class=n>y</span> <span class=o>&gt;&gt;=</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+        <span class=p>};</span>
 
-        <span class="c1">// odd indices count and even indices count
-</span><span class="c1"></span>        <span class="kt">int64_t</span> <span class="n">odd</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">),</span> <span class="n">even</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">);</span>
-        <span class="kt">int64_t</span> <span class="n">ans</span> <span class="o">=</span> <span class="p">(</span><span class="n">qpow</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">odd</span><span class="p">)</span> <span class="o">*</span> <span class="n">qpow</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">even</span><span class="p">))</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+        <span class=c1>// odd indices count and even indices count
+</span><span class=c1></span>        <span class=kt>int64_t</span> <span class=n>odd</span> <span class=o>=</span> <span class=n>floor</span><span class=p>(</span><span class=n>n</span> <span class=o>/</span> <span class=mf>2.0</span><span class=p>),</span> <span class=n>even</span> <span class=o>=</span> <span class=n>ceil</span><span class=p>(</span><span class=n>n</span> <span class=o>/</span> <span class=mf>2.0</span><span class=p>);</span>
+        <span class=kt>int64_t</span> <span class=n>ans</span> <span class=o>=</span> <span class=p>(</span><span class=n>qpow</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=n>odd</span><span class=p>)</span> <span class=o>*</span> <span class=n>qpow</span><span class=p>(</span><span class=mi>5</span><span class=p>,</span> <span class=n>even</span><span class=p>))</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath">Q4. <a href="https://leetcode-cn.com/problems/longest-common-subpath/">最长公共子路径</a></h2>
-<h3 id="思路-3">思路</h3>
+</div><h2 id=q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath>Q4. <a href=https://leetcode-cn.com/problems/longest-common-subpath/>最长公共子路径</a></h2>
+<h3 id=思路-3>思路</h3>
 <p>滚动哈希，二分查找。但是可能会有碰撞，导致答案错误。</p>
 <p>更好的解法是后缀数组(TODO)。</p>
-<h3 id="代码-3">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
+<h3 id=代码-3>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: rolling hash + binary search
-</span><span class="c1">// Time Complexity: O(n \log n)
-</span><span class="c1">// Space Complexity: O(n)
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">longestCommonSubpath</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">paths</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">uint64_t</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: rolling hash + binary search
+</span><span class=c1>// Time Complexity: O(n \log n)
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>int</span> <span class=n>longestCommonSubpath</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=o>&amp;</span><span class=n>paths</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>uint64_t</span> <span class=n>mod</span> <span class=o>=</span> <span class=n>numeric_limits</span><span class=o>&lt;</span><span class=kt>uint64_t</span><span class=o>&gt;::</span><span class=n>max</span><span class=p>()</span> <span class=o>/</span> <span class=n>n</span> <span class=o>/</span> <span class=mi>10</span><span class=p>;</span>
 
-        <span class="c1">// check if there is common subpath which length is `len`
-</span><span class="c1"></span>        <span class="k">auto</span> <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">len</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">seen</span><span class="p">;</span>
-            <span class="kt">uint64_t</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">_</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">_</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="o">++</span><span class="n">_</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">base</span> <span class="o">=</span> <span class="p">(</span><span class="n">base</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">paths</span><span class="p">.</span><span class="n">size</span><span class="p">());</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">now</span><span class="p">;</span>
-                <span class="kt">uint64_t</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">());</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">curr</span> <span class="o">=</span> <span class="p">(</span><span class="n">curr</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="n">paths</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">or</span> <span class="n">seen</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="o">!=</span> <span class="n">seen</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
-                            <span class="n">now</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">curr</span><span class="p">);</span>
-                        <span class="p">}</span>
-                        <span class="n">curr</span> <span class="o">=</span> <span class="p">(</span><span class="n">curr</span> <span class="o">-</span> <span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="n">len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">base</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span> <span class="o">+</span> <span class="n">mod</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span><span class="p">;</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
-                    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-                <span class="p">}</span>
-                <span class="n">seen</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="n">now</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-        <span class="p">};</span>
+        <span class=c1>// check if there is common subpath which length is `len`
+</span><span class=c1></span>        <span class=k>auto</span> <span class=n>check</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int</span> <span class=n>len</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>unordered_set</span><span class=o>&lt;</span><span class=kt>uint64_t</span><span class=o>&gt;</span> <span class=n>seen</span><span class=p>;</span>
+            <span class=kt>uint64_t</span> <span class=n>base</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>_</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>_</span> <span class=o>&lt;</span> <span class=n>len</span><span class=p>;</span> <span class=o>++</span><span class=n>_</span><span class=p>)</span> <span class=p>{</span>
+                <span class=n>base</span> <span class=o>=</span> <span class=p>(</span><span class=n>base</span> <span class=o>*</span> <span class=n>n</span><span class=p>)</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=k>static_cast</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span><span class=p>(</span><span class=n>paths</span><span class=p>.</span><span class=n>size</span><span class=p>());</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+                <span class=n>unordered_set</span><span class=o>&lt;</span><span class=kt>uint64_t</span><span class=o>&gt;</span> <span class=n>now</span><span class=p>;</span>
+                <span class=kt>uint64_t</span> <span class=n>curr</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+                <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=k>static_cast</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span><span class=p>(</span><span class=n>paths</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>size</span><span class=p>());</span> <span class=o>++</span><span class=n>j</span><span class=p>)</span> <span class=p>{</span>
+                    <span class=n>curr</span> <span class=o>=</span> <span class=p>(</span><span class=n>curr</span> <span class=o>*</span> <span class=n>n</span> <span class=o>+</span> <span class=n>paths</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>])</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+                    <span class=k>if</span> <span class=p>(</span><span class=n>j</span> <span class=o>&gt;=</span> <span class=n>len</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+                        <span class=k>if</span> <span class=p>(</span><span class=n>i</span> <span class=o>==</span> <span class=mi>0</span> <span class=n>or</span> <span class=n>seen</span><span class=p>.</span><span class=n>find</span><span class=p>(</span><span class=n>curr</span><span class=p>)</span> <span class=o>!=</span> <span class=n>seen</span><span class=p>.</span><span class=n>end</span><span class=p>())</span> <span class=p>{</span>
+                            <span class=n>now</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>curr</span><span class=p>);</span>
+                        <span class=p>}</span>
+                        <span class=n>curr</span> <span class=o>=</span> <span class=p>(</span><span class=n>curr</span> <span class=o>-</span> <span class=p>(</span><span class=n>paths</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span> <span class=o>-</span> <span class=n>len</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span> <span class=o>*</span> <span class=n>base</span><span class=p>)</span> <span class=o>%</span> <span class=n>mod</span> <span class=o>+</span> <span class=n>mod</span><span class=p>)</span> <span class=o>%</span> <span class=n>mod</span><span class=p>;</span>
+                    <span class=p>}</span>
+                <span class=p>}</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>now</span><span class=p>.</span><span class=n>empty</span><span class=p>())</span> <span class=p>{</span>
+                    <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
+                <span class=p>}</span>
+                <span class=n>seen</span> <span class=o>=</span> <span class=n>move</span><span class=p>(</span><span class=n>now</span><span class=p>);</span>
+            <span class=p>}</span>
+            <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
+        <span class=p>};</span>
 
-        <span class="c1">// binary search
-</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">path</span> <span class="p">:</span> <span class="n">paths</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">high</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">high</span><span class="p">,</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">size</span><span class="p">()));</span>
-        <span class="p">}</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">mid</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">low</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+        <span class=c1>// binary search
+</span><span class=c1></span>        <span class=kt>int</span> <span class=n>low</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>high</span> <span class=o>=</span> <span class=n>numeric_limits</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;::</span><span class=n>max</span><span class=p>();</span>
+        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>path</span> <span class=p>:</span> <span class=n>paths</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>high</span> <span class=o>=</span> <span class=n>min</span><span class=p>(</span><span class=n>high</span><span class=p>,</span> <span class=k>static_cast</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span><span class=p>(</span><span class=n>path</span><span class=p>.</span><span class=n>size</span><span class=p>()));</span>
+        <span class=p>}</span>
+        <span class=k>while</span> <span class=p>(</span><span class=n>low</span> <span class=o>&lt;</span> <span class=n>high</span><span class=p>)</span> <span class=p>{</span>
+            <span class=kt>int</span> <span class=n>mid</span> <span class=o>=</span> <span class=p>(</span><span class=n>low</span> <span class=o>+</span> <span class=n>high</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span><span class=p>;</span>
+            <span class=k>if</span> <span class=p>(</span><span class=n>check</span><span class=p>(</span><span class=n>mid</span><span class=p>))</span> <span class=p>{</span>
+                <span class=n>low</span> <span class=o>=</span> <span class=n>mid</span><span class=p>;</span>
+            <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+                <span class=n>high</span> <span class=o>=</span> <span class=n>mid</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>low</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
 </div>
-    </div>
 </div>
-
-<div class="container">
-    
-    <nav class="flex container suggested">
-        
-        <a rel="prev" href="/post/leetcode-weekly-247/" title="Previous post (older)">
-            <span>Previous</span>
-            LeetCode 第 247 场周赛
-        </a>
-        
-
-        
-        <a rel="next" href="/post/leetcode-biweekly-56/" title="Next post (newer)">
-            <span>Next</span>
-            LeetCode 第 56 场双周赛
-        </a>
-        
-    </nav>
-    
 </div>
-
-<div class="container">
-    <script src="https://utteranc.es/client.js" repo="kevinchen147/kevinchen147.github.io" issue-term="pathname"
-    theme="github-light" crossorigin="anonymous" async>
-    </script>
+<div class=container>
+<nav class="flex container suggested">
+<a rel=prev href=/post/leetcode-weekly-247/ title="Previous post (older)">
+<span>Previous</span>
+LeetCode 第 247 场周赛
+</a>
+<a rel=next href=/post/leetcode-biweekly-56/ title="Next post (newer)">
+<span>Next</span>
+LeetCode 第 56 场双周赛
+</a>
+</nav>
 </div>
-
+<div class=container>
+<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</div>
 </main>
-
-
-
-        </main>
-        <footer class="footer flex">
-    <section class="container">
-        <nav class="footer-links">
-            
-        </nav>
-    </section>
-    <script type="text/javascript">
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$','$'], ['\\(','\\)']],
-            }
-        };
-    </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-    
-    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</main>
+<footer class="footer flex">
+<section class=container>
+<nav class=footer-links>
+</nav>
+</section>
+<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
+<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
+<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
 </footer>
-    </body>
+</body>
 </html>

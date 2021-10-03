@@ -1,356 +1,316 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-    
+<!doctype html><html lang=zh-cn>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="dark">
-    <title> LeetCode 第 246 场周赛 | kevin</title>
-    
-    
-    
-    <link rel="stylesheet" href="/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=theme-color content="dark">
+<title> LeetCode 第 246 场周赛 | kevin</title>
+<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
 </head>
-
-    <body class="dark">
-        <nav class="navbar">
-    <div class="container">
-        <div class="flex">
-            <div>
-                <a class="brand" href="/">
-                    
-                    <span class="emoji">
-                        🤪
-                    </span>
-                    
-                    kevin
-                    </a>
-            </div>
-            <div class="flex">
-                
-                <button id="dark-mode-button"></button>
-            </div>
-            </div>
-    </div>
+<body class=dark>
+<nav class=navbar>
+<div class=container>
+<div class=flex>
+<div>
+<a class=brand href=/>
+<span class=emoji>
+🤪
+</span>
+kevin
+</a>
+</div>
+<div class=flex>
+<button id=dark-mode-button></button>
+</div>
+</div>
+</div>
 </nav>
-        <main>
-            
-
-<div class="container">
-    <article>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>LeetCode 第 246 场周赛</h1>
-                    <div class="post-meta">
-                        <div>
-                            By kevin on <time>June 20, 2021</time>
-                        </div>
-                        <div class="tags">
-                            
-                            <a href="/tags/leetcode/">LeetCode</a>
-                            
-                            <a href="/tags/competitive-programming/">Competitive Programming</a>
-                            
-                            <a href="/tags/algorithm/">Algorithm</a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </article>
-
-    <div class="article-post">
-        <h2 id="q1-字符串中的最大奇数httpsleetcode-cncomproblemslargest-odd-number-in-string">Q1. <a href="https://leetcode-cn.com/problems/largest-odd-number-in-string/">字符串中的最大奇数</a></h2>
-<h3 id="思路">思路</h3>
+<main>
+<div class=container>
+<article>
+<header class=article-header>
+<div class=thumb>
+<div>
+<h1>LeetCode 第 246 场周赛</h1>
+<div class=post-meta>
+<div>
+By kevin on <time>June 20, 2021</time>
+</div>
+<div class=tags>
+<a href=/tags/leetcode/>LeetCode</a>
+<a href=/tags/competitive-programming/>Competitive Programming</a>
+<a href=/tags/algorithm/>Algorithm</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+</article>
+<div class=article-post>
+<h2 id=q1-字符串中的最大奇数httpsleetcode-cncomproblemslargest-odd-number-in-string>Q1. <a href=https://leetcode-cn.com/problems/largest-odd-number-in-string/>字符串中的最大奇数</a></h2>
+<h3 id=思路>思路</h3>
 <p>从后往前找到第一个奇数即可。</p>
-<h3 id="代码">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">largestOddNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="c1"># Algorithm: tranform and conquer</span>
-        <span class="c1"># Time Complexity: O(n), n = len(num)</span>
-        <span class="c1"># Space Complexity: O(1)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">num</span><span class="p">[:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="k">return</span> <span class="s2">&#34;&#34;</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>largestOddNumber</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>num</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+        <span class=c1># Algorithm: tranform and conquer</span>
+        <span class=c1># Time Complexity: O(n), n = len(num)</span>
+        <span class=c1># Space Complexity: O(1)</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>num</span><span class=p>)</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+            <span class=k>if</span> <span class=nb>int</span><span class=p>(</span><span class=n>num</span><span class=p>[</span><span class=n>i</span><span class=p>])</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span>
+                <span class=k>return</span> <span class=n>num</span><span class=p>[:</span><span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span>
+        <span class=k>return</span> <span class=s2>&#34;&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q2-你完成的完整对局数httpsleetcode-cncomproblemsthe-number-of-full-rounds-you-have-played">Q2. <a href="https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/">你完成的完整对局数</a></h2>
-<h3 id="思路-1">思路</h3>
+</div><h2 id=q2-你完成的完整对局数httpsleetcode-cncomproblemsthe-number-of-full-rounds-you-have-played>Q2. <a href=https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/>你完成的完整对局数</a></h2>
+<h3 id=思路-1>思路</h3>
 <p>模拟即可。</p>
-<h3 id="代码-1">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
+<h3 id=代码-1>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="c1"># Algorithm: simulation</span>
-    <span class="c1"># Time Complexity: O(1)</span>
-    <span class="c1"># Space Complexity: O(1)</span>
-    <span class="k">def</span> <span class="nf">isOver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startHour</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">startMinute</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">finishHour</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">finishMinute</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">startHour</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">startMinute</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">finishHour</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">finishMinute</span><span class="p">)</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=c1># Algorithm: simulation</span>
+    <span class=c1># Time Complexity: O(1)</span>
+    <span class=c1># Space Complexity: O(1)</span>
+    <span class=k>def</span> <span class=nf>isOver</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>startHour</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>startMinute</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>finishHour</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>finishMinute</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+        <span class=k>return</span> <span class=p>(</span><span class=n>startHour</span> <span class=o>*</span> <span class=mi>60</span> <span class=o>+</span> <span class=n>startMinute</span><span class=p>)</span> <span class=o>&gt;</span> <span class=p>(</span><span class=n>finishHour</span> <span class=o>*</span> <span class=mi>60</span> <span class=o>+</span> <span class=n>finishMinute</span><span class=p>)</span>
 
-    <span class="k">def</span> <span class="nf">numberOfRounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startTime</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">finishTime</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="n">startHour</span><span class="p">,</span> <span class="n">startMinute</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">startTime</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
-        <span class="n">finishHour</span><span class="p">,</span> <span class="n">finishMinute</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">finishTime</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isOver</span><span class="p">(</span><span class="n">startHour</span><span class="p">,</span> <span class="n">startMinute</span><span class="p">,</span> <span class="n">finishHour</span><span class="p">,</span> <span class="n">finishMinute</span><span class="p">):</span>
-            <span class="n">finishHour</span> <span class="o">+=</span> <span class="mi">24</span>
-        <span class="k">if</span> <span class="n">startMinute</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">startMinute</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
-                <span class="n">startMinute</span> <span class="o">=</span> <span class="mi">15</span>
-            <span class="k">elif</span> <span class="n">startMinute</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
-                <span class="n">startMinute</span> <span class="o">=</span> <span class="mi">30</span>
-            <span class="k">elif</span> <span class="n">startMinute</span> <span class="o">&lt;</span> <span class="mi">45</span><span class="p">:</span>
-                <span class="n">startMinute</span> <span class="o">=</span> <span class="mi">45</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">startHour</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="n">startMinute</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">startMinute</span> <span class="o">+=</span> <span class="mi">15</span>
-            <span class="k">if</span> <span class="n">startMinute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-                <span class="n">startHour</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="n">startMinute</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isOver</span><span class="p">(</span><span class="n">startHour</span><span class="p">,</span> <span class="n">startMinute</span><span class="p">,</span> <span class="n">finishHour</span><span class="p">,</span> <span class="n">finishMinute</span><span class="p">):</span>
-                <span class="k">break</span>
-            <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">ans</span>
+    <span class=k>def</span> <span class=nf>numberOfRounds</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>startTime</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>finishTime</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+        <span class=n>startHour</span><span class=p>,</span> <span class=n>startMinute</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=n>startTime</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;:&#39;</span><span class=p>))</span>
+        <span class=n>finishHour</span><span class=p>,</span> <span class=n>finishMinute</span> <span class=o>=</span> <span class=nb>map</span><span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=n>finishTime</span><span class=o>.</span><span class=n>split</span><span class=p>(</span><span class=s1>&#39;:&#39;</span><span class=p>))</span>
+        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>isOver</span><span class=p>(</span><span class=n>startHour</span><span class=p>,</span> <span class=n>startMinute</span><span class=p>,</span> <span class=n>finishHour</span><span class=p>,</span> <span class=n>finishMinute</span><span class=p>):</span>
+            <span class=n>finishHour</span> <span class=o>+=</span> <span class=mi>24</span>
+        <span class=k>if</span> <span class=n>startMinute</span> <span class=o>%</span> <span class=mi>15</span> <span class=o>!=</span> <span class=mi>0</span><span class=p>:</span>
+            <span class=k>if</span> <span class=n>startMinute</span> <span class=o>&lt;</span> <span class=mi>15</span><span class=p>:</span>
+                <span class=n>startMinute</span> <span class=o>=</span> <span class=mi>15</span>
+            <span class=k>elif</span> <span class=n>startMinute</span> <span class=o>&lt;</span> <span class=mi>30</span><span class=p>:</span>
+                <span class=n>startMinute</span> <span class=o>=</span> <span class=mi>30</span>
+            <span class=k>elif</span> <span class=n>startMinute</span> <span class=o>&lt;</span> <span class=mi>45</span><span class=p>:</span>
+                <span class=n>startMinute</span> <span class=o>=</span> <span class=mi>45</span>
+            <span class=k>else</span><span class=p>:</span>
+                <span class=n>startHour</span> <span class=o>+=</span> <span class=mi>1</span>
+                <span class=n>startMinute</span> <span class=o>=</span> <span class=mi>0</span>
+        <span class=n>ans</span> <span class=o>=</span> <span class=mi>0</span>
+        <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+            <span class=n>startMinute</span> <span class=o>+=</span> <span class=mi>15</span>
+            <span class=k>if</span> <span class=n>startMinute</span> <span class=o>&gt;=</span> <span class=mi>60</span><span class=p>:</span>
+                <span class=n>startHour</span> <span class=o>+=</span> <span class=mi>1</span>
+                <span class=n>startMinute</span> <span class=o>=</span> <span class=mi>0</span>
+            <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>isOver</span><span class=p>(</span><span class=n>startHour</span><span class=p>,</span> <span class=n>startMinute</span><span class=p>,</span> <span class=n>finishHour</span><span class=p>,</span> <span class=n>finishMinute</span><span class=p>):</span>
+                <span class=k>break</span>
+            <span class=n>ans</span> <span class=o>+=</span> <span class=mi>1</span>
+        <span class=k>return</span> <span class=n>ans</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q3-统计子岛屿httpsleetcode-cncomproblemscount-sub-islands">Q3. <a href="https://leetcode-cn.com/problems/count-sub-islands/">统计子岛屿</a></h2>
-<h3 id="思路-2">思路</h3>
+</div><h2 id=q3-统计子岛屿httpsleetcode-cncomproblemscount-sub-islands>Q3. <a href=https://leetcode-cn.com/problems/count-sub-islands/>统计子岛屿</a></h2>
+<h3 id=思路-2>思路</h3>
 <p>用深度优先搜索可以找出 <code>grid2</code> 中所有的连通块。</p>
 <p>搜索的同时检查 <code>grid2</code> 中的连通块在 <code>grid1</code> 中是否被完全包含即可。</p>
-<h3 id="代码-2">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
+<h3 id=代码-2>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">countSubIslands</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid1</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// Algorithm: dfs
-</span><span class="c1"></span>        <span class="c1">// Time Complexity: O(n * m), n = grid2.size(), m = grid2[0].size()
-</span><span class="c1"></span>        <span class="c1">// Space Complexity: O(1)
-</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="n">grid1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">col</span> <span class="o">=</span> <span class="n">grid1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
-        <span class="k">constexpr</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">dir</span><span class="p">{{{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">}}};</span>
-        <span class="k">auto</span> <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="n">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">row</span> <span class="n">and</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="n">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">col</span> <span class="n">and</span> <span class="n">grid2</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="p">};</span>
-        <span class="n">function</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">dfs</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">grid2</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="kt">bool</span> <span class="n">valid</span> <span class="o">=</span> <span class="n">grid1</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;&amp;</span> <span class="p">[</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">]</span> <span class="o">:</span> <span class="n">dir</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="n">valid</span> <span class="o">&amp;=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="n">valid</span><span class="p">;</span>
-        <span class="p">};</span>
-        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">;</span> <span class="o">++</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">col</span><span class="p">;</span> <span class="o">++</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="n">and</span> <span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>int</span> <span class=n>countSubIslands</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;&amp;</span> <span class=n>grid1</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;&amp;</span> <span class=n>grid2</span><span class=p>)</span> <span class=p>{</span>
+        <span class=c1>// Algorithm: dfs
+</span><span class=c1></span>        <span class=c1>// Time Complexity: O(n * m), n = grid2.size(), m = grid2[0].size()
+</span><span class=c1></span>        <span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span>        <span class=kt>int</span> <span class=n>row</span> <span class=o>=</span> <span class=n>grid1</span><span class=p>.</span><span class=n>size</span><span class=p>(),</span> <span class=n>col</span> <span class=o>=</span> <span class=n>grid1</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=n>size</span><span class=p>();</span>
+        <span class=k>constexpr</span> <span class=n>array</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;</span><span class=p>,</span> <span class=mi>4</span><span class=o>&gt;</span> <span class=n>dir</span><span class=p>{{{</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>},</span> <span class=p>{</span><span class=mi>0</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>},</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>},</span> <span class=p>{</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>}}};</span>
+        <span class=k>auto</span> <span class=n>check</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int</span> <span class=n>x</span><span class=p>,</span> <span class=kt>int</span> <span class=n>y</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>return</span> <span class=n>x</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=n>and</span> <span class=n>x</span> <span class=o>&lt;</span> <span class=n>row</span> <span class=n>and</span> <span class=n>y</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=n>and</span> <span class=n>y</span> <span class=o>&lt;</span> <span class=n>col</span> <span class=n>and</span> <span class=n>grid2</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>==</span> <span class=mi>1</span><span class=p>;</span>
+        <span class=p>};</span>
+        <span class=n>function</span><span class=o>&lt;</span><span class=kt>bool</span><span class=p>(</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=p>)</span><span class=o>&gt;</span> <span class=n>dfs</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=p>](</span><span class=kt>int</span> <span class=n>x</span><span class=p>,</span> <span class=kt>int</span> <span class=n>y</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>grid2</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+            <span class=kt>bool</span> <span class=n>valid</span> <span class=o>=</span> <span class=n>grid1</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>==</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=k>for</span> <span class=p>(</span><span class=k>auto</span><span class=o>&amp;&amp;</span> <span class=p>[</span><span class=n>dx</span><span class=p>,</span> <span class=n>dy</span><span class=p>]</span> <span class=o>:</span> <span class=n>dir</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>check</span><span class=p>(</span><span class=n>x</span> <span class=o>+</span> <span class=n>dx</span><span class=p>,</span> <span class=n>y</span> <span class=o>+</span> <span class=n>dy</span><span class=p>))</span> <span class=p>{</span>
+                    <span class=n>valid</span> <span class=o>&amp;=</span> <span class=n>dfs</span><span class=p>(</span><span class=n>x</span> <span class=o>+</span> <span class=n>dx</span><span class=p>,</span> <span class=n>y</span> <span class=o>+</span> <span class=n>dy</span><span class=p>);</span>
+                <span class=p>}</span>
+            <span class=p>}</span>
+            <span class=k>return</span> <span class=n>valid</span><span class=p>;</span>
+        <span class=p>};</span>
+        <span class=kt>int</span> <span class=n>ans</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>x</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>x</span> <span class=o>&lt;</span> <span class=n>row</span><span class=p>;</span> <span class=o>++</span><span class=n>x</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>y</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>y</span> <span class=o>&lt;</span> <span class=n>col</span><span class=p>;</span> <span class=o>++</span><span class=n>y</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>check</span><span class=p>(</span><span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>)</span> <span class=n>and</span> <span class=n>dfs</span><span class=p>(</span><span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>))</span> <span class=p>{</span>
+                    <span class=n>ans</span> <span class=o>+=</span> <span class=mi>1</span><span class=p>;</span>
+                <span class=p>}</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=n>ans</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="q4-查询差绝对值的最小值httpsleetcode-cncomproblemsminimum-absolute-difference-queries">Q4. <a href="https://leetcode-cn.com/problems/minimum-absolute-difference-queries/">查询差绝对值的最小值</a></h2>
-<h3 id="思路-3">思路</h3>
+</div><h2 id=q4-查询差绝对值的最小值httpsleetcode-cncomproblemsminimum-absolute-difference-queries>Q4. <a href=https://leetcode-cn.com/problems/minimum-absolute-difference-queries/>查询差绝对值的最小值</a></h2>
+<h3 id=思路-3>思路</h3>
 <p>前缀和 + 计数排序。</p>
-<h3 id="代码-3">代码</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
+<h3 id=代码-3>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
 </span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">minDifference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">queries</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-        <span class="c1"># Algorithm: prefix sum + counting sort</span>
-        <span class="c1"># Time Complexity: O((n + q) * m), n = len(nums), q = len(queries), m = max(nums)</span>
-        <span class="c1"># Space Complexity: O(n * m)</span>
-        <span class="n">prefix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">101</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
-                <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-            <span class="n">prefix</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">ans</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="ow">in</span> <span class="n">queries</span><span class="p">:</span>
-            <span class="n">cur</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">prefix</span><span class="p">[</span><span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">prefix</span><span class="p">[</span><span class="n">left</span><span class="p">][</span><span class="n">i</span><span class="p">]:</span>
-                    <span class="n">cur</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">minimum</span> <span class="o">=</span> <span class="n">inf</span>
-                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">)):</span>
-                    <span class="n">minimum</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">cur</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">cur</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
-                <span class="n">ans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">minimum</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">ans</span>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>minDifference</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>],</span> <span class=n>queries</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]])</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]:</span>
+        <span class=c1># Algorithm: prefix sum + counting sort</span>
+        <span class=c1># Time Complexity: O((n + q) * m), n = len(nums), q = len(queries), m = max(nums)</span>
+        <span class=c1># Space Complexity: O(n * m)</span>
+        <span class=n>prefix</span> <span class=o>=</span> <span class=p>[[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=mi>101</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)]</span>
+        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)):</span>
+            <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>101</span><span class=p>):</span>
+                <span class=n>prefix</span><span class=p>[</span><span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>][</span><span class=n>j</span><span class=p>]</span> <span class=o>=</span> <span class=n>prefix</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=n>j</span><span class=p>]</span>
+            <span class=n>prefix</span><span class=p>[</span><span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>][</span><span class=n>nums</span><span class=p>[</span><span class=n>i</span><span class=p>]]</span> <span class=o>+=</span> <span class=mi>1</span>
+        <span class=n>ans</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
+        <span class=k>for</span> <span class=n>left</span><span class=p>,</span> <span class=n>right</span> <span class=ow>in</span> <span class=n>queries</span><span class=p>:</span>
+            <span class=n>cur</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
+            <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>101</span><span class=p>):</span>
+                <span class=k>if</span> <span class=n>prefix</span><span class=p>[</span><span class=n>right</span> <span class=o>+</span> <span class=mi>1</span><span class=p>][</span><span class=n>i</span><span class=p>]</span> <span class=o>&gt;</span> <span class=n>prefix</span><span class=p>[</span><span class=n>left</span><span class=p>][</span><span class=n>i</span><span class=p>]:</span>
+                    <span class=n>cur</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+            <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=n>cur</span><span class=p>)</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span>
+                <span class=n>ans</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+            <span class=k>else</span><span class=p>:</span>
+                <span class=n>minimum</span> <span class=o>=</span> <span class=n>inf</span>
+                <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>cur</span><span class=p>)):</span>
+                    <span class=n>minimum</span> <span class=o>=</span> <span class=nb>min</span><span class=p>(</span><span class=n>minimum</span><span class=p>,</span> <span class=n>cur</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=n>cur</span><span class=p>[</span><span class=n>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>])</span>
+                <span class=n>ans</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>minimum</span><span class=p>)</span>
+        <span class=k>return</span> <span class=n>ans</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="注意">注意</h3>
+</div><h3 id=注意>注意</h3>
 <p>审题，注意数据范围！</p>
-
-    </div>
 </div>
-
-<div class="container">
-    
-    <nav class="flex container suggested">
-        
-        <a rel="prev" href="/post/leetcode-weekly-245/" title="Previous post (older)">
-            <span>Previous</span>
-            LeetCode 第 245 场周赛
-        </a>
-        
-
-        
-        <a rel="next" href="/post/leetcode-biweekly-55/" title="Next post (newer)">
-            <span>Next</span>
-            LeetCode 第 55 场双周赛
-        </a>
-        
-    </nav>
-    
 </div>
-
-<div class="container">
-    <script src="https://utteranc.es/client.js" repo="kevinchen147/kevinchen147.github.io" issue-term="pathname"
-    theme="github-light" crossorigin="anonymous" async>
-    </script>
+<div class=container>
+<nav class="flex container suggested">
+<a rel=prev href=/post/leetcode-weekly-245/ title="Previous post (older)">
+<span>Previous</span>
+LeetCode 第 245 场周赛
+</a>
+<a rel=next href=/post/leetcode-biweekly-55/ title="Next post (newer)">
+<span>Next</span>
+LeetCode 第 55 场双周赛
+</a>
+</nav>
 </div>
-
+<div class=container>
+<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</div>
 </main>
-
-
-
-        </main>
-        <footer class="footer flex">
-    <section class="container">
-        <nav class="footer-links">
-            
-        </nav>
-    </section>
-    <script type="text/javascript">
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$','$'], ['\\(','\\)']],
-            }
-        };
-    </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-    
-    <script async src="/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js" data-enable-footnotes="true"></script>
+</main>
+<footer class="footer flex">
+<section class=container>
+<nav class=footer-links>
+</nav>
+</section>
+<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
+<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
+<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
 </footer>
-    </body>
+</body>
 </html>
