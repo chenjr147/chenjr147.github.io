@@ -1,0 +1,354 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=theme-color content="dark">
+<title> LeetCode 第 56 场双周赛 | kevin</title>
+<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
+</head>
+<body class=dark>
+<nav class=navbar>
+<div class=container>
+<div class=flex>
+<div>
+<a class=brand href=/>
+<span class=emoji>
+🤪
+</span>
+kevin
+</a>
+</div>
+<div class=flex>
+<button id=dark-mode-button></button>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<div class=container>
+<article>
+<header class=article-header>
+<div class=thumb>
+<div>
+<h1>LeetCode 第 56 场双周赛</h1>
+<div class=post-meta>
+<div>
+By kevin on <time>July 16, 2021</time>
+</div>
+<div class=tags>
+<a href=/tags/leetcode/>LeetCode</a>
+<a href=/tags/competitive-programming/>Competitive Programming</a>
+<a href=/tags/algorithm/>Algorithm</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+</article>
+<div class=article-post>
+<h2 id=q1-统计平方和三元组的数目httpsleetcode-cncomproblemscount-square-sum-triples>Q1. <a href=https://leetcode-cn.com/problems/count-square-sum-triples/>统计平方和三元组的数目</a></h2>
+<h3 id=思路>思路</h3>
+<p>第一题无脑暴力 $O(n^3)$ 即可。</p>
+<p>赛后补一份容易想到的 $O(n^2)$ 的双指针代码。评论区给出了复杂度更低的算法，但需要前置的数学知识，并不太容易在面试中想出来，在这里也就不再赘述了。</p>
+<h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python3 data-lang=python3><span class=c1># Algorithm: two pointers</span>
+<span class=c1># Time Complexity: O(n^2)</span>
+<span class=c1># Space Complexity: O(1)</span>
+<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>countTriples</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>n</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+        <span class=n>ans</span> <span class=o>=</span> <span class=mi>0</span>
+        <span class=k>for</span> <span class=n>c</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=n>n</span> <span class=o>+</span> <span class=mi>1</span><span class=p>):</span>
+            <span class=n>target</span> <span class=o>=</span> <span class=n>c</span> <span class=o>*</span> <span class=n>c</span>
+            <span class=n>a</span><span class=p>,</span> <span class=n>b</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span> <span class=n>c</span> <span class=o>-</span> <span class=mi>1</span>
+            <span class=k>while</span> <span class=n>a</span> <span class=o>&lt;=</span> <span class=n>b</span><span class=p>:</span>
+                <span class=n>result</span> <span class=o>=</span> <span class=n>a</span> <span class=o>*</span> <span class=n>a</span> <span class=o>+</span> <span class=n>b</span> <span class=o>*</span> <span class=n>b</span>
+                <span class=k>if</span> <span class=n>result</span> <span class=o>==</span> <span class=n>target</span><span class=p>:</span>
+                    <span class=n>ans</span> <span class=o>+=</span> <span class=mi>1</span> <span class=k>if</span> <span class=n>a</span> <span class=o>==</span> <span class=n>b</span> <span class=k>else</span> <span class=mi>2</span>
+                    <span class=n>a</span> <span class=o>+=</span> <span class=mi>1</span>
+                    <span class=n>b</span> <span class=o>-=</span> <span class=mi>1</span>
+                <span class=k>elif</span> <span class=n>result</span> <span class=o>&lt;</span> <span class=n>target</span><span class=p>:</span>
+                    <span class=n>a</span> <span class=o>+=</span> <span class=mi>1</span>
+                <span class=k>else</span><span class=p>:</span>
+                    <span class=n>b</span> <span class=o>-=</span> <span class=mi>1</span>
+        <span class=k>return</span> <span class=n>ans</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=q2-迷宫中离入口最近的出口httpsleetcode-cncomproblemsnearest-exit-from-entrance-in-maze>Q2. <a href=https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/>迷宫中离入口最近的出口</a></h2>
+<h3 id=思路-1>思路</h3>
+<p>一道比较无脑的搜索题。</p>
+<h3 id=代码-1>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Alogrithm: bfs
+</span><span class=c1>// Time Complexity: O(n * m), n = maze.size(), m = maze[0].size()
+</span><span class=c1>// Space Complexity: O(n * m)
+</span><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+<span class=k>public</span><span class=o>:</span>
+    <span class=kt>int</span> <span class=n>nearestExit</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>char</span><span class=o>&gt;&gt;</span> <span class=o>&amp;</span><span class=n>maze</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>entrance</span><span class=p>)</span> <span class=p>{</span>
+        <span class=kt>int</span> <span class=n>row</span> <span class=o>=</span> <span class=n>maze</span><span class=p>.</span><span class=n>size</span><span class=p>(),</span> <span class=n>col</span> <span class=o>=</span> <span class=n>maze</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=n>size</span><span class=p>();</span>
+        <span class=c1>// in order to use `set` to find coordinate (x, y) that we have processed before,
+</span><span class=c1></span>        <span class=c1>// we transform it into an unique value
+</span><span class=c1></span>        <span class=k>auto</span> <span class=n>position</span> <span class=o>=</span> <span class=p>[</span><span class=o>&amp;</span><span class=n>col</span><span class=p>](</span><span class=kt>int</span> <span class=n>x</span><span class=p>,</span> <span class=kt>int</span> <span class=n>y</span><span class=p>)</span> <span class=p>{</span> <span class=k>return</span> <span class=n>col</span> <span class=o>*</span> <span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=p>;</span> <span class=p>};</span>
+        <span class=n>unordered_set</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>seen</span><span class=p>;</span>
+        <span class=n>seen</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>position</span><span class=p>(</span><span class=n>entrance</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>entrance</span><span class=p>[</span><span class=mi>1</span><span class=p>]));</span>
+        <span class=n>queue</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>q</span><span class=p>;</span>
+        <span class=n>q</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>entrance</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>entrance</span><span class=p>[</span><span class=mi>1</span><span class=p>]);</span>
+        <span class=k>constexpr</span> <span class=n>array</span><span class=o>&lt;</span><span class=n>pair</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;</span><span class=p>,</span> <span class=mi>4</span><span class=o>&gt;</span> <span class=n>dir</span><span class=p>{{{</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>},</span> <span class=p>{</span><span class=mi>0</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>},</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>},</span> <span class=p>{</span><span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>}}};</span>
+        <span class=kt>int</span> <span class=n>step</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+        <span class=k>while</span> <span class=p>(</span><span class=n>not</span> <span class=n>q</span><span class=p>.</span><span class=n>empty</span><span class=p>())</span> <span class=p>{</span>
+            <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=n>_</span> <span class=o>=</span> <span class=n>q</span><span class=p>.</span><span class=n>size</span><span class=p>();</span> <span class=n>_</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>;</span> <span class=o>--</span><span class=n>_</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>auto</span> <span class=p>[</span><span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>]</span> <span class=o>=</span> <span class=n>q</span><span class=p>.</span><span class=n>front</span><span class=p>();</span>
+                <span class=n>q</span><span class=p>.</span><span class=n>pop</span><span class=p>();</span>
+                <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=p>[</span><span class=n>dx</span><span class=p>,</span> <span class=n>dy</span><span class=p>]</span> <span class=o>:</span> <span class=n>dir</span><span class=p>)</span> <span class=p>{</span>
+                    <span class=kt>int</span> <span class=n>nx</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=n>dx</span><span class=p>,</span> <span class=n>ny</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=n>dy</span><span class=p>;</span>
+                    <span class=k>if</span> <span class=p>(</span><span class=n>nx</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=n>and</span> <span class=n>nx</span> <span class=o>&lt;</span> <span class=n>row</span> <span class=n>and</span> <span class=n>ny</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=n>and</span> <span class=n>ny</span> <span class=o>&lt;</span> <span class=n>col</span> <span class=n>and</span>
+                        <span class=n>maze</span><span class=p>[</span><span class=n>nx</span><span class=p>][</span><span class=n>ny</span><span class=p>]</span> <span class=o>==</span> <span class=sc>&#39;.&#39;</span> <span class=n>and</span> <span class=n>seen</span><span class=p>.</span><span class=n>find</span><span class=p>(</span><span class=n>position</span><span class=p>(</span><span class=n>nx</span><span class=p>,</span> <span class=n>ny</span><span class=p>))</span> <span class=o>==</span> <span class=n>seen</span><span class=p>.</span><span class=n>end</span><span class=p>())</span> <span class=p>{</span>
+                        <span class=n>seen</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>position</span><span class=p>(</span><span class=n>nx</span><span class=p>,</span> <span class=n>ny</span><span class=p>));</span>
+                        <span class=k>if</span> <span class=p>(</span><span class=n>nx</span> <span class=o>==</span> <span class=mi>0</span> <span class=n>or</span> <span class=n>nx</span> <span class=o>==</span> <span class=n>row</span> <span class=o>-</span> <span class=mi>1</span> <span class=n>or</span> <span class=n>ny</span> <span class=o>==</span> <span class=mi>0</span> <span class=n>or</span> <span class=n>ny</span> <span class=o>==</span> <span class=n>col</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+                            <span class=k>return</span> <span class=n>step</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+                        <span class=p>}</span>
+                        <span class=n>q</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>nx</span><span class=p>,</span> <span class=n>ny</span><span class=p>);</span>
+                    <span class=p>}</span>
+                <span class=p>}</span>
+            <span class=p>}</span>
+            <span class=n>step</span> <span class=o>+=</span> <span class=mi>1</span><span class=p>;</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=q3-求和游戏httpsleetcode-cncomproblemssum-game>Q3. <a href=https://leetcode-cn.com/problems/sum-game/>求和游戏</a></h2>
+<h3 id=思路-2>思路</h3>
+<p>分类讨论的博弈论问题。</p>
+<p>理清楚之后翻译成代码即可。</p>
+<div style=text-align:center><img src=Q3.svg></div>
+<h3 id=代码-2>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python3 data-lang=python3><span class=c1># Algorithm: category discussion</span>
+<span class=c1># Time Complexity: O(n), n = len(num)</span>
+<span class=c1># Space Complexity: O(1)</span>
+<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>sumGame</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>num</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>bool</span><span class=p>:</span>
+        <span class=c1># number of &#39;?&#39;</span>
+        <span class=n>leftQuestion</span> <span class=o>=</span> <span class=n>rightQuestion</span> <span class=o>=</span> <span class=mi>0</span>
+        <span class=c1># sum</span>
+        <span class=n>leftSum</span> <span class=o>=</span> <span class=n>rightSum</span> <span class=o>=</span> <span class=mi>0</span>
+        <span class=k>for</span> <span class=n>idx</span><span class=p>,</span> <span class=n>char</span> <span class=ow>in</span> <span class=n>num</span><span class=p>:</span>
+            <span class=k>if</span> <span class=n>char</span> <span class=o>==</span> <span class=s1>&#39;?&#39;</span><span class=p>:</span>
+                <span class=k>if</span> <span class=n>idx</span> <span class=o>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=n>num</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span><span class=p>:</span>
+                    <span class=n>leftQuestion</span> <span class=o>+=</span> <span class=mi>1</span>
+                <span class=k>else</span><span class=p>:</span>
+                    <span class=n>rightQuestion</span> <span class=o>+=</span> <span class=mi>1</span>
+            <span class=k>else</span><span class=p>:</span>
+                <span class=k>if</span> <span class=n>idx</span> <span class=o>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=n>num</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span><span class=p>:</span>
+                    <span class=n>leftSum</span> <span class=o>+=</span> <span class=nb>int</span><span class=p>(</span><span class=n>char</span><span class=p>)</span>
+                <span class=k>else</span><span class=p>:</span>
+                    <span class=n>rightSum</span> <span class=o>+=</span> <span class=nb>int</span><span class=p>(</span><span class=n>char</span><span class=p>)</span>
+        
+        <span class=c1># discussion</span>
+        <span class=k>if</span> <span class=p>(</span><span class=n>leftQuestion</span> <span class=o>+</span> <span class=n>rightQuestion</span><span class=p>)</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>1</span><span class=p>:</span>
+            <span class=k>return</span> <span class=kc>True</span>
+        <span class=k>if</span> <span class=n>leftQuestion</span> <span class=o>==</span> <span class=n>rightQuestion</span> <span class=ow>and</span> <span class=n>leftSum</span> <span class=o>==</span> <span class=n>rightSum</span><span class=p>:</span>
+            <span class=k>return</span> <span class=kc>False</span>
+        <span class=k>if</span> <span class=p>(</span><span class=n>leftQuestion</span> <span class=o>&gt;</span> <span class=n>rightQuestion</span> <span class=ow>and</span> <span class=n>leftSum</span> <span class=o>&lt;</span> <span class=n>rightSum</span><span class=p>)</span> <span class=ow>or</span> <span class=p>(</span>
+                <span class=n>leftQuestion</span> <span class=o>&lt;</span> <span class=n>rightQuestion</span> <span class=ow>and</span> <span class=n>leftSum</span> <span class=o>&gt;</span> <span class=n>rightSum</span><span class=p>):</span>
+            <span class=k>if</span> <span class=nb>abs</span><span class=p>(</span><span class=n>leftQuestion</span> <span class=o>-</span> <span class=n>rightQuestion</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span> <span class=o>*</span> <span class=mi>9</span> <span class=o>==</span> <span class=nb>abs</span><span class=p>(</span><span class=n>leftSum</span> <span class=o>-</span> <span class=n>rightSum</span><span class=p>):</span>
+                <span class=k>return</span> <span class=kc>False</span>
+        <span class=k>return</span> <span class=kc>True</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=q4-规定时间内到达终点的最小花费httpsleetcode-cncomproblemsminimum-cost-to-reach-destination-in-time>Q4. <a href=https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/>规定时间内到达终点的最小花费</a></h2>
+<h3 id=思路-3>思路</h3>
+<p>二维的最短路径问题，观察到数据范围 $1 \le maxTime \le 1000$ 以及 $2 \le n \le 1000$，可以想到使用动态规划进行求解。</p>
+<p>我们定义 $dp[t][x]$ 为在时刻 $t$ 到达城市 $x$ 的最小花费。那么对于城市 $x$ 的邻居 $y$，假设二者之间的耗时为 $time$，我们有以下状态转移方程：</p>
+<p>$$
+dp[t + time][y] = \min (dp[t + time][y], dp[t][x] + passingFees[y])
+$$</p>
+<p>注意到 $n - 1 \le edges.length \le 1000$，故总体的计算量只会到 $10^6$ 量级，可以通过本题。</p>
+<h3 id=代码-3>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-python3 data-lang=python3><span class=c1># Algorithm: dynamic programming</span>
+<span class=c1># Time Complexity: O(maxTime * m), m = edges.length</span>
+<span class=c1># Space Complexity: O(maxTime * n)</span>
+<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>minCost</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>maxTime</span><span class=p>:</span> <span class=nb>int</span><span class=p>,</span> <span class=n>edges</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]],</span>
+                <span class=n>passingFees</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
+        <span class=c1># process edges</span>
+        <span class=n>adj</span> <span class=o>=</span> <span class=n>defaultdict</span><span class=p>(</span><span class=k>lambda</span><span class=p>:</span> <span class=n>defaultdict</span><span class=p>(</span><span class=k>lambda</span><span class=p>:</span> <span class=n>inf</span><span class=p>))</span>
+        <span class=k>for</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>,</span> <span class=n>time</span> <span class=ow>in</span> <span class=n>edges</span><span class=p>:</span>
+            <span class=n>adj</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>=</span> <span class=n>adj</span><span class=p>[</span><span class=n>y</span><span class=p>][</span><span class=n>x</span><span class=p>]</span> <span class=o>=</span> <span class=nb>min</span><span class=p>(</span><span class=n>adj</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>],</span> <span class=n>time</span><span class=p>)</span>
+        
+        <span class=n>n</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>passingFees</span><span class=p>)</span>
+
+        <span class=c1># dp[t][x]: at time t, arrive at city x, minimum cost</span>
+        <span class=n>dp</span> <span class=o>=</span> <span class=p>[[</span><span class=n>inf</span><span class=p>]</span> <span class=o>*</span> <span class=n>n</span> <span class=k>for</span> <span class=n>_</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>maxTime</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)]</span>
+        <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=n>passingFees</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+        <span class=k>for</span> <span class=n>t</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>maxTime</span> <span class=o>+</span> <span class=mi>1</span><span class=p>):</span>
+            <span class=k>for</span> <span class=n>x</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>n</span><span class=p>):</span>
+                <span class=k>if</span> <span class=n>dp</span><span class=p>[</span><span class=n>t</span><span class=p>][</span><span class=n>x</span><span class=p>]</span> <span class=o>!=</span> <span class=n>inf</span><span class=p>:</span>
+                    <span class=k>for</span> <span class=n>y</span><span class=p>,</span> <span class=n>time</span> <span class=ow>in</span> <span class=n>adj</span><span class=p>[</span><span class=n>x</span><span class=p>]</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
+                        <span class=k>if</span> <span class=n>t</span> <span class=o>+</span> <span class=n>time</span> <span class=o>&lt;=</span> <span class=n>maxTime</span><span class=p>:</span>
+                            <span class=n>dp</span><span class=p>[</span><span class=n>t</span> <span class=o>+</span> <span class=n>time</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>=</span> <span class=nb>min</span><span class=p>(</span><span class=n>dp</span><span class=p>[</span><span class=n>t</span> <span class=o>+</span> <span class=n>time</span><span class=p>][</span><span class=n>y</span><span class=p>],</span>
+                                                  <span class=n>dp</span><span class=p>[</span><span class=n>t</span><span class=p>][</span><span class=n>x</span><span class=p>]</span> <span class=o>+</span> <span class=n>passingFees</span><span class=p>[</span><span class=n>y</span><span class=p>])</span>
+        <span class=n>ans</span> <span class=o>=</span> <span class=nb>min</span><span class=p>([</span><span class=n>dp</span><span class=p>[</span><span class=n>t</span><span class=p>][</span><span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=k>for</span> <span class=n>t</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>maxTime</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)])</span>
+        <span class=k>return</span> <span class=n>ans</span> <span class=k>if</span> <span class=n>ans</span> <span class=o>!=</span> <span class=n>inf</span> <span class=k>else</span> <span class=o>-</span><span class=mi>1</span>
+
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+</div>
+<div class=container>
+<nav class="flex container suggested">
+<a rel=prev href=/post/leetcode-weekly-248/ title="Previous post (older)">
+<span>Previous</span>
+LeetCode 第 248 场周赛
+</a>
+</nav>
+</div>
+<div class=container>
+<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+</div>
+</main>
+</main>
+<footer class="footer flex">
+<section class=container>
+<nav class=footer-links>
+</nav>
+</section>
+<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
+<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
+<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
+</footer>
+</body>
+</html>
