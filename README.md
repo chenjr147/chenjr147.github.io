@@ -1,3 +1,4 @@
-# 个人博客
+# Personal Blog
 
-Powered by Hugo & Tania
+> Powered by Hugo & Tania
+
