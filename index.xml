@@ -1942,7 +1942,7 @@ $$&lt;/p>
 &lt;/div>
 &lt;/div>&lt;h2 id="剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof">剑指 Offer 30. &lt;a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">包含min函数的栈&lt;/a>&lt;/h2>
 &lt;h3 id="思路-1">思路&lt;/h3>
-&lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
+&lt;p>双栈思路，保持栈中每个元素在 &lt;code>min&lt;/code> 栈中对应当前最小值。&lt;/p>
 &lt;h3 id="代码-1">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
