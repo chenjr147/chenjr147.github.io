@@ -7,7 +7,94 @@ tags: [
 ]
 ---
 
-顺序参考[牛客网 - 剑指 offer](https://www.nowcoder.com/ta/coding-interviews)
+## 剑指 Offer 09. [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
+
+### 思路
+
+使用两个栈，交替 `push` 及 `pop` 实现队列。
+
+### 代码
+
+```Go
+// Algorithm: double stacks
+// Time Complexity: O(1)
+// Space Complexity: O(n), n = len(data)
+type CQueue struct {
+	stk1, stk2 []int
+}
+
+func Constructor() CQueue {
+	return CQueue{}
+}
+
+func (this *CQueue) AppendTail(value int) {
+	this.stk1 = append(this.stk1, value)
+}
+
+func (this *CQueue) DeleteHead() int {
+	// Corner case
+	if len(this.stk1) == 0 && len(this.stk2) == 0 {
+		return -1
+	}
+
+	// Pop stack 1 into stack 2
+	if len(this.stk2) == 0 {
+		for len(this.stk1) > 0 {
+			this.stk2 = append(this.stk2, this.stk1[len(this.stk1)-1])
+			this.stk1 = this.stk1[:len(this.stk1)-1]
+		}
+	}
+
+	// return result
+	result := this.stk2[len(this.stk2)-1]
+	this.stk2 = this.stk2[:len(this.stk2)-1]
+	return result
+}
+```
+
+## 剑指 Offer 30. [包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/)
+
+### 思路
+
+从数组的右上或左下开始查找，可以有效地进行减治。
+
+### 代码
+
+```Go
+// Algorithm: double stacks
+// Time Complexity: O(1)
+// Space Complexity: O(n), n = len(data)
+type MinStack struct {
+	stk, min []int
+}
+
+/** initialize your data structure here. */
+func Constructor() MinStack {
+	return MinStack{}
+}
+
+func (this *MinStack) Push(x int) {
+	this.stk = append(this.stk, x)
+	if len(this.min) == 0 || x <= this.min[len(this.min)-1] {
+		this.min = append(this.min, x)
+	}
+}
+
+func (this *MinStack) Pop() {
+	if this.stk[len(this.stk)-1] == this.min[len(this.min)-1] {
+		this.min = this.min[:len(this.min)-1]
+	}
+	this.stk = this.stk[:len(this.stk)-1]
+}
+
+func (this *MinStack) Top() int {
+	return this.stk[len(this.stk)-1]
+}
+
+func (this *MinStack) Min() int {
+	return this.min[len(this.min)-1]
+}
+```
 
 ## JZ1. 二维数组中的查找
 
