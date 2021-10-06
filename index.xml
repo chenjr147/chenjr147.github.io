@@ -1867,11 +1867,154 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>剑指 offer</title><link>https://blog.chenjr.top/post/sword-to-offer/</link><pubDate>Thu, 10 Jun 2021 23:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/sword-to-offer/</guid><description>
-&lt;p>顺序参考&lt;a href="https://www.nowcoder.com/ta/coding-interviews">牛客网 - 剑指 offer&lt;/a>&lt;/p>
-&lt;h2 id="jz1-二维数组中的查找">JZ1. 二维数组中的查找&lt;/h2>
+&lt;h2 id="剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof">剑指 Offer 09. &lt;a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/">用两个栈实现队列&lt;/a>&lt;/h2>
 &lt;h3 id="思路">思路&lt;/h3>
-&lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
+&lt;p>使用两个栈，交替 &lt;code>push&lt;/code> 及 &lt;code>pop&lt;/code> 实现队列。&lt;/p>
 &lt;h3 id="代码">代码&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Go" data-lang="Go">&lt;span class="c1">// Algorithm: double stacks
+&lt;/span>&lt;span class="c1">// Time Complexity: O(1)
+&lt;/span>&lt;span class="c1">// Space Complexity: O(n), n = len(data)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">type&lt;/span> &lt;span class="nx">CQueue&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">stk1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stk2&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="nf">Constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="nx">CQueue&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">CQueue&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">CQueue&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">AppendTail&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">CQueue&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">DeleteHead&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Corner case
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// Pop stack 1 into stack 2
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// return result
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof">剑指 Offer 30. &lt;a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">包含min函数的栈&lt;/a>&lt;/h2>
+&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
+&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Go" data-lang="Go">&lt;span class="c1">// Algorithm: double stacks
+&lt;/span>&lt;span class="c1">// Time Complexity: O(1)
+&lt;/span>&lt;span class="c1">// Space Complexity: O(n), n = len(data)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">type&lt;/span> &lt;span class="nx">MinStack&lt;/span> &lt;span class="kd">struct&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">stk&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">min&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/** initialize your data structure here. */&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="nf">Constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="nx">MinStack&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">MinStack&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MinStack&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MinStack&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Pop&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">[:&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MinStack&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Top&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stk&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">func&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">MinStack&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nf">Min&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="jz1-二维数组中的查找">JZ1. 二维数组中的查找&lt;/h2>
+&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
+&lt;h3 id="代码-2">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1931,9 +2074,9 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="jz16-合并两个排序的链表">JZ16. 合并两个排序的链表&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;h3 id="思路-3">思路&lt;/h3>
 &lt;p>允许对原链表进行修改的话，由于 &lt;code>next&lt;/code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-3">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1993,7 +2136,7 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="jz53-表示数值的字符串">JZ53. 表示数值的字符串&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;h3 id="思路-4">思路&lt;/h3>
 &lt;p>对于这种比较复杂的状态转移，硬编码 &lt;code>if-else&lt;/code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 &lt;abbr title="Deterministic finite automaton">DFA&lt;/abbr>。&lt;/p>
 &lt;p>这里我们先定义可能出现的几种符号所属类型：&lt;/p>
 &lt;table>
@@ -2103,7 +2246,7 @@ $$&lt;/p>
 &lt;li>&lt;code>0&lt;/code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。&lt;/li>
 &lt;li>&lt;code>2&lt;/code>, &lt;code>4&lt;/code>, &lt;code>7&lt;/code> 为合法的结束状态。&lt;/li>
 &lt;/ul>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-4">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
