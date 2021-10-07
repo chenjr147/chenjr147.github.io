@@ -22,12 +22,12 @@ tags: [
 func reversePrint(head *ListNode) []int {
 	ans := []int{}
 
-    // traverse
+	// traverse
 	for curr := head; curr != nil; curr = curr.Next {
 		ans = append(ans, curr.Val)
 	}
 
-    // reverse
+	// reverse
 	for i, j := 0, len(ans)-1; i < j; i, j = i+1, j-1 {
 		ans[i], ans[j] = ans[j], ans[i]
 	}
