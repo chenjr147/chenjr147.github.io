@@ -76,12 +76,12 @@ By kevin on <time>June 10, 2021</time>
 </span><span class=c1></span><span class=kd>func</span> <span class=nf>reversePrint</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span> <span class=p>[]</span><span class=kt>int</span> <span class=p>{</span>
 	<span class=nx>ans</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{}</span>
 
-    <span class=c1>// traverse
+	<span class=c1>// traverse
 </span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
 		<span class=nx>ans</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>ans</span><span class=p>,</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Val</span><span class=p>)</span>
 	<span class=p>}</span>
 
-    <span class=c1>// reverse
+	<span class=c1>// reverse
 </span><span class=c1></span>	<span class=k>for</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>ans</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>j</span><span class=p>;</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=p>=</span> <span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>j</span><span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
 		<span class=nx>ans</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>j</span><span class=p>]</span> <span class=p>=</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>j</span><span class=p>],</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
 	<span class=p>}</span>
