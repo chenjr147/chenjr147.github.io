@@ -45,10 +45,54 @@ By kevin on <time>June 10, 2021</time>
 </header>
 </article>
 <div class=article-post>
-<h2 id=剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof>剑指 Offer 09. <a href=https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/>用两个栈实现队列</a></h2>
+<h2 id=剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof>剑指 Offer 06. <a href=https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/>从尾到头打印链表</a></h2>
 <h3 id=思路>思路</h3>
-<p>使用两个栈，交替 <code>push</code> 及 <code>pop</code> 实现队列。</p>
+<p>正向遍历，反转数组。</p>
 <h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: traverse and reverse
+</span><span class=c1>// Time Complexity: O(n), n = len(List)
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>reversePrint</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span> <span class=p>[]</span><span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>ans</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{}</span>
+
+    <span class=c1>// traverse
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
+		<span class=nx>ans</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>ans</span><span class=p>,</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Val</span><span class=p>)</span>
+	<span class=p>}</span>
+
+    <span class=c1>// reverse
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>ans</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>j</span><span class=p>;</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=p>=</span> <span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>j</span><span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
+		<span class=nx>ans</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>j</span><span class=p>]</span> <span class=p>=</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>j</span><span class=p>],</span> <span class=nx>ans</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nx>ans</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof>剑指 Offer 09. <a href=https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/>用两个栈实现队列</a></h2>
+<h3 id=思路-1>思路</h3>
+<p>使用两个栈，交替 <code>push</code> 及 <code>pop</code> 实现队列。</p>
+<h3 id=代码-1>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -123,10 +167,114 @@ By kevin on <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id=剑指-offer-24-反转链表httpsleetcode-cncomproblemsfan-zhuan-lian-biao-lcof>剑指 Offer 24. <a href=https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/>反转链表</a></h2>
+<h3 id=思路-2>思路</h3>
+<p>使用辅助的指针，迭代反转。必要时可以画图，辅助理解。</p>
+<h3 id=代码-2>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: iterate
+</span><span class=c1>// Time Complexity: O(n), n = len(List)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>reverseList</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
+	<span class=kd>var</span> <span class=nx>prev</span> <span class=o>*</span><span class=nx>ListNode</span>
+	<span class=k>for</span> <span class=nx>head</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>next</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>head</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>prev</span>
+		<span class=nx>prev</span> <span class=p>=</span> <span class=nx>head</span>
+		<span class=nx>head</span> <span class=p>=</span> <span class=nx>next</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nx>prev</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-35-复杂链表的复制httpsleetcode-cncomproblemsfu-za-lian-biao-de-fu-zhi-lcof>剑指 Offer 35. <a href=https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/>复杂链表的复制</a></h2>
+<h3 id=思路-3>思路</h3>
+<p>类似原地哈希。在并发的场景下，需要借助额外的空间。</p>
+<h3 id=代码-3>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash in place
+</span><span class=c1>// Time Complexity: O(n), n = len(List)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>copyRandomList</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>Node</span><span class=p>)</span> <span class=o>*</span><span class=nx>Node</span> <span class=p>{</span>
+	<span class=c1>// Copy each node(without `random`) in place
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
+		<span class=nx>duplicate</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{</span><span class=nx>Val</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Val</span><span class=p>,</span> <span class=nx>Next</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>}</span>
+		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=o>&amp;</span><span class=nx>duplicate</span>
+	<span class=p>}</span>
+
+	<span class=c1>// Copy `random`
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+			<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Random</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=c1>// Separate
+</span><span class=c1></span>	<span class=nx>dummy</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{}</span>
+	<span class=nx>curr</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>dummy</span>
+	<span class=k>for</span> <span class=nx>head</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>head</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>head</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nx>dummy</span><span class=p>.</span><span class=nx>Next</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id=剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof>剑指 Offer 30. <a href=https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/>包含min函数的栈</a></h2>
-<h3 id=思路-1>思路</h3>
+<h3 id=思路-4>思路</h3>
 <p>双栈思路，保持栈中每个元素在 <code>min</code> 栈中对应当前最小值。</p>
-<h3 id=代码-1>代码</h3>
+<h3 id=代码-4>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -200,9 +348,9 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=jz1-二维数组中的查找>JZ1. 二维数组中的查找</h2>
-<h3 id=思路-2>思路</h3>
+<h3 id=思路-5>思路</h3>
 <p>从数组的右上或左下开始查找，可以有效地进行减治。</p>
-<h3 id=代码-2>代码</h3>
+<h3 id=代码-5>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -262,9 +410,9 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=jz16-合并两个排序的链表>JZ16. 合并两个排序的链表</h2>
-<h3 id=思路-3>思路</h3>
+<h3 id=思路-6>思路</h3>
 <p>允许对原链表进行修改的话，由于 <code>next</code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。</p>
-<h3 id=代码-3>代码</h3>
+<h3 id=代码-6>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -324,7 +472,7 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=jz53-表示数值的字符串>JZ53. 表示数值的字符串</h2>
-<h3 id=思路-4>思路</h3>
+<h3 id=思路-7>思路</h3>
 <p>对于这种比较复杂的状态转移，硬编码 <code>if-else</code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 <abbr title="Deterministic finite automaton">DFA</abbr>。</p>
 <p>这里我们先定义可能出现的几种符号所属类型：</p>
 <table>
@@ -434,7 +582,7 @@ By kevin on <time>June 10, 2021</time>
 <li><code>0</code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。</li>
 <li><code>2</code>, <code>4</code>, <code>7</code> 为合法的结束状态。</li>
 </ul>
-<h3 id=代码-4>代码</h3>
+<h3 id=代码-7>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1

@@ -1867,10 +1867,52 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>剑指 offer</title><link>https://blog.chenjr.top/post/sword-to-offer/</link><pubDate>Thu, 10 Jun 2021 23:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/sword-to-offer/</guid><description>
-&lt;h2 id="剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof">剑指 Offer 09. &lt;a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/">用两个栈实现队列&lt;/a>&lt;/h2>
+&lt;h2 id="剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof">剑指 Offer 06. &lt;a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">从尾到头打印链表&lt;/a>&lt;/h2>
 &lt;h3 id="思路">思路&lt;/h3>
-&lt;p>使用两个栈，交替 &lt;code>push&lt;/code> 及 &lt;code>pop&lt;/code> 实现队列。&lt;/p>
+&lt;p>正向遍历，反转数组。&lt;/p>
 &lt;h3 id="代码">代码&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Go" data-lang="Go">&lt;span class="c1">// Algorithm: traverse and reverse
+&lt;/span>&lt;span class="c1">// Time Complexity: O(n), n = len(List)
+&lt;/span>&lt;span class="c1">// Space Complexity: O(n)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">func&lt;/span> &lt;span class="nf">reversePrint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">head&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">ListNode&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">ans&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="c1">// traverse
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Val&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// reverse
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">ans&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">ans&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">ans&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">ans&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">ans&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof">剑指 Offer 09. &lt;a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/">用两个栈实现队列&lt;/a>&lt;/h2>
+&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;p>使用两个栈，交替 &lt;code>push&lt;/code> 及 &lt;code>pop&lt;/code> 实现队列。&lt;/p>
+&lt;h3 id="代码-1">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1940,10 +1982,111 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div>&lt;h2 id="剑指-offer-24-反转链表httpsleetcode-cncomproblemsfan-zhuan-lian-biao-lcof">剑指 Offer 24. &lt;a href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">反转链表&lt;/a>&lt;/h2>
+&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;p>使用辅助的指针，迭代反转。必要时可以画图，辅助理解。&lt;/p>
+&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Go" data-lang="Go">&lt;span class="c1">// Algorithm: iterate
+&lt;/span>&lt;span class="c1">// Time Complexity: O(n), n = len(List)
+&lt;/span>&lt;span class="c1">// Space Complexity: O(1)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">func&lt;/span> &lt;span class="nf">reverseList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">head&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">ListNode&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">ListNode&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">prev&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">ListNode&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="nx">head&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">next&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">prev&lt;/span>
+&lt;span class="nx">prev&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">head&lt;/span>
+&lt;span class="nx">head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">next&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">prev&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="剑指-offer-35-复杂链表的复制httpsleetcode-cncomproblemsfu-za-lian-biao-de-fu-zhi-lcof">剑指 Offer 35. &lt;a href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">复杂链表的复制&lt;/a>&lt;/h2>
+&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;p>类似原地哈希。在并发的场景下，需要借助额外的空间。&lt;/p>
+&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Go" data-lang="Go">&lt;span class="c1">// Algorithm: hash in place
+&lt;/span>&lt;span class="c1">// Time Complexity: O(n), n = len(List)
+&lt;/span>&lt;span class="c1">// Space Complexity: O(1)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">func&lt;/span> &lt;span class="nf">copyRandomList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">head&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">Node&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Copy each node(without `random`) in place
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">duplicate&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">Val&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Val&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Next&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">duplicate&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// Copy `random`
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">curr&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Random&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Random&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Random&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// Separate
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">dummy&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="p">{}&lt;/span>
+&lt;span class="nx">curr&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">dummy&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="nx">head&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="nx">curr&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="nx">head&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">head&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">dummy&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Next&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div>&lt;h2 id="剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof">剑指 Offer 30. &lt;a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">包含min函数的栈&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;h3 id="思路-4">思路&lt;/h3>
 &lt;p>双栈思路，保持栈中每个元素在 &lt;code>min&lt;/code> 栈中对应当前最小值。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-4">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2012,9 +2155,9 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="jz1-二维数组中的查找">JZ1. 二维数组中的查找&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;h3 id="思路-5">思路&lt;/h3>
 &lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-5">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2074,9 +2217,9 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="jz16-合并两个排序的链表">JZ16. 合并两个排序的链表&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;h3 id="思路-6">思路&lt;/h3>
 &lt;p>允许对原链表进行修改的话，由于 &lt;code>next&lt;/code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-6">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2136,7 +2279,7 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="jz53-表示数值的字符串">JZ53. 表示数值的字符串&lt;/h2>
-&lt;h3 id="思路-4">思路&lt;/h3>
+&lt;h3 id="思路-7">思路&lt;/h3>
 &lt;p>对于这种比较复杂的状态转移，硬编码 &lt;code>if-else&lt;/code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 &lt;abbr title="Deterministic finite automaton">DFA&lt;/abbr>。&lt;/p>
 &lt;p>这里我们先定义可能出现的几种符号所属类型：&lt;/p>
 &lt;table>
@@ -2246,7 +2389,7 @@ $$&lt;/p>
 &lt;li>&lt;code>0&lt;/code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。&lt;/li>
 &lt;li>&lt;code>2&lt;/code>, &lt;code>4&lt;/code>, &lt;code>7&lt;/code> 为合法的结束状态。&lt;/li>
 &lt;/ul>
-&lt;h3 id="代码-4">代码&lt;/h3>
+&lt;h3 id="代码-7">代码&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
