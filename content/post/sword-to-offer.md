@@ -7,6 +7,34 @@ tags: [
 ]
 ---
 
+## 剑指 Offer 06. [从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
+
+### 思路
+
+正向遍历，反转数组。
+
+### 代码
+
+```Go
+// Algorithm: traverse and reverse
+// Time Complexity: O(n), n = len(List)
+// Space Complexity: O(n)
+func reversePrint(head *ListNode) []int {
+	ans := []int{}
+
+    // traverse
+	for curr := head; curr != nil; curr = curr.Next {
+		ans = append(ans, curr.Val)
+	}
+
+    // reverse
+	for i, j := 0, len(ans)-1; i < j; i, j = i+1, j-1 {
+		ans[i], ans[j] = ans[j], ans[i]
+	}
+	return ans
+}
+```
+
 ## 剑指 Offer 09. [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
 ### 思路
@@ -49,6 +77,70 @@ func (this *CQueue) DeleteHead() int {
 	result := this.stk2[len(this.stk2)-1]
 	this.stk2 = this.stk2[:len(this.stk2)-1]
 	return result
+}
+```
+
+## 剑指 Offer 24. [反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)
+
+### 思路
+
+使用辅助的指针，迭代反转。必要时可以画图，辅助理解。
+
+### 代码
+
+```Go
+// Algorithm: iterate
+// Time Complexity: O(n), n = len(List)
+// Space Complexity: O(1)
+func reverseList(head *ListNode) *ListNode {
+	var prev *ListNode
+	for head != nil {
+		next := head.Next
+		head.Next = prev
+		prev = head
+		head = next
+	}
+	return prev
+}
+```
+
+## 剑指 Offer 35. [复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
+
+### 思路
+
+类似原地哈希。在并发的场景下，需要借助额外的空间。
+
+### 代码
+
+```Go
+// Algorithm: hash in place
+// Time Complexity: O(n), n = len(List)
+// Space Complexity: O(1)
+func copyRandomList(head *Node) *Node {
+	// Copy each node(without `random`) in place
+	for curr := head; curr != nil; curr = curr.Next.Next {
+		duplicate := Node{Val: curr.Val, Next: curr.Next}
+		curr.Next = &duplicate
+	}
+
+	// Copy `random`
+	for curr := head; curr != nil; curr = curr.Next.Next {
+		if curr.Random != nil {
+			curr.Next.Random = curr.Random.Next
+		}
+	}
+
+	// Separate
+	dummy := Node{}
+	curr := &dummy
+	for head != nil {
+		curr.Next = head.Next
+		head.Next = head.Next.Next
+		curr = curr.Next
+		head = head.Next
+	}
+
+	return dummy.Next
 }
 ```
 
