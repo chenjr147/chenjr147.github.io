@@ -7,6 +7,34 @@ tags: [
 ]
 ---
 
+## 剑指 Offer 05. [替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
+
+### 思路
+
+用 `strings.Builder`。
+
+### 代码
+```Go
+// Algorithm: copy
+// Time Complexity: O(n), n = len(s)
+// Space Complexity: O(n)
+func replaceSpace(s string) string {
+	// return strings.ReplaceAll(s, " ", "%20")
+	sb := &strings.Builder{}
+	sb.Grow(3 * len(s))
+	for i := range s {
+		if s[i] == ' ' {
+			sb.WriteString("%20")
+		} else {
+			sb.WriteByte(s[i])
+		}
+	}
+	return sb.String()
+}
+
+```
+
+
 ## 剑指 Offer 06. [从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
 ### 思路
@@ -185,6 +213,22 @@ func (this *MinStack) Top() int {
 
 func (this *MinStack) Min() int {
 	return this.min[len(this.min)-1]
+}
+```
+
+## 剑指 Offer 58 - [II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
+
+### 思路
+
+切片。
+
+### 代码
+```Go
+// Algorithm: slice
+// Time Complexity: O(n), n = len(s)
+// Space Complexity: O(n)
+func reverseLeftWords(s string, n int) string {
+	return s[n:] + s[:n]
 }
 ```
 
