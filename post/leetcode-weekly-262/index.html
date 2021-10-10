@@ -1,434 +1,629 @@
-<!doctype html><html lang=zh-cn>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
 <head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=theme-color content="dark">
-<title>LeetCode 第 262 场周赛 | Kevin's Blog</title>
-<meta property="og:site_name" content="Kevin's Blog">
-<meta property="og:title" content="LeetCode 第 262 场周赛 | Kevin's Blog">
-<meta itemprop=name content="LeetCode 第 262 场周赛 | Kevin's Blog">
-<meta name=twitter:title content="LeetCode 第 262 场周赛 | Kevin's Blog">
-<meta name=application-name content="LeetCode 第 262 场周赛 | Kevin's Blog">
-<meta name=description content="Kevin Chen">
-<meta name=twitter:description content="Kevin Chen">
-<meta itemprop=description content="Kevin Chen">
-<meta property="og:description" content="Kevin Chen">
-<meta property="og:type" content="article">
-<meta property="article:publisher" content="Kevin Chen">
-<meta property="og:article:published_time" content="2021-10-10T17:23:21+0800">
-<meta property="article:published_time" content="2021-10-10T17:23:21+0800">
-<meta property="og:article:author" content="Kevin">
-<meta property="article:author" content="Kevin">
-<meta name=author content="Kevin">
-<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 262 场周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-10-10","description":"","wordCount":582,"mainEntityOfPage":"True","dateModified":"2021-10-10","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
-<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
-<link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>LeetCode 第 262 场周赛 | Kevin&#39;s Blog</title>
+
+    
+    
+    
+    <meta property="og:site_name" content="Kevin&#39;s Blog" />
+    <meta property="og:title" content="LeetCode 第 262 场周赛 | Kevin&#39;s Blog"/>
+    <meta itemprop="name" content="LeetCode 第 262 场周赛 | Kevin&#39;s Blog" />
+    <meta name="twitter:title" content="LeetCode 第 262 场周赛 | Kevin&#39;s Blog" />
+    <meta name="application-name" content="LeetCode 第 262 场周赛 | Kevin&#39;s Blog" />
+
+
+    <meta name="description" content="Kevin Chen" />
+    <meta name="twitter:description" content="Kevin Chen"/>
+    <meta itemprop="description" content="Kevin Chen"/>
+    <meta property="og:description" content="Kevin Chen" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="Kevin Chen" />
+<meta property="og:article:published_time" content=2021-10-10T17:23:21&#43;0800 />
+<meta property="article:published_time" content=2021-10-10T17:23:21&#43;0800 />
+
+
+  <meta property="og:article:author" content="Kevin" />
+  <meta property="article:author" content="Kevin" />
+  <meta name="author" content="Kevin" />
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "LeetCode 第 262 场周赛",
+    "author": {
+      "@type": "Person",
+      "name": "Kevin Chen"
+    },
+    "datePublished": "2021-10-10",
+    "description": "",
+    "wordCount":  582 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2021-10-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kevin Chen",
+      "logo": {
+        "@type": "imageObject",
+        "url": "https:\/\/blog.chenjr.top\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
 </head>
-<script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
-<body class=dark>
-<nav class=navbar>
-<div class=container>
-<div class=flex>
-<div>
-<a class=brand href=/>
-<img src=/favicon.ico>
-Kevin's Blog
-</a>
-</div>
-<div class=flex>
-<a href=/articles/>Articles</a>
-<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
-</button>
-</div>
-</div>
-</div>
+    <script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    
+                        <img src="/favicon.ico" />
+                    
+                    Kevin&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                <button id="dark-mode-button">
+                  <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                  <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                </button>
+            </div>
+            </div>
+    </div>
 </nav>
-<main>
-<div class=container>
-<article>
-<header class=article-header>
-<div class=thumb>
-<div>
-<h1>LeetCode 第 262 场周赛</h1>
-<div class=post-meta>
-<div>
-By kevin | <time>October 10, 2021</time>
-| 3 minutes
-</div>
-<div class=tags>
-<a href=/tags/leetcode/>LeetCode</a>
-<a href=/tags/competitive-programming/>Competitive Programming</a>
-<a href=/tags/algorithm/>Algorithm</a>
-</div>
-</div>
-</div>
-</div>
-</header>
-</article>
-<div class=article-post>
-<h2 id=q1-至少在两个数组中出现的值>
-<a href=#q1-%e8%87%b3%e5%b0%91%e5%9c%a8%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e4%b8%ad%e5%87%ba%e7%8e%b0%e7%9a%84%e5%80%bc class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q1. 至少在两个数组中出现的值
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>LeetCode 第 262 场周赛</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                            By kevin | <time>October 10, 2021</time>
+                            | 3 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/leetcode/">LeetCode</a>
+                            
+                            <a href="/tags/competitive-programming/">Competitive Programming</a>
+                            
+                            <a href="/tags/algorithm/">Algorithm</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="q1-至少在两个数组中出现的值">
+    <a href="#q1-%e8%87%b3%e5%b0%91%e5%9c%a8%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e4%b8%ad%e5%87%ba%e7%8e%b0%e7%9a%84%e5%80%bc" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q1. 至少在两个数组中出现的值
 </h2>
 <blockquote>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：<a href=https://leetcode-cn.com/problems/two-out-of-three/>https://leetcode-cn.com/problems/two-out-of-three/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/two-out-of-three/">https://leetcode-cn.com/problems/two-out-of-three/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路>
-<a href=#%e6%80%9d%e8%b7%af class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路">
+    <a href="#%e6%80%9d%e8%b7%af" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>集合。</p>
-<h3 id=代码>
-<a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码">
+    <a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=c1># Algorithm: set</span>
-<span class=c1># Time Complexity: O(n), n = sum(len(nums{1..3}))</span>
-<span class=c1># Space Complexity: O(n)</span>
-<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
-    <span class=k>def</span> <span class=nf>twoOutOfThree</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>nums1</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>],</span> <span class=n>nums2</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>],</span> <span class=n>nums3</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]:</span>
-        <span class=n>s1</span><span class=p>,</span> <span class=n>s2</span><span class=p>,</span> <span class=n>s3</span> <span class=o>=</span> <span class=nb>set</span><span class=p>(</span><span class=n>nums1</span><span class=p>),</span> <span class=nb>set</span><span class=p>(</span><span class=n>nums2</span><span class=p>),</span> <span class=nb>set</span><span class=p>(</span><span class=n>nums3</span><span class=p>)</span>
-        <span class=k>return</span> <span class=nb>list</span><span class=p>((</span><span class=n>s1</span> <span class=o>&amp;</span> <span class=n>s2</span><span class=p>)</span> <span class=o>|</span> <span class=p>(</span><span class=n>s2</span> <span class=o>&amp;</span> <span class=n>s3</span><span class=p>)</span> <span class=o>|</span> <span class=p>(</span><span class=n>s1</span> <span class=o>&amp;</span> <span class=n>s3</span><span class=p>))</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Algorithm: set</span>
+<span class="c1"># Time Complexity: O(n), n = sum(len(nums{1..3}))</span>
+<span class="c1"># Space Complexity: O(n)</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoOutOfThree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">nums3</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums1</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums2</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">nums3</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">((</span><span class="n">s1</span> <span class="o">&amp;</span> <span class="n">s2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">s2</span> <span class="o">&amp;</span> <span class="n">s3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">s1</span> <span class="o">&amp;</span> <span class="n">s3</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q2-获取单值网格的最小操作数>
-<a href=#q2-%e8%8e%b7%e5%8f%96%e5%8d%95%e5%80%bc%e7%bd%91%e6%a0%bc%e7%9a%84%e6%9c%80%e5%b0%8f%e6%93%8d%e4%bd%9c%e6%95%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q2. 获取单值网格的最小操作数
+</div><h2 id="q2-获取单值网格的最小操作数">
+    <a href="#q2-%e8%8e%b7%e5%8f%96%e5%8d%95%e5%80%bc%e7%bd%91%e6%a0%bc%e7%9a%84%e6%9c%80%e5%b0%8f%e6%93%8d%e4%bd%9c%e6%95%b0" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q2. 获取单值网格的最小操作数
 </h2>
 <blockquote>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：<a href=https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/>https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/">https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-1>
-<a href=#%e6%80%9d%e8%b7%af-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-1">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
-<p>中位数。原型是 <a href=https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements-ii/>462. 最少移动次数使数组元素相等 II</a>。</p>
-<h3 id=代码-1>
-<a href=#%e4%bb%a3%e7%a0%81-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<p>中位数。原型是 <a href="https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements-ii/">462. 最少移动次数使数组元素相等 II</a>。</p>
+<h3 id="代码-1">
+    <a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=c1># Algorithm: midian</span>
-<span class=c1># Time Complexity: O(row * col), row = len(grid), col = len(grid[0])</span>
-<span class=c1># Space Complexity: O(row * col)</span>
-<span class=k>class</span> <span class=nc>Solution</span><span class=p>:</span>
-    <span class=k>def</span> <span class=nf>minOperations</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>grid</span><span class=p>:</span> <span class=n>List</span><span class=p>[</span><span class=n>List</span><span class=p>[</span><span class=nb>int</span><span class=p>]],</span> <span class=n>x</span><span class=p>:</span> <span class=nb>int</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>int</span><span class=p>:</span>
-        <span class=n>nums</span> <span class=o>=</span> <span class=nb>list</span><span class=p>()</span>
-        <span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>grid</span><span class=p>:</span>
-            <span class=k>for</span> <span class=n>num</span> <span class=ow>in</span> <span class=n>row</span><span class=p>:</span>
-                <span class=k>if</span> <span class=nb>abs</span><span class=p>(</span><span class=n>grid</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>-</span> <span class=n>num</span><span class=p>)</span> <span class=o>%</span> <span class=n>x</span> <span class=o>!=</span> <span class=mi>0</span><span class=p>:</span>
-                    <span class=k>return</span> <span class=o>-</span><span class=mi>1</span>
-                <span class=n>nums</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>num</span><span class=p>)</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Algorithm: midian</span>
+<span class="c1"># Time Complexity: O(row * col), row = len(grid), col = len(grid[0])</span>
+<span class="c1"># Space Complexity: O(row * col)</span>
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">minOperations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">grid</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">num</span><span class="p">)</span> <span class="o">%</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
 
-        <span class=n>nums</span><span class=o>.</span><span class=n>sort</span><span class=p>()</span>
-        <span class=k>return</span> <span class=nb>sum</span><span class=p>([</span><span class=nb>abs</span><span class=p>(</span><span class=n>num</span> <span class=o>-</span> <span class=n>nums</span><span class=p>[</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span><span class=p>])</span> <span class=o>//</span> <span class=n>x</span> <span class=k>for</span> <span class=n>num</span> <span class=ow>in</span> <span class=n>nums</span><span class=p>])</span>
+        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="n">x</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">])</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q3-股票价格波动>
-<a href=#q3-%e8%82%a1%e7%a5%a8%e4%bb%b7%e6%a0%bc%e6%b3%a2%e5%8a%a8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q3. 股票价格波动
+</div><h2 id="q3-股票价格波动">
+    <a href="#q3-%e8%82%a1%e7%a5%a8%e4%bb%b7%e6%a0%bc%e6%b3%a2%e5%8a%a8" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q3. 股票价格波动
 </h2>
 <blockquote>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：<a href=https://leetcode-cn.com/problems/stock-price-fluctuation/>https://leetcode-cn.com/problems/stock-price-fluctuation/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/stock-price-fluctuation/">https://leetcode-cn.com/problems/stock-price-fluctuation/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-2>
-<a href=#%e6%80%9d%e8%b7%af-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-2">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>模拟。</p>
-<h3 id=代码-2>
-<a href=#%e4%bb%a3%e7%a0%81-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码-2">
+    <a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=c1>// Algorithm: simulation
-</span><span class=c1>// Time Complexity: O(log n), n = prices.size()
-</span><span class=c1>// Space Complexity: O(n)
-</span><span class=c1></span><span class=k>class</span> <span class=nc>StockPrice</span> <span class=p>{</span>
- <span class=k>private</span><span class=o>:</span>
-  <span class=c1>// timestamp -&gt; price
-</span><span class=c1></span>  <span class=n>map</span><span class=o>&lt;</span><span class=kt>int</span><span class=p>,</span> <span class=kt>int</span><span class=o>&gt;</span> <span class=n>time2price</span><span class=p>;</span>
-  <span class=c1>// current prices
-</span><span class=c1></span>  <span class=n>multiset</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>prices</span><span class=p>;</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// Algorithm: simulation
+</span><span class="c1">// Time Complexity: O(log n), n = prices.size()
+</span><span class="c1">// Space Complexity: O(n)
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">StockPrice</span> <span class="p">{</span>
+ <span class="k">private</span><span class="o">:</span>
+  <span class="c1">// timestamp -&gt; price
+</span><span class="c1"></span>  <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">time2price</span><span class="p">;</span>
+  <span class="c1">// current prices
+</span><span class="c1"></span>  <span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">prices</span><span class="p">;</span>
 
- <span class=k>public</span><span class=o>:</span>
-  <span class=n>StockPrice</span><span class=p>()</span> <span class=p>{}</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="n">StockPrice</span><span class="p">()</span> <span class="p">{}</span>
 
-  <span class=kt>void</span> <span class=nf>update</span><span class=p>(</span><span class=kt>int</span> <span class=n>timestamp</span><span class=p>,</span> <span class=kt>int</span> <span class=n>price</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span> <span class=p>(</span><span class=n>time2price</span><span class=p>.</span><span class=n>find</span><span class=p>(</span><span class=n>timestamp</span><span class=p>)</span> <span class=o>!=</span> <span class=n>time2price</span><span class=p>.</span><span class=n>end</span><span class=p>())</span> <span class=p>{</span>
-      <span class=kt>int</span> <span class=n>oldPrice</span> <span class=o>=</span> <span class=n>time2price</span><span class=p>[</span><span class=n>timestamp</span><span class=p>];</span>
-      <span class=n>prices</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>prices</span><span class=p>.</span><span class=n>find</span><span class=p>(</span><span class=n>oldPrice</span><span class=p>));</span>
-    <span class=p>}</span>
-    <span class=n>time2price</span><span class=p>[</span><span class=n>timestamp</span><span class=p>]</span> <span class=o>=</span> <span class=n>price</span><span class=p>;</span>
-    <span class=n>prices</span><span class=p>.</span><span class=n>emplace</span><span class=p>(</span><span class=n>price</span><span class=p>);</span>
-  <span class=p>}</span>
+  <span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="kt">int</span> <span class="n">timestamp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">time2price</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span> <span class="o">!=</span> <span class="n">time2price</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">oldPrice</span> <span class="o">=</span> <span class="n">time2price</span><span class="p">[</span><span class="n">timestamp</span><span class="p">];</span>
+      <span class="n">prices</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">prices</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">oldPrice</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="n">time2price</span><span class="p">[</span><span class="n">timestamp</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+    <span class="n">prices</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">price</span><span class="p">);</span>
+  <span class="p">}</span>
 
-  <span class=kt>int</span> <span class=nf>current</span><span class=p>()</span> <span class=p>{</span> <span class=k>return</span> <span class=n>time2price</span><span class=p>.</span><span class=n>rbegin</span><span class=p>()</span><span class=o>-&gt;</span><span class=n>second</span><span class=p>;</span> <span class=p>}</span>
+  <span class="kt">int</span> <span class="nf">current</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">time2price</span><span class="p">.</span><span class="n">rbegin</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span> <span class="p">}</span>
 
-  <span class=kt>int</span> <span class=nf>maximum</span><span class=p>()</span> <span class=p>{</span> <span class=k>return</span> <span class=o>*</span><span class=n>prices</span><span class=p>.</span><span class=n>rbegin</span><span class=p>();</span> <span class=p>}</span>
+  <span class="kt">int</span> <span class="nf">maximum</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">*</span><span class="n">prices</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span> <span class="p">}</span>
 
-  <span class=kt>int</span> <span class=nf>minimum</span><span class=p>()</span> <span class=p>{</span> <span class=k>return</span> <span class=o>*</span><span class=n>prices</span><span class=p>.</span><span class=n>begin</span><span class=p>();</span> <span class=p>}</span>
-<span class=p>};</span>
+  <span class="kt">int</span> <span class="nf">minimum</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">*</span><span class="n">prices</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> <span class="p">}</span>
+<span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q4-将数组分成两个数组并最小化数组和的差>
-<a href=#q4-%e5%b0%86%e6%95%b0%e7%bb%84%e5%88%86%e6%88%90%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e5%b9%b6%e6%9c%80%e5%b0%8f%e5%8c%96%e6%95%b0%e7%bb%84%e5%92%8c%e7%9a%84%e5%b7%ae class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-Q4. 将数组分成两个数组并最小化数组和的差
+</div><h2 id="q4-将数组分成两个数组并最小化数组和的差">
+    <a href="#q4-%e5%b0%86%e6%95%b0%e7%bb%84%e5%88%86%e6%88%90%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e5%b9%b6%e6%9c%80%e5%b0%8f%e5%8c%96%e6%95%b0%e7%bb%84%e5%92%8c%e7%9a%84%e5%b7%ae" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Q4. 将数组分成两个数组并最小化数组和的差
 </h2>
 <blockquote>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：<a href=https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/>https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/">https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-3>
-<a href=#%e6%80%9d%e8%b7%af-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-思路
+<h3 id="思路-3">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    思路
 </h3>
 <p>Meet in the middle.</p>
-<h3 id=代码-3>
-<a href=#%e4%bb%a3%e7%a0%81-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
-</a>
-代码
+<h3 id="代码-3">
+    <a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    代码
 </h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span><span class=lnt>51
-</span><span class=lnt>52
-</span><span class=lnt>53
-</span><span class=lnt>54
-</span><span class=lnt>55
-</span><span class=lnt>56
-</span><span class=lnt>57
-</span><span class=lnt>58
-</span><span class=lnt>59
-</span><span class=lnt>60
-</span><span class=lnt>61
-</span><span class=lnt>62
-</span><span class=lnt>63
-</span><span class=lnt>64
-</span><span class=lnt>65
-</span><span class=lnt>66
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: meet in the middle
-</span><span class=c1>// Time Complexity: O(n * 2^n * log C(n, n/2)), n = len(nums) / 2
-</span><span class=c1>// Space Complexity: O(n * 2^n)
-</span><span class=c1></span><span class=kd>func</span> <span class=nf>minimumDifference</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-	<span class=nx>construct</span> <span class=o>:=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>slice</span> <span class=p>[]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>all</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
-		<span class=c1>// unique
-</span><span class=c1></span>		<span class=nx>seen</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kd>map</span><span class=p>[</span><span class=kt>int</span><span class=p>]</span><span class=kd>struct</span><span class=p>{},</span> <span class=nb>len</span><span class=p>(</span><span class=nx>slice</span><span class=p>)</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
-		<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>seen</span> <span class=p>{</span>
-			<span class=nx>seen</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=p>=</span> <span class=nb>make</span><span class=p>(</span><span class=kd>map</span><span class=p>[</span><span class=kt>int</span><span class=p>]</span><span class=kd>struct</span><span class=p>{})</span>
-		<span class=p>}</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Go" data-lang="Go"><span class="c1">// Algorithm: meet in the middle
+</span><span class="c1">// Time Complexity: O(n * 2^n * log C(n, n/2)), n = len(nums) / 2
+</span><span class="c1">// Space Complexity: O(n * 2^n)
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">minimumDifference</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="nx">construct</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">slice</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">all</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// unique
+</span><span class="c1"></span>		<span class="nx">seen</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kd">struct</span><span class="p">{},</span> <span class="nb">len</span><span class="p">(</span><span class="nx">slice</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+		<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">seen</span> <span class="p">{</span>
+			<span class="nx">seen</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kd">struct</span><span class="p">{})</span>
+		<span class="p">}</span>
 
-		<span class=c1>// enumerate
-</span><span class=c1></span>		<span class=k>for</span> <span class=nx>mask</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>mask</span> <span class=p>&lt;</span> <span class=mi>1</span><span class=o>&lt;&lt;</span><span class=nb>len</span><span class=p>(</span><span class=nx>slice</span><span class=p>);</span> <span class=nx>mask</span> <span class=o>+=</span> <span class=mi>1</span> <span class=p>{</span>
-			<span class=nx>ones</span><span class=p>,</span> <span class=nx>total</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span>
-			<span class=k>for</span> <span class=nx>bit</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>bit</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>slice</span><span class=p>);</span> <span class=nx>bit</span> <span class=o>+=</span> <span class=mi>1</span> <span class=p>{</span>
-				<span class=k>if</span> <span class=nx>mask</span><span class=o>&amp;</span><span class=p>(</span><span class=mi>1</span><span class=o>&lt;&lt;</span><span class=nx>bit</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
-					<span class=nx>total</span> <span class=o>+=</span> <span class=nx>slice</span><span class=p>[</span><span class=nx>bit</span><span class=p>]</span>
-					<span class=nx>ones</span> <span class=o>+=</span> <span class=mi>1</span>
-				<span class=p>}</span>
-			<span class=p>}</span>
-			<span class=k>if</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>ok</span> <span class=o>:=</span> <span class=nx>seen</span><span class=p>[</span><span class=nx>ones</span><span class=p>][</span><span class=nx>total</span><span class=p>];</span> <span class=p>!</span><span class=nx>ok</span> <span class=p>{</span>
-				<span class=nx>all</span><span class=p>[</span><span class=nx>ones</span><span class=p>]</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>all</span><span class=p>[</span><span class=nx>ones</span><span class=p>],</span> <span class=nx>total</span><span class=p>)</span>
-				<span class=nx>seen</span><span class=p>[</span><span class=nx>ones</span><span class=p>][</span><span class=nx>total</span><span class=p>]</span> <span class=p>=</span> <span class=kd>struct</span><span class=p>{}{}</span>
-			<span class=p>}</span>
-		<span class=p>}</span>
+		<span class="c1">// enumerate
+</span><span class="c1"></span>		<span class="k">for</span> <span class="nx">mask</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">mask</span> <span class="p">&lt;</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="nb">len</span><span class="p">(</span><span class="nx">slice</span><span class="p">);</span> <span class="nx">mask</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">{</span>
+			<span class="nx">ones</span><span class="p">,</span> <span class="nx">total</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+			<span class="k">for</span> <span class="nx">bit</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">bit</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">slice</span><span class="p">);</span> <span class="nx">bit</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="nx">mask</span><span class="o">&amp;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="nx">bit</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+					<span class="nx">total</span> <span class="o">+=</span> <span class="nx">slice</span><span class="p">[</span><span class="nx">bit</span><span class="p">]</span>
+					<span class="nx">ones</span> <span class="o">+=</span> <span class="mi">1</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+			<span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">seen</span><span class="p">[</span><span class="nx">ones</span><span class="p">][</span><span class="nx">total</span><span class="p">];</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+				<span class="nx">all</span><span class="p">[</span><span class="nx">ones</span><span class="p">]</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">all</span><span class="p">[</span><span class="nx">ones</span><span class="p">],</span> <span class="nx">total</span><span class="p">)</span>
+				<span class="nx">seen</span><span class="p">[</span><span class="nx">ones</span><span class="p">][</span><span class="nx">total</span><span class="p">]</span> <span class="p">=</span> <span class="kd">struct</span><span class="p">{}{}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
 
-		<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>all</span> <span class=p>{</span>
-			<span class=nx>sort</span><span class=p>.</span><span class=nf>Ints</span><span class=p>(</span><span class=nx>all</span><span class=p>[</span><span class=nx>i</span><span class=p>])</span>
-		<span class=p>}</span>
-	<span class=p>}</span>
+		<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">all</span> <span class="p">{</span>
+			<span class="nx">sort</span><span class="p">.</span><span class="nf">Ints</span><span class="p">(</span><span class="nx">all</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-	<span class=c1>// reduce by half
-</span><span class=c1></span>	<span class=nx>n</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span>
-	<span class=nx>lhs</span><span class=p>,</span> <span class=nx>rhs</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([][]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>n</span><span class=o>+</span><span class=mi>1</span><span class=p>),</span> <span class=nb>make</span><span class=p>([][]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>n</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
-	<span class=nf>construct</span><span class=p>(</span><span class=nx>nums</span><span class=p>[:</span><span class=nx>n</span><span class=p>],</span> <span class=nx>lhs</span><span class=p>)</span>
-	<span class=nf>construct</span><span class=p>(</span><span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=p>:],</span> <span class=nx>rhs</span><span class=p>)</span>
+	<span class="c1">// reduce by half
+</span><span class="c1"></span>	<span class="nx">n</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+	<span class="nx">lhs</span><span class="p">,</span> <span class="nx">rhs</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+	<span class="nf">construct</span><span class="p">(</span><span class="nx">nums</span><span class="p">[:</span><span class="nx">n</span><span class="p">],</span> <span class="nx">lhs</span><span class="p">)</span>
+	<span class="nf">construct</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="p">:],</span> <span class="nx">rhs</span><span class="p">)</span>
 
-	<span class=c1>// sum(nums)
-</span><span class=c1></span>	<span class=nx>sum</span> <span class=o>:=</span> <span class=mi>0</span>
-	<span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>num</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>nums</span> <span class=p>{</span>
-		<span class=nx>sum</span> <span class=o>+=</span> <span class=nx>num</span>
-	<span class=p>}</span>
+	<span class="c1">// sum(nums)
+</span><span class="c1"></span>	<span class="nx">sum</span> <span class="o">:=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">num</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
+		<span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
+	<span class="p">}</span>
 
-	<span class=c1>// meet in the middle
-</span><span class=c1></span>	<span class=nx>ans</span> <span class=o>:=</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span>
-	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=nx>n</span><span class=p>;</span> <span class=nx>i</span> <span class=o>+=</span> <span class=mi>1</span> <span class=p>{</span>
-		<span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>leftSum</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>lhs</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=p>{</span>
-			<span class=nx>j</span> <span class=o>:=</span> <span class=nx>sort</span><span class=p>.</span><span class=nf>SearchInts</span><span class=p>(</span><span class=nx>rhs</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=nx>i</span><span class=p>],</span> <span class=nx>sum</span><span class=o>/</span><span class=mi>2</span><span class=o>-</span><span class=nx>leftSum</span><span class=p>)</span>
-			<span class=k>for</span> <span class=nx>k</span> <span class=o>:=</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=nx>k</span> <span class=o>&lt;=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>k</span> <span class=o>+=</span> <span class=mi>1</span> <span class=p>{</span>
-				<span class=k>if</span> <span class=nx>j</span><span class=o>+</span><span class=nx>k</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>j</span><span class=o>+</span><span class=nx>k</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>rhs</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=nx>i</span><span class=p>])</span> <span class=p>{</span>
-					<span class=nx>rightSum</span> <span class=o>:=</span> <span class=nx>rhs</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=o>+</span><span class=nx>k</span><span class=p>]</span>
-					<span class=nx>minus</span> <span class=o>:=</span> <span class=nx>sum</span> <span class=o>-</span> <span class=mi>2</span><span class=o>*</span><span class=nx>leftSum</span> <span class=o>-</span> <span class=mi>2</span><span class=o>*</span><span class=nx>rightSum</span>
-					<span class=k>if</span> <span class=nx>minus</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=p>{</span>
-						<span class=nx>minus</span> <span class=p>=</span> <span class=o>-</span><span class=nx>minus</span>
-					<span class=p>}</span>
-					<span class=k>if</span> <span class=nx>minus</span> <span class=p>&lt;</span> <span class=nx>ans</span> <span class=p>{</span>
-						<span class=nx>ans</span> <span class=p>=</span> <span class=nx>minus</span>
-					<span class=p>}</span>
-				<span class=p>}</span>
-			<span class=p>}</span>
-		<span class=p>}</span>
-	<span class=p>}</span>
+	<span class="c1">// meet in the middle
+</span><span class="c1"></span>	<span class="nx">ans</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">leftSum</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">lhs</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">{</span>
+			<span class="nx">j</span> <span class="o">:=</span> <span class="nx">sort</span><span class="p">.</span><span class="nf">SearchInts</span><span class="p">(</span><span class="nx">rhs</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="nx">i</span><span class="p">],</span> <span class="nx">sum</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="nx">leftSum</span><span class="p">)</span>
+			<span class="k">for</span> <span class="nx">k</span> <span class="o">:=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">k</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">{</span>
+				<span class="k">if</span> <span class="nx">j</span><span class="o">+</span><span class="nx">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span><span class="o">+</span><span class="nx">k</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">rhs</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+					<span class="nx">rightSum</span> <span class="o">:=</span> <span class="nx">rhs</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="nx">k</span><span class="p">]</span>
+					<span class="nx">minus</span> <span class="o">:=</span> <span class="nx">sum</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="nx">leftSum</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="nx">rightSum</span>
+					<span class="k">if</span> <span class="nx">minus</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+						<span class="nx">minus</span> <span class="p">=</span> <span class="o">-</span><span class="nx">minus</span>
+					<span class="p">}</span>
+					<span class="k">if</span> <span class="nx">minus</span> <span class="p">&lt;</span> <span class="nx">ans</span> <span class="p">{</span>
+						<span class="nx">ans</span> <span class="p">=</span> <span class="nx">minus</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-	<span class=k>return</span> <span class=nx>ans</span>
-<span class=p>}</span>
+	<span class="k">return</span> <span class="nx">ans</span>
+<span class="p">}</span>
 
 </code></pre></td></tr></table>
 </div>
 </div>
+    </div>
 </div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/leetcode-biweekly-56/" title="Previous post (older)">
+            <span>Previous</span>
+            LeetCode 第 56 场双周赛
+            </a>
+        
+        
+        
+    </nav>
+    
 </div>
-<div class=container>
-<nav class="flex container suggested">
-<a rel=prev href=/post/leetcode-biweekly-56/ title="Previous post (older)">
-<span>Previous</span>
-LeetCode 第 56 场双周赛
-</a>
-</nav>
+ 
+<div class="container">
+    
+    <script src="https://giscus.app/client.js" 
+        data-repo="kevinchen147/kevinchen147.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI="
+        
+        data-category="General"
+        data-category-id="DIC_kwDODLdYXs4B_XnR"
+        
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<script>
+    function setGiscusTeheme(theme) {
+        let giscus = document.querySelector('.giscus iframe');
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme
+                        }
+                    }
+                },
+                'https://giscus.app'
+            )
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://giscus.app') return;
+        setGiscusTeheme(document.documentElement.dataset.userColorScheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setGiscusTeheme(e.detail)
+    })
+</script>
+
 </div>
-<div class=container>
-<script src=https://giscus.app/client.js data-repo=kevinchen147/kevinchen147.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI=" data-category=General data-category-id=DIC_kwDODLdYXs4B_XnR data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script>
-<script>function setGiscusTeheme(b){let a=document.querySelector('.giscus iframe');a&&a.contentWindow.postMessage({giscus:{setConfig:{theme:b}}},'https://giscus.app')}addEventListener('message',a=>{if(a.origin!=='https://giscus.app')return;setGiscusTeheme(document.documentElement.dataset.userColorScheme)}),window.addEventListener('onColorSchemeChange',a=>{setGiscusTeheme(a.detail)})</script>
-</div>
+
 </main>
-</main>
-<footer class="footer flex">
-<section class=container>
-<nav class=footer-links>
-<a href=/index.xml>RSS</a>
-</nav>
-</section>
-<script defer src=/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js data-enable-footnotes=true></script>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+            <a href="/index.xml">RSS</a>
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js" 
+    data-enable-footnotes="true"
+    ></script>
 </footer>
-</body>
+
+    </body>
 </html>
