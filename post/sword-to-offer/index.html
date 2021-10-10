@@ -45,10 +45,102 @@ By kevin on <time>June 10, 2021</time>
 </header>
 </article>
 <div class=article-post>
-<h2 id=剑指-offer-05-替换空格httpsleetcode-cncomproblemsti-huan-kong-ge-lcof>剑指 Offer 05. <a href=https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/>替换空格</a></h2>
+<h2 id=剑指-offer-03-数组中重复的数字httpsleetcode-cncomproblemsshu-zu-zhong-zhong-fu-de-shu-zi-lcof>剑指 Offer 03. <a href=https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/>数组中重复的数字</a></h2>
 <h3 id=思路>思路</h3>
-<p>用 <code>strings.Builder</code>。</p>
+<p>原地哈希。</p>
 <h3 id=代码>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash in-place
+</span><span class=c1>// Time Complexity: O(n), n = len(nums)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>findRepeatNumber</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>n</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span>
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>nums</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=o>%</span><span class=nx>n</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=nx>n</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>%</span> <span class=nx>n</span>
+		<span class=p>}</span>
+		<span class=nx>nums</span><span class=p>[</span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=o>%</span><span class=nx>n</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>n</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=o>-</span><span class=mi>1</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-04-二维数组中的查找httpsleetcode-cncomproblemser-wei-shu-zu-zhong-de-cha-zhao-lcof>剑指 Offer 04. <a href=https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/>二维数组中的查找</a></h2>
+<h3 id=思路-1>思路</h3>
+<p>从数组的右上或左下开始查找，可以有效地进行减治。</p>
+<h3 id=代码-1>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=nx>class</span> <span class=nx>Solution</span> <span class=p>{</span>
+<span class=nx>public</span><span class=p>:</span>
+    <span class=kt>bool</span> <span class=nf>Find</span><span class=p>(</span><span class=kt>int</span> <span class=nx>target</span><span class=p>,</span> <span class=nx>vector</span><span class=p>&lt;</span><span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=nx>array</span><span class=p>)</span> <span class=p>{</span>
+        <span class=c1>// Corner Case:
+</span><span class=c1></span>        <span class=k>if</span> <span class=p>(</span><span class=nx>array</span><span class=p>.</span><span class=nf>empty</span><span class=p>()</span> <span class=nx>or</span> <span class=nx>array</span><span class=p>.</span><span class=nf>front</span><span class=p>().</span><span class=nf>empty</span><span class=p>())</span> <span class=p>{</span>
+            <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+        <span class=p>}</span>
+        <span class=c1>// Normal Case:
+</span><span class=c1></span>        <span class=kt>int</span> <span class=nx>n</span> <span class=p>=</span> <span class=nx>static_cast</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;(</span><span class=nx>array</span><span class=p>.</span><span class=nf>size</span><span class=p>());</span>
+        <span class=kt>int</span> <span class=nx>x</span> <span class=p>=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>y</span> <span class=p>=</span> <span class=nx>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
+        <span class=nf>while</span> <span class=p>(</span><span class=nx>x</span> <span class=p>&lt;</span> <span class=nx>n</span> <span class=nx>and</span> <span class=nx>y</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>if</span> <span class=p>(</span><span class=nx>array</span><span class=p>[</span><span class=nx>x</span><span class=p>][</span><span class=nx>y</span><span class=p>]</span> <span class=o>==</span> <span class=nx>target</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=k>if</span> <span class=p>(</span><span class=nx>array</span><span class=p>[</span><span class=nx>x</span><span class=p>][</span><span class=nx>y</span><span class=p>]</span> <span class=p>&lt;</span> <span class=nx>target</span><span class=p>)</span> <span class=p>{</span>
+                <span class=nx>x</span> <span class=o>+=</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+                <span class=nx>y</span> <span class=o>-=</span> <span class=mi>1</span><span class=p>;</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+    <span class=p>}</span>
+<span class=p>};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-05-替换空格httpsleetcode-cncomproblemsti-huan-kong-ge-lcof>剑指 Offer 05. <a href=https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/>替换空格</a></h2>
+<h3 id=思路-2>思路</h3>
+<p>用 <code>strings.Builder</code>。</p>
+<h3 id=代码-2>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -90,9 +182,9 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof>剑指 Offer 06. <a href=https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/>从尾到头打印链表</a></h2>
-<h3 id=思路-1>思路</h3>
+<h3 id=思路-3>思路</h3>
 <p>正向遍历，反转数组。</p>
-<h3 id=代码-1>代码</h3>
+<h3 id=代码-3>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -134,9 +226,9 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof>剑指 Offer 09. <a href=https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/>用两个栈实现队列</a></h2>
-<h3 id=思路-2>思路</h3>
+<h3 id=思路-4>思路</h3>
 <p>使用两个栈，交替 <code>push</code> 及 <code>pop</code> 实现队列。</p>
-<h3 id=代码-2>代码</h3>
+<h3 id=代码-4>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -211,10 +303,120 @@ By kevin on <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id=剑指-offer-11-旋转数组的最小数字httpsleetcode-cncomproblemsxuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof>剑指 Offer 11. <a href=https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/>旋转数组的最小数字</a></h2>
+<h3 id=思路-5>思路</h3>
+<p>二分查找，分类讨论。</p>
+<h3 id=代码-5>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: binary search
+</span><span class=c1>// Time Complexity: n = len(nums)
+</span><span class=c1>//		Average: O(log n)
+</span><span class=c1>//		Worst:   O(n)
+</span><span class=c1>// Space Complexity: n = len(nums)
+</span><span class=c1>//		Average: O(1)
+</span><span class=c1>//		Worst:   O(log n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>minArray</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+	<span class=kd>var</span> <span class=nx>search</span> <span class=kd>func</span><span class=p>(</span><span class=nx>left</span><span class=p>,</span> <span class=nx>right</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span>
+	<span class=nx>search</span> <span class=p>=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>left</span><span class=p>,</span> <span class=nx>right</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+		<span class=c1>// Corner Case
+</span><span class=c1></span>		<span class=k>if</span> <span class=nx>left</span> <span class=p>&gt;</span> <span class=nx>right</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span>
+		<span class=p>}</span>
+
+		<span class=k>if</span> <span class=nx>left</span> <span class=o>==</span> <span class=nx>right</span> <span class=o>||</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=p>&lt;</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span> <span class=p>{</span>
+			<span class=c1>// return first element
+</span><span class=c1></span>			<span class=k>return</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span>
+		<span class=p>}</span>
+
+		<span class=nx>mid</span> <span class=o>:=</span> <span class=nx>left</span> <span class=o>+</span> <span class=p>(</span><span class=nx>right</span><span class=o>-</span><span class=nx>left</span><span class=p>)</span><span class=o>/</span><span class=mi>2</span>
+		<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=o>==</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span> <span class=p>{</span>
+			<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span> <span class=o>==</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=p>{</span>
+				<span class=c1>// nums[left] == nums[mid] == nums[right]
+</span><span class=c1></span>				<span class=nx>minimum</span> <span class=o>:=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span>
+				<span class=k>if</span> <span class=nx>lhs</span> <span class=o>:=</span> <span class=nf>search</span><span class=p>(</span><span class=nx>left</span><span class=p>,</span> <span class=nx>mid</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span> <span class=nx>lhs</span> <span class=p>&lt;</span> <span class=nx>minimum</span> <span class=p>{</span>
+					<span class=nx>minimum</span> <span class=p>=</span> <span class=nx>lhs</span>
+				<span class=p>}</span>
+				<span class=k>if</span> <span class=nx>rhs</span> <span class=o>:=</span> <span class=nf>search</span><span class=p>(</span><span class=nx>mid</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>right</span><span class=p>);</span> <span class=nx>rhs</span> <span class=p>&lt;</span> <span class=nx>minimum</span> <span class=p>{</span>
+					<span class=nx>minimum</span> <span class=p>=</span> <span class=nx>rhs</span>
+				<span class=p>}</span>
+				<span class=k>return</span> <span class=nx>minimum</span>
+			<span class=p>}</span>
+
+			<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span> <span class=p>&lt;</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=p>{</span>
+				<span class=c1>// nums[mid] &lt; nums[left] == nums[right]
+</span><span class=c1></span>				<span class=k>return</span> <span class=nf>search</span><span class=p>(</span><span class=nx>left</span><span class=p>,</span> <span class=nx>mid</span><span class=p>)</span>
+			<span class=p>}</span>
+			<span class=c1>// nums[left] == nums[right] &lt; nums[mid]
+</span><span class=c1></span>			<span class=k>return</span> <span class=nf>search</span><span class=p>(</span><span class=nx>mid</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>right</span><span class=p>)</span>
+		<span class=p>}</span>
+
+		<span class=c1>// nums[left] &gt; nums[right]
+</span><span class=c1></span>		<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span> <span class=o>&gt;=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=nf>search</span><span class=p>(</span><span class=nx>mid</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>right</span><span class=p>)</span>
+		<span class=p>}</span>
+		<span class=k>return</span> <span class=nf>search</span><span class=p>(</span><span class=nx>left</span><span class=p>,</span> <span class=nx>mid</span><span class=p>)</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nf>search</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id=剑指-offer-24-反转链表httpsleetcode-cncomproblemsfan-zhuan-lian-biao-lcof>剑指 Offer 24. <a href=https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/>反转链表</a></h2>
-<h3 id=思路-3>思路</h3>
+<h3 id=思路-6>思路</h3>
 <p>使用辅助的指针，迭代反转。必要时可以画图，辅助理解。</p>
-<h3 id=代码-3>代码</h3>
+<h3 id=代码-6>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -247,78 +449,10 @@ By kevin on <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=剑指-offer-35-复杂链表的复制httpsleetcode-cncomproblemsfu-za-lian-biao-de-fu-zhi-lcof>剑指 Offer 35. <a href=https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/>复杂链表的复制</a></h2>
-<h3 id=思路-4>思路</h3>
-<p>类似原地哈希。在并发的场景下，需要借助额外的空间。</p>
-<h3 id=代码-4>代码</h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash in place
-</span><span class=c1>// Time Complexity: O(n), n = len(List)
-</span><span class=c1>// Space Complexity: O(1)
-</span><span class=c1></span><span class=kd>func</span> <span class=nf>copyRandomList</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>Node</span><span class=p>)</span> <span class=o>*</span><span class=nx>Node</span> <span class=p>{</span>
-	<span class=c1>// Copy each node(without `random`) in place
-</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
-		<span class=nx>duplicate</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{</span><span class=nx>Val</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Val</span><span class=p>,</span> <span class=nx>Next</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>}</span>
-		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=o>&amp;</span><span class=nx>duplicate</span>
-	<span class=p>}</span>
-
-	<span class=c1>// Copy `random`
-</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
-		<span class=k>if</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-			<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Random</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span><span class=p>.</span><span class=nx>Next</span>
-		<span class=p>}</span>
-	<span class=p>}</span>
-
-	<span class=c1>// Separate
-</span><span class=c1></span>	<span class=nx>dummy</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{}</span>
-	<span class=nx>curr</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>dummy</span>
-	<span class=k>for</span> <span class=nx>head</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
-		<span class=nx>head</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span>
-		<span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span>
-		<span class=nx>head</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
-	<span class=p>}</span>
-
-	<span class=k>return</span> <span class=nx>dummy</span><span class=p>.</span><span class=nx>Next</span>
-<span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
 </div><h2 id=剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof>剑指 Offer 30. <a href=https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/>包含min函数的栈</a></h2>
-<h3 id=思路-5>思路</h3>
+<h3 id=思路-7>思路</h3>
 <p>双栈思路，保持栈中每个元素在 <code>min</code> 栈中对应当前最小值。</p>
-<h3 id=代码-5>代码</h3>
+<h3 id=代码-7>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -391,32 +525,10 @@ By kevin on <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=剑指-offer-58---ii-左旋转字符串httpsleetcode-cncomproblemszuo-xuan-zhuan-zi-fu-chuan-lcof>剑指 Offer 58 - <a href=https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/>II. 左旋转字符串</a></h2>
-<h3 id=思路-6>思路</h3>
-<p>切片。</p>
-<h3 id=代码-6>代码</h3>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: slice
-</span><span class=c1>// Time Complexity: O(n), n = len(s)
-</span><span class=c1>// Space Complexity: O(n)
-</span><span class=c1></span><span class=kd>func</span> <span class=nf>reverseLeftWords</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>,</span> <span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>string</span> <span class=p>{</span>
-	<span class=k>return</span> <span class=nx>s</span><span class=p>[</span><span class=nx>n</span><span class=p>:]</span> <span class=o>+</span> <span class=nx>s</span><span class=p>[:</span><span class=nx>n</span><span class=p>]</span>
-<span class=p>}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id=jz1-二维数组中的查找>JZ1. 二维数组中的查找</h2>
-<h3 id=思路-7>思路</h3>
-<p>从数组的右上或左下开始查找，可以有效地进行减治。</p>
-<h3 id=代码-7>代码</h3>
+</div><h2 id=剑指-offer-35-复杂链表的复制httpsleetcode-cncomproblemsfu-za-lian-biao-de-fu-zhi-lcof>剑指 Offer 35. <a href=https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/>复杂链表的复制</a></h2>
+<h3 id=思路-8>思路</h3>
+<p>类似原地哈希。在并发的场景下，需要借助额外的空间。</p>
+<h3 id=代码-8>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -445,40 +557,242 @@ By kevin on <time>June 10, 2021</time>
 </span><span class=lnt>24
 </span><span class=lnt>25
 </span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
 </span></code></pre></td>
 <td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
-<span class=k>public</span><span class=o>:</span>
-    <span class=kt>bool</span> <span class=n>Find</span><span class=p>(</span><span class=kt>int</span> <span class=n>target</span><span class=p>,</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;&gt;</span> <span class=n>array</span><span class=p>)</span> <span class=p>{</span>
-        <span class=c1>// Algorithm: decrease and conquer
-</span><span class=c1></span>        <span class=c1>// Time Complexity: O(n), n = array.size()
-</span><span class=c1></span>        <span class=c1>// Space Complexity: O(1)
-</span><span class=c1></span>        <span class=c1>// Corner Case:
-</span><span class=c1></span>        <span class=k>if</span> <span class=p>(</span><span class=n>array</span><span class=p>.</span><span class=n>empty</span><span class=p>()</span> <span class=n>or</span> <span class=n>array</span><span class=p>.</span><span class=n>front</span><span class=p>().</span><span class=n>empty</span><span class=p>())</span> <span class=p>{</span>
-            <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
-        <span class=p>}</span>
-        <span class=c1>// Normal Case:
-</span><span class=c1></span>        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=k>static_cast</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span><span class=p>(</span><span class=n>array</span><span class=p>.</span><span class=n>size</span><span class=p>());</span>
-        <span class=kt>int</span> <span class=n>x</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>y</span> <span class=o>=</span> <span class=n>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
-        <span class=k>while</span> <span class=p>(</span><span class=n>x</span> <span class=o>&lt;</span> <span class=n>n</span> <span class=n>and</span> <span class=n>y</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-            <span class=k>if</span> <span class=p>(</span><span class=n>array</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>==</span> <span class=n>target</span><span class=p>)</span> <span class=p>{</span>
-                <span class=k>return</span> <span class=nb>true</span><span class=p>;</span>
-            <span class=p>}</span>
-            <span class=k>if</span> <span class=p>(</span><span class=n>array</span><span class=p>[</span><span class=n>x</span><span class=p>][</span><span class=n>y</span><span class=p>]</span> <span class=o>&lt;</span> <span class=n>target</span><span class=p>)</span> <span class=p>{</span>
-                <span class=n>x</span> <span class=o>+=</span> <span class=mi>1</span><span class=p>;</span>
-            <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-                <span class=n>y</span> <span class=o>-=</span> <span class=mi>1</span><span class=p>;</span>
-            <span class=p>}</span>
-        <span class=p>}</span>
-        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>
-    <span class=p>}</span>
-<span class=p>};</span>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash in place
+</span><span class=c1>// Time Complexity: O(n), n = len(List)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>copyRandomList</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>Node</span><span class=p>)</span> <span class=o>*</span><span class=nx>Node</span> <span class=p>{</span>
+	<span class=c1>// Copy each node(without `random`) in place
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
+		<span class=nx>duplicate</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{</span><span class=nx>Val</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Val</span><span class=p>,</span> <span class=nx>Next</span><span class=p>:</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>}</span>
+		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=o>&amp;</span><span class=nx>duplicate</span>
+	<span class=p>}</span>
+
+	<span class=c1>// Copy `random`
+</span><span class=c1></span>	<span class=k>for</span> <span class=nx>curr</span> <span class=o>:=</span> <span class=nx>head</span><span class=p>;</span> <span class=nx>curr</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+			<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Random</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Random</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=c1>// Separate
+</span><span class=c1></span>	<span class=nx>dummy</span> <span class=o>:=</span> <span class=nx>Node</span><span class=p>{}</span>
+	<span class=nx>curr</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>dummy</span>
+	<span class=k>for</span> <span class=nx>head</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>head</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>curr</span> <span class=p>=</span> <span class=nx>curr</span><span class=p>.</span><span class=nx>Next</span>
+		<span class=nx>head</span> <span class=p>=</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nx>dummy</span><span class=p>.</span><span class=nx>Next</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-50-第一个只出现一次的字符httpsleetcode-cncomproblemsdi-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof>剑指 Offer 50. <a href=https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/>第一个只出现一次的字符</a></h2>
+<h3 id=思路-9>思路</h3>
+<p>哈希表，两次遍历。</p>
+<h3 id=代码-9>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash table
+</span><span class=c1>// Time Complexity: O(n), n = len(s)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>firstUniqChar</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>byte</span> <span class=p>{</span>
+	<span class=nx>cnt</span> <span class=o>:=</span> <span class=p>[</span><span class=mi>26</span><span class=p>]</span><span class=kt>int</span><span class=p>{}</span>
+
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>s</span> <span class=p>{</span>
+		<span class=nx>cnt</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=o>-</span><span class=sc>&#39;a&#39;</span><span class=p>]</span> <span class=o>+=</span> <span class=mi>1</span>
+	<span class=p>}</span>
+
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>s</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>cnt</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=o>-</span><span class=sc>&#39;a&#39;</span><span class=p>]</span> <span class=o>==</span> <span class=mi>1</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=sc>&#39; &#39;</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-53---i-在排序数组中查找数字-ihttpsleetcode-cncomproblemszai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof>剑指 Offer 53 - I. <a href=https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/>在排序数组中查找数字 I</a></h2>
+<h3 id=思路-10>思路</h3>
+<p>二分查找。</p>
+<h3 id=代码-10>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: binary search
+</span><span class=c1>// Time Complexity: O(log n), n = len(nums)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>search</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>target</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>binarySearch</span> <span class=o>:=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>lower</span> <span class=kt>bool</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+		<span class=nx>low</span><span class=p>,</span> <span class=nx>high</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span>
+
+		<span class=k>for</span> <span class=nx>low</span> <span class=p>&lt;</span> <span class=nx>high</span> <span class=p>{</span>
+			<span class=nx>mid</span> <span class=o>:=</span> <span class=p>(</span><span class=nx>low</span> <span class=o>+</span> <span class=nx>high</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span>
+			<span class=k>if</span> <span class=nx>lower</span> <span class=p>{</span>
+				<span class=nx>mid</span> <span class=p>=</span> <span class=p>(</span><span class=nx>low</span> <span class=o>+</span> <span class=nx>high</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span>
+			<span class=p>}</span>
+			<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span> <span class=o>==</span> <span class=nx>target</span> <span class=p>{</span>
+				<span class=k>if</span> <span class=nx>lower</span> <span class=p>{</span>
+					<span class=nx>high</span> <span class=p>=</span> <span class=nx>mid</span>
+				<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+					<span class=nx>low</span> <span class=p>=</span> <span class=nx>mid</span>
+				<span class=p>}</span>
+			<span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>mid</span><span class=p>]</span> <span class=p>&lt;</span> <span class=nx>target</span> <span class=p>{</span>
+				<span class=nx>low</span> <span class=p>=</span> <span class=nx>mid</span> <span class=o>+</span> <span class=mi>1</span>
+			<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+				<span class=nx>high</span> <span class=p>=</span> <span class=nx>mid</span> <span class=o>-</span> <span class=mi>1</span>
+			<span class=p>}</span>
+		<span class=p>}</span>
+
+		<span class=k>return</span> <span class=nx>low</span>
+	<span class=p>}</span>
+
+	<span class=nx>left</span> <span class=o>:=</span> <span class=nf>binarySearch</span><span class=p>(</span><span class=kc>true</span><span class=p>)</span>
+	<span class=k>if</span> <span class=nx>left</span> <span class=o>&gt;=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span> <span class=o>||</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>target</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=mi>0</span>
+	<span class=p>}</span>
+
+	<span class=nx>right</span> <span class=o>:=</span> <span class=nf>binarySearch</span><span class=p>(</span><span class=kc>false</span><span class=p>)</span>
+	<span class=k>return</span> <span class=nx>right</span> <span class=o>-</span> <span class=nx>left</span> <span class=o>+</span> <span class=mi>1</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-53---ii-0n-1中缺失的数字httpsleetcode-cncomproblemsque-shi-de-shu-zi-lcof>剑指 Offer 53 - II. <a href=https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/>0～n-1中缺失的数字</a></h2>
+<h3 id=思路-11>思路</h3>
+<p>通过数字交换实现原地哈希。</p>
+<h3 id=代码-11>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: hash in-place
+</span><span class=c1>// Time Complexity: O(n), n = len(nums)
+</span><span class=c1>// Space Complexity: O(1)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>missingNumber</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>nums</span> <span class=p>{</span>
+		<span class=k>for</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>i</span> <span class=o>&amp;&amp;</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>!=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span> <span class=p>{</span>
+			<span class=nx>nums</span><span class=p>[</span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=p>=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]]</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>nums</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>i</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=nx>i</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-58---ii-左旋转字符串httpsleetcode-cncomproblemszuo-xuan-zhuan-zi-fu-chuan-lcof>剑指 Offer 58 - II. <a href=https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/>左旋转字符串</a></h2>
+<h3 id=思路-12>思路</h3>
+<p>切片。</p>
+<h3 id=代码-12>代码</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: slice
+</span><span class=c1>// Time Complexity: O(n), n = len(s)
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>reverseLeftWords</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>,</span> <span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>string</span> <span class=p>{</span>
+	<span class=k>return</span> <span class=nx>s</span><span class=p>[</span><span class=nx>n</span><span class=p>:]</span> <span class=o>+</span> <span class=nx>s</span><span class=p>[:</span><span class=nx>n</span><span class=p>]</span>
+<span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=jz16-合并两个排序的链表>JZ16. 合并两个排序的链表</h2>
-<h3 id=思路-8>思路</h3>
+<h3 id=思路-13>思路</h3>
 <p>允许对原链表进行修改的话，由于 <code>next</code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。</p>
-<h3 id=代码-8>代码</h3>
+<h3 id=代码-13>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -538,7 +852,7 @@ By kevin on <time>June 10, 2021</time>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id=jz53-表示数值的字符串>JZ53. 表示数值的字符串</h2>
-<h3 id=思路-9>思路</h3>
+<h3 id=思路-14>思路</h3>
 <p>对于这种比较复杂的状态转移，硬编码 <code>if-else</code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 <abbr title="Deterministic finite automaton">DFA</abbr>。</p>
 <p>这里我们先定义可能出现的几种符号所属类型：</p>
 <table>
@@ -648,7 +962,7 @@ By kevin on <time>June 10, 2021</time>
 <li><code>0</code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。</li>
 <li><code>2</code>, <code>4</code>, <code>7</code> 为合法的结束状态。</li>
 </ul>
-<h3 id=代码-9>代码</h3>
+<h3 id=代码-14>代码</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
