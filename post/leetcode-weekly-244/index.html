@@ -4,23 +4,42 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=theme-color content="dark">
-<title> LeetCode 第 244 场周赛 | kevin</title>
-<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
+<title>LeetCode 第 244 场周赛 | Kevin's Blog</title>
+<meta property="og:site_name" content="Kevin's Blog">
+<meta property="og:title" content="LeetCode 第 244 场周赛 | Kevin's Blog">
+<meta itemprop=name content="LeetCode 第 244 场周赛 | Kevin's Blog">
+<meta name=twitter:title content="LeetCode 第 244 场周赛 | Kevin's Blog">
+<meta name=application-name content="LeetCode 第 244 场周赛 | Kevin's Blog">
+<meta name=description content="Kevin Chen">
+<meta name=twitter:description content="Kevin Chen">
+<meta itemprop=description content="Kevin Chen">
+<meta property="og:description" content="Kevin Chen">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="Kevin Chen">
+<meta property="og:article:published_time" content="2021-06-09T23:52:42+0800">
+<meta property="article:published_time" content="2021-06-09T23:52:42+0800">
+<meta property="og:article:author" content="Kevin">
+<meta property="article:author" content="Kevin">
+<meta name=author content="Kevin">
+<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 244 场周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-06-09","description":"","wordCount":591,"mainEntityOfPage":"True","dateModified":"2021-06-09","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
+<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
 </head>
+<script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
 <div class=container>
 <div class=flex>
 <div>
 <a class=brand href=/>
-<span class=emoji>
-🤪
-</span>
-kevin
+<img src=/favicon.ico>
+Kevin's Blog
 </a>
 </div>
 <div class=flex>
-<button id=dark-mode-button></button>
+<a href=/articles/>Articles</a>
+<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
+</button>
 </div>
 </div>
 </div>
@@ -34,7 +53,8 @@ kevin
 <h1>LeetCode 第 244 场周赛</h1>
 <div class=post-meta>
 <div>
-By kevin on <time>June 09, 2021</time>
+By kevin | <time>June 09, 2021</time>
+| 3 minutes
 </div>
 <div class=tags>
 <a href=/tags/leetcode/>LeetCode</a>
@@ -47,11 +67,28 @@ By kevin on <time>June 09, 2021</time>
 </header>
 </article>
 <div class=article-post>
-<h2 id=q1-判断矩阵经轮转后是否一致httpsleetcode-cncomproblemsdetermine-whether-matrix-can-be-obtained-by-rotation>Q1. <a href=https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/>判断矩阵经轮转后是否一致</a></h2>
-<h3 id=思路>思路</h3>
+<h2 id=q1-判断矩阵经轮转后是否一致>
+<a href=#q1-%e5%88%a4%e6%96%ad%e7%9f%a9%e9%98%b5%e7%bb%8f%e8%bd%ae%e8%bd%ac%e5%90%8e%e6%98%af%e5%90%a6%e4%b8%80%e8%87%b4 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q1. 判断矩阵经轮转后是否一致
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/>https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路>
+<a href=#%e6%80%9d%e8%b7%af class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>容易发现，旋转四次 <code>mat</code> 即回到了原始状态。</p>
 <p>所以我们只需要至多旋转三次 <code>mat</code> ，每次判断是否和 <code>target</code> 一致即可。</p>
-<h3 id=代码>代码</h3>
+<h3 id=代码>
+<a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -110,11 +147,28 @@ By kevin on <time>June 09, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q2-使数组元素相等的减少操作次数httpsleetcode-cncomproblemsreduction-operations-to-make-the-array-elements-equal>Q2. <a href=https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/>使数组元素相等的减少操作次数</a></h2>
-<h3 id=思路-1>思路</h3>
+</div><h2 id=q2-使数组元素相等的减少操作次数>
+<a href=#q2-%e4%bd%bf%e6%95%b0%e7%bb%84%e5%85%83%e7%b4%a0%e7%9b%b8%e7%ad%89%e7%9a%84%e5%87%8f%e5%b0%91%e6%93%8d%e4%bd%9c%e6%ac%a1%e6%95%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q2. 使数组元素相等的减少操作次数
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/>https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-1>
+<a href=#%e6%80%9d%e8%b7%af-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>使用 <code>map</code> 来模拟这一过程即可。</p>
 <p><code>map</code> 可以带上自定义的排序规则，使用 <code>greater&lt;></code> 使得 <code>map</code> 逆序，更加方便。</p>
-<h3 id=代码-1>代码</h3>
+<h3 id=代码-1>
+<a href=#%e4%bb%a3%e7%a0%81-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -155,12 +209,29 @@ By kevin on <time>June 09, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q3-使二进制字符串字符交替的最少反转次数httpsleetcode-cncomproblemsminimum-number-of-flips-to-make-the-binary-string-alternating>Q3. <a href=https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/>使二进制字符串字符交替的最少反转次数</a></h2>
-<h3 id=思路-2>思路</h3>
+</div><h2 id=q3-使二进制字符串字符交替的最少反转次数>
+<a href=#q3-%e4%bd%bf%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%ad%97%e7%ac%a6%e4%ba%a4%e6%9b%bf%e7%9a%84%e6%9c%80%e5%b0%91%e5%8f%8d%e8%bd%ac%e6%ac%a1%e6%95%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q3. 使二进制字符串字符交替的最少反转次数
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/>https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-2>
+<a href=#%e6%80%9d%e8%b7%af-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>遇到这种多种类型操作的问题，尽量地去把操作简化为一种。</p>
 <p>对于类型 1 的操作，我们可以使用 <code>T = S + S</code> 的方法进行模拟。</p>
 <p>对于类型 2 的操作，结合最终所需要的交替字符串，很容易想到只有两种交替情况，枚举即可。</p>
-<h3 id=代码-2>代码</h3>
+<h3 id=代码-2>
+<a href=#%e4%bb%a3%e7%a0%81-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -225,11 +296,28 @@ By kevin on <time>June 09, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q4-装包裹的最小浪费空间httpsleetcode-cncomproblemsminimum-space-wasted-from-packaging>Q4. <a href=https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/>装包裹的最小浪费空间</a></h2>
-<h3 id=思路-3>思路</h3>
+</div><h2 id=q4-装包裹的最小浪费空间>
+<a href=#q4-%e8%a3%85%e5%8c%85%e8%a3%b9%e7%9a%84%e6%9c%80%e5%b0%8f%e6%b5%aa%e8%b4%b9%e7%a9%ba%e9%97%b4 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q4. 装包裹的最小浪费空间
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/>https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-3>
+<a href=#%e6%80%9d%e8%b7%af-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>遍历每个供应商，将其提供的箱子进行排序，贪心选择尽可能小的箱子装包裹。</p>
 <p>在遍历之前，我们提前计算好 <code>packages</code> 的前缀和；遍历过程中，借助前缀和计算浪费的空间即可。</p>
-<h3 id=代码-3>代码</h3>
+<h3 id=代码-3>
+<a href=#%e4%bb%a3%e7%a0%81-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -314,16 +402,18 @@ By kevin on <time>June 09, 2021</time>
 </nav>
 </div>
 <div class=container>
-<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script src=https://giscus.app/client.js data-repo=kevinchen147/kevinchen147.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI=" data-category=General data-category-id=DIC_kwDODLdYXs4B_XnR data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script>
+<script>function setGiscusTeheme(b){let a=document.querySelector('.giscus iframe');a&&a.contentWindow.postMessage({giscus:{setConfig:{theme:b}}},'https://giscus.app')}addEventListener('message',a=>{if(a.origin!=='https://giscus.app')return;setGiscusTeheme(document.documentElement.dataset.userColorScheme)}),window.addEventListener('onColorSchemeChange',a=>{setGiscusTeheme(a.detail)})</script>
 </div>
 </main>
 </main>
 <footer class="footer flex">
 <section class=container>
 <nav class=footer-links>
+<a href=/index.xml>RSS</a>
 </nav>
 </section>
-<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
+<script defer src=/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js data-enable-footnotes=true></script>
 </footer>
 </body>
 </html>

@@ -4,23 +4,42 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=theme-color content="dark">
-<title> LeetCode 第 场周赛 | kevin</title>
-<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
+<title>LeetCode 第 262 场周赛 | Kevin's Blog</title>
+<meta property="og:site_name" content="Kevin's Blog">
+<meta property="og:title" content="LeetCode 第 262 场周赛 | Kevin's Blog">
+<meta itemprop=name content="LeetCode 第 262 场周赛 | Kevin's Blog">
+<meta name=twitter:title content="LeetCode 第 262 场周赛 | Kevin's Blog">
+<meta name=application-name content="LeetCode 第 262 场周赛 | Kevin's Blog">
+<meta name=description content="Kevin Chen">
+<meta name=twitter:description content="Kevin Chen">
+<meta itemprop=description content="Kevin Chen">
+<meta property="og:description" content="Kevin Chen">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="Kevin Chen">
+<meta property="og:article:published_time" content="2021-10-10T17:23:21+0800">
+<meta property="article:published_time" content="2021-10-10T17:23:21+0800">
+<meta property="og:article:author" content="Kevin">
+<meta property="article:author" content="Kevin">
+<meta name=author content="Kevin">
+<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 262 场周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-10-10","description":"","wordCount":582,"mainEntityOfPage":"True","dateModified":"2021-10-10","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
+<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
 </head>
+<script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
 <div class=container>
 <div class=flex>
 <div>
 <a class=brand href=/>
-<span class=emoji>
-🤪
-</span>
-kevin
+<img src=/favicon.ico>
+Kevin's Blog
 </a>
 </div>
 <div class=flex>
-<button id=dark-mode-button></button>
+<a href=/articles/>Articles</a>
+<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
+</button>
 </div>
 </div>
 </div>
@@ -31,10 +50,11 @@ kevin
 <header class=article-header>
 <div class=thumb>
 <div>
-<h1>LeetCode 第 场周赛</h1>
+<h1>LeetCode 第 262 场周赛</h1>
 <div class=post-meta>
 <div>
-By kevin on <time>October 10, 2021</time>
+By kevin | <time>October 10, 2021</time>
+| 3 minutes
 </div>
 <div class=tags>
 <a href=/tags/leetcode/>LeetCode</a>
@@ -47,10 +67,27 @@ By kevin on <time>October 10, 2021</time>
 </header>
 </article>
 <div class=article-post>
-<h2 id=q1-至少在两个数组中出现的值httpsleetcode-cncomproblemstwo-out-of-three>Q1. <a href=https://leetcode-cn.com/problems/two-out-of-three/>至少在两个数组中出现的值</a></h2>
-<h3 id=思路>思路</h3>
+<h2 id=q1-至少在两个数组中出现的值>
+<a href=#q1-%e8%87%b3%e5%b0%91%e5%9c%a8%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e4%b8%ad%e5%87%ba%e7%8e%b0%e7%9a%84%e5%80%bc class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q1. 至少在两个数组中出现的值
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/two-out-of-three/>https://leetcode-cn.com/problems/two-out-of-three/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路>
+<a href=#%e6%80%9d%e8%b7%af class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>集合。</p>
-<h3 id=代码>代码</h3>
+<h3 id=代码>
+<a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -71,10 +108,27 @@ By kevin on <time>October 10, 2021</time>
         <span class=k>return</span> <span class=nb>list</span><span class=p>((</span><span class=n>s1</span> <span class=o>&amp;</span> <span class=n>s2</span><span class=p>)</span> <span class=o>|</span> <span class=p>(</span><span class=n>s2</span> <span class=o>&amp;</span> <span class=n>s3</span><span class=p>)</span> <span class=o>|</span> <span class=p>(</span><span class=n>s1</span> <span class=o>&amp;</span> <span class=n>s3</span><span class=p>))</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q2-获取单值网格的最小操作数httpsleetcode-cncomproblemsminimum-operations-to-make-a-uni-value-grid>Q2. <a href=https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/>获取单值网格的最小操作数</a></h2>
-<h3 id=思路-1>思路</h3>
+</div><h2 id=q2-获取单值网格的最小操作数>
+<a href=#q2-%e8%8e%b7%e5%8f%96%e5%8d%95%e5%80%bc%e7%bd%91%e6%a0%bc%e7%9a%84%e6%9c%80%e5%b0%8f%e6%93%8d%e4%bd%9c%e6%95%b0 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q2. 获取单值网格的最小操作数
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/>https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-1>
+<a href=#%e6%80%9d%e8%b7%af-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>中位数。原型是 <a href=https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements-ii/>462. 最少移动次数使数组元素相等 II</a>。</p>
-<h3 id=代码-1>代码</h3>
+<h3 id=代码-1>
+<a href=#%e4%bb%a3%e7%a0%81-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -109,10 +163,27 @@ By kevin on <time>October 10, 2021</time>
         <span class=k>return</span> <span class=nb>sum</span><span class=p>([</span><span class=nb>abs</span><span class=p>(</span><span class=n>num</span> <span class=o>-</span> <span class=n>nums</span><span class=p>[</span><span class=nb>len</span><span class=p>(</span><span class=n>nums</span><span class=p>)</span> <span class=o>//</span> <span class=mi>2</span><span class=p>])</span> <span class=o>//</span> <span class=n>x</span> <span class=k>for</span> <span class=n>num</span> <span class=ow>in</span> <span class=n>nums</span><span class=p>])</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q3-股票价格波动httpsleetcode-cncomproblemsstock-price-fluctuation>Q3. <a href=https://leetcode-cn.com/problems/stock-price-fluctuation/>股票价格波动</a></h2>
-<h3 id=思路-2>思路</h3>
+</div><h2 id=q3-股票价格波动>
+<a href=#q3-%e8%82%a1%e7%a5%a8%e4%bb%b7%e6%a0%bc%e6%b3%a2%e5%8a%a8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q3. 股票价格波动
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/stock-price-fluctuation/>https://leetcode-cn.com/problems/stock-price-fluctuation/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-2>
+<a href=#%e6%80%9d%e8%b7%af-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>模拟。</p>
-<h3 id=代码-2>代码</h3>
+<h3 id=代码-2>
+<a href=#%e4%bb%a3%e7%a0%81-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -175,10 +246,27 @@ By kevin on <time>October 10, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q4-将数组分成两个数组并最小化数组和的差httpsleetcode-cncomproblemspartition-array-into-two-arrays-to-minimize-sum-difference>Q4. <a href=https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/>将数组分成两个数组并最小化数组和的差</a></h2>
-<h3 id=思路-3>思路</h3>
+</div><h2 id=q4-将数组分成两个数组并最小化数组和的差>
+<a href=#q4-%e5%b0%86%e6%95%b0%e7%bb%84%e5%88%86%e6%88%90%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e5%b9%b6%e6%9c%80%e5%b0%8f%e5%8c%96%e6%95%b0%e7%bb%84%e5%92%8c%e7%9a%84%e5%b7%ae class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q4. 将数组分成两个数组并最小化数组和的差
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/>https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-3>
+<a href=#%e6%80%9d%e8%b7%af-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>Meet in the middle.</p>
-<h3 id=代码-3>代码</h3>
+<h3 id=代码-3>
+<a href=#%e4%bb%a3%e7%a0%81-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -329,18 +417,18 @@ LeetCode 第 56 场双周赛
 </nav>
 </div>
 <div class=container>
-<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script src=https://giscus.app/client.js data-repo=kevinchen147/kevinchen147.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI=" data-category=General data-category-id=DIC_kwDODLdYXs4B_XnR data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script>
+<script>function setGiscusTeheme(b){let a=document.querySelector('.giscus iframe');a&&a.contentWindow.postMessage({giscus:{setConfig:{theme:b}}},'https://giscus.app')}addEventListener('message',a=>{if(a.origin!=='https://giscus.app')return;setGiscusTeheme(document.documentElement.dataset.userColorScheme)}),window.addEventListener('onColorSchemeChange',a=>{setGiscusTeheme(a.detail)})</script>
 </div>
 </main>
 </main>
 <footer class="footer flex">
 <section class=container>
 <nav class=footer-links>
+<a href=/index.xml>RSS</a>
 </nav>
 </section>
-<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
-<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
-<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
+<script defer src=/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js data-enable-footnotes=true></script>
 </footer>
 </body>
 </html>

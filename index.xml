@@ -1,8 +1,40 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>kevin</title><link>https://blog.chenjr.top/</link><description>Recent content on kevin</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:23:21 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode 第 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>
-&lt;h2 id="q1-至少在两个数组中出现的值httpsleetcode-cncomproblemstwo-out-of-three">Q1. &lt;a href="https://leetcode-cn.com/problems/two-out-of-three/">至少在两个数组中出现的值&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kevin's Blog</title><link>https://blog.chenjr.top/</link><description>Recent content on Kevin's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:23:21 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>
+&lt;h2 id="q1-至少在两个数组中出现的值">
+&lt;a href="#q1-%e8%87%b3%e5%b0%91%e5%9c%a8%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e4%b8%ad%e5%87%ba%e7%8e%b0%e7%9a%84%e5%80%bc" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 至少在两个数组中出现的值
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/two-out-of-three/">https://leetcode-cn.com/problems/two-out-of-three/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>集合。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -23,10 +55,42 @@
 &lt;span class="k">return&lt;/span> &lt;span class="nb">list&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s2&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="n">s3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="n">s3&lt;/span>&lt;span class="p">))&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-获取单值网格的最小操作数httpsleetcode-cncomproblemsminimum-operations-to-make-a-uni-value-grid">Q2. &lt;a href="https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/">获取单值网格的最小操作数&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-获取单值网格的最小操作数">
+&lt;a href="#q2-%e8%8e%b7%e5%8f%96%e5%8d%95%e5%80%bc%e7%bd%91%e6%a0%bc%e7%9a%84%e6%9c%80%e5%b0%8f%e6%93%8d%e4%bd%9c%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 获取单值网格的最小操作数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/">https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>中位数。原型是 &lt;a href="https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements-ii/">462. 最少移动次数使数组元素相等 II&lt;/a>。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -60,10 +124,42 @@
 &lt;span class="k">return&lt;/span> &lt;span class="nb">sum&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nb">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">num&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="n">x&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">num&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">])&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-股票价格波动httpsleetcode-cncomproblemsstock-price-fluctuation">Q3. &lt;a href="https://leetcode-cn.com/problems/stock-price-fluctuation/">股票价格波动&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-股票价格波动">
+&lt;a href="#q3-%e8%82%a1%e7%a5%a8%e4%bb%b7%e6%a0%bc%e6%b3%a2%e5%8a%a8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 股票价格波动
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/stock-price-fluctuation/">https://leetcode-cn.com/problems/stock-price-fluctuation/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>模拟。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -121,10 +217,42 @@
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-将数组分成两个数组并最小化数组和的差httpsleetcode-cncomproblemspartition-array-into-two-arrays-to-minimize-sum-difference">Q4. &lt;a href="https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/">将数组分成两个数组并最小化数组和的差&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-将数组分成两个数组并最小化数组和的差">
+&lt;a href="#q4-%e5%b0%86%e6%95%b0%e7%bb%84%e5%88%86%e6%88%90%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e5%b9%b6%e6%9c%80%e5%b0%8f%e5%8c%96%e6%95%b0%e7%bb%84%e5%92%8c%e7%9a%84%e5%b7%ae" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 将数组分成两个数组并最小化数组和的差
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/">https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>Meet in the middle.&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -257,11 +385,43 @@
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>LeetCode 第 56 场双周赛</title><link>https://blog.chenjr.top/post/leetcode-biweekly-56/</link><pubDate>Fri, 16 Jul 2021 13:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-biweekly-56/</guid><description>
-&lt;h2 id="q1-统计平方和三元组的数目httpsleetcode-cncomproblemscount-square-sum-triples">Q1. &lt;a href="https://leetcode-cn.com/problems/count-square-sum-triples/">统计平方和三元组的数目&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-统计平方和三元组的数目">
+&lt;a href="#q1-%e7%bb%9f%e8%ae%a1%e5%b9%b3%e6%96%b9%e5%92%8c%e4%b8%89%e5%85%83%e7%bb%84%e7%9a%84%e6%95%b0%e7%9b%ae" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 统计平方和三元组的数目
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/count-square-sum-triples/">https://leetcode-cn.com/problems/count-square-sum-triples/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>第一题无脑暴力 $O(n^3)$ 即可。&lt;/p>
 &lt;p>赛后补一份容易想到的 $O(n^2)$ 的双指针代码。评论区给出了复杂度更低的算法，但需要前置的数学知识，并不太容易在面试中想出来，在这里也就不再赘述了。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -308,10 +468,42 @@
 &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-迷宫中离入口最近的出口httpsleetcode-cncomproblemsnearest-exit-from-entrance-in-maze">Q2. &lt;a href="https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/">迷宫中离入口最近的出口&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-迷宫中离入口最近的出口">
+&lt;a href="#q2-%e8%bf%b7%e5%ae%ab%e4%b8%ad%e7%a6%bb%e5%85%a5%e5%8f%a3%e6%9c%80%e8%bf%91%e7%9a%84%e5%87%ba%e5%8f%a3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 迷宫中离入口最近的出口
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/">https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>一道比较无脑的搜索题。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -392,12 +584,44 @@
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-求和游戏httpsleetcode-cncomproblemssum-game">Q3. &lt;a href="https://leetcode-cn.com/problems/sum-game/">求和游戏&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-求和游戏">
+&lt;a href="#q3-%e6%b1%82%e5%92%8c%e6%b8%b8%e6%88%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 求和游戏
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/sum-game/">https://leetcode-cn.com/problems/sum-game/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>分类讨论的博弈论问题。&lt;/p>
 &lt;p>理清楚之后翻译成代码即可。&lt;/p>
 &lt;div style="text-align:center">&lt;img src="Q3.svg" />&lt;/div>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -466,15 +690,47 @@
 &lt;span class="k">return&lt;/span> &lt;span class="kc">True&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-规定时间内到达终点的最小花费httpsleetcode-cncomproblemsminimum-cost-to-reach-destination-in-time">Q4. &lt;a href="https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/">规定时间内到达终点的最小花费&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-规定时间内到达终点的最小花费">
+&lt;a href="#q4-%e8%a7%84%e5%ae%9a%e6%97%b6%e9%97%b4%e5%86%85%e5%88%b0%e8%be%be%e7%bb%88%e7%82%b9%e7%9a%84%e6%9c%80%e5%b0%8f%e8%8a%b1%e8%b4%b9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 规定时间内到达终点的最小花费
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/">https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>二维的最短路径问题，观察到数据范围 $1 \le maxTime \le 1000$ 以及 $2 \le n \le 1000$，可以想到使用动态规划进行求解。&lt;/p>
 &lt;p>我们定义 $dp[t][x]$ 为在时刻 $t$ 到达城市 $x$ 的最小花费。那么对于城市 $x$ 的邻居 $y$，假设二者之间的耗时为 $time$，我们有以下状态转移方程：&lt;/p>
 &lt;p>$$
 dp[t + time][y] = \min (dp[t + time][y], dp[t][x] + passingFees[y])
 $$&lt;/p>
 &lt;p>注意到 $n - 1 \le edges.length \le 1000$，故总体的计算量只会到 $10^6$ 量级，可以通过本题。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -532,10 +788,42 @@ $$&lt;/p>
 &lt;/div>
 &lt;/div></description></item><item><title>LeetCode 第 248 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-248/</link><pubDate>Sun, 04 Jul 2021 13:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-248/</guid><description>
 &lt;p>起晚了没赶上:(&lt;/p>
-&lt;h2 id="q1-基于排列构建数组httpsleetcode-cncomproblemsbuild-array-from-permutation">Q1. &lt;a href="https://leetcode-cn.com/problems/build-array-from-permutation/">基于排列构建数组&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-基于排列构建数组">
+&lt;a href="#q1-%e5%9f%ba%e4%ba%8e%e6%8e%92%e5%88%97%e6%9e%84%e5%bb%ba%e6%95%b0%e7%bb%84" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 基于排列构建数组
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/build-array-from-permutation/">https://leetcode-cn.com/problems/build-array-from-permutation/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>阅读理解。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -570,11 +858,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters">Q2. &lt;a href="https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/">消灭怪物的最大数量&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters">
+&lt;a href="#q2-%e6%b6%88%e7%81%ad%e6%80%aa%e7%89%a9%e7%9a%84%e6%9c%80%e5%a4%a7%e6%95%b0%e9%87%8fhttpsleetcode-cncomproblemseliminate-maximum-number-of-monsters" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 消灭怪物的最大数量(&amp;lt;a href=&amp;#34;https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/&amp;#34;&amp;gt;https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/&amp;lt;/a&amp;gt;)
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：[]&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, \infty)$ 的怪物。&lt;/p>
 &lt;p>只需要将怪物的到达时间向上取整并排序，贪心消灭即可。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -621,8 +941,31 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers">Q3. &lt;a href="https://leetcode-cn.com/problems/count-good-numbers/">统计好数字的数目&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers">
+&lt;a href="#q3-%e7%bb%9f%e8%ae%a1%e5%a5%bd%e6%95%b0%e5%ad%97%e7%9a%84%e6%95%b0%e7%9b%aehttpsleetcode-cncomproblemscount-good-numbers" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 统计好数字的数目(&amp;lt;a href=&amp;#34;https://leetcode-cn.com/problems/count-good-numbers/&amp;#34;&amp;gt;https://leetcode-cn.com/problems/count-good-numbers/&amp;lt;/a&amp;gt;)
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：[]&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>奇数位置有 &lt;code>2, 3, 5, 7&lt;/code> 四种选择，偶数位置有 &lt;code>0, 2, 4, 6, 8&lt;/code> 五种选择。&lt;/p>
 &lt;p>根据排列组合原理可知这是乘法关系。&lt;/p>
 &lt;p>题目中说明可以包括前导零，所以好数字的数目即&lt;/p>
@@ -630,7 +973,16 @@ $$&lt;/p>
 ans = 4^{\lfloor \dfrac{n}{2} \rfloor} * 5 ^{\lceil \dfrac{n}{2} \rceil}
 $$&lt;/p>
 &lt;p>只需要简单地进行快速幂处理并取模即可。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -691,11 +1043,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath">Q4. &lt;a href="https://leetcode-cn.com/problems/longest-common-subpath/">最长公共子路径&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath">
+&lt;a href="#q4-%e6%9c%80%e9%95%bf%e5%85%ac%e5%85%b1%e5%ad%90%e8%b7%af%e5%be%84httpsleetcode-cncomproblemslongest-common-subpath" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 最长公共子路径(&amp;lt;a href=&amp;#34;https://leetcode-cn.com/problems/longest-common-subpath/&amp;#34;&amp;gt;https://leetcode-cn.com/problems/longest-common-subpath/&amp;lt;/a&amp;gt;)
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：[]&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>滚动哈希，二分查找。但是可能会有碰撞，导致答案错误。&lt;/p>
 &lt;p>更好的解法是后缀数组(TODO)。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -803,10 +1187,42 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>LeetCode 第 247 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-247/</link><pubDate>Thu, 01 Jul 2021 13:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-247/</guid><description>
-&lt;h2 id="q1-两个数对之间的最大乘积差httpsleetcode-cncomproblemsmaximum-product-difference-between-two-pairs">Q1. &lt;a href="https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/">两个数对之间的最大乘积差&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-两个数对之间的最大乘积差">
+&lt;a href="#q1-%e4%b8%a4%e4%b8%aa%e6%95%b0%e5%af%b9%e4%b9%8b%e9%97%b4%e7%9a%84%e6%9c%80%e5%a4%a7%e4%b9%98%e7%a7%af%e5%b7%ae" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 两个数对之间的最大乘积差
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/">https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>注意到数据范围 &lt;code>1 &amp;lt;= nums[i] &amp;lt;= 10^4&lt;/code>，可以想到使用排序解决本问题。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -827,10 +1243,42 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-循环轮转矩阵httpsleetcode-cncomproblemscyclically-rotating-a-grid">Q2. &lt;a href="https://leetcode-cn.com/problems/cyclically-rotating-a-grid/">循环轮转矩阵&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-循环轮转矩阵">
+&lt;a href="#q2-%e5%be%aa%e7%8e%af%e8%bd%ae%e8%bd%ac%e7%9f%a9%e9%98%b5" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 循环轮转矩阵
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/cyclically-rotating-a-grid/">https://leetcode-cn.com/problems/cyclically-rotating-a-grid/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>模拟即可，注意细节。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -897,11 +1345,43 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="n">grid&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-最美子字符串的数目httpsleetcode-cncomproblemsnumber-of-wonderful-substrings">Q3. &lt;a href="https://leetcode-cn.com/problems/number-of-wonderful-substrings/">最美子字符串的数目&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-最美子字符串的数目">
+&lt;a href="#q3-%e6%9c%80%e7%be%8e%e5%ad%90%e5%ad%97%e7%ac%a6%e4%b8%b2%e7%9a%84%e6%95%b0%e7%9b%ae" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 最美子字符串的数目
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/number-of-wonderful-substrings/">https://leetcode-cn.com/problems/number-of-wonderful-substrings/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>子字符串问题往前缀和方向思考；子序列问题往动态规划方向思考。&lt;/p>
 &lt;p>显然本题中只需要记录前缀字符串的奇偶情况即可，由于数据量很小，考虑使用状态压缩进行优化。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -954,8 +1434,31 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-统计为蚁群构筑房间的不同顺序httpsleetcode-cncomproblemscount-ways-to-build-rooms-in-an-ant-colony">Q4. &lt;a href="https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/">统计为蚁群构筑房间的不同顺序&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-统计为蚁群构筑房间的不同顺序">
+&lt;a href="#q4-%e7%bb%9f%e8%ae%a1%e4%b8%ba%e8%9a%81%e7%be%a4%e6%9e%84%e7%ad%91%e6%88%bf%e9%97%b4%e7%9a%84%e4%b8%8d%e5%90%8c%e9%a1%ba%e5%ba%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 统计为蚁群构筑房间的不同顺序
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/">https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;div style="text-align:center">&lt;img src="test.svg" />&lt;/div>
 &lt;p>如上图所示，假设我们已经得到了所有子节点的 $dp[child]$ 以及 $sz[child]$，那么我们可以得出以下计算公式：&lt;/p>
 &lt;p>$$
@@ -963,7 +1466,16 @@ dp[root] = \left ( \prod_{i = 0}^{childCnt} dp[child_i] \right ) \times \frac{(s
 $$&lt;/p>
 &lt;p>其中乘号左边的部分是各子节点的方案数，是乘法关系。乘号右边是将各子节点归并排列的组合方式，其中分子即子节点的全排列方式，由于每个子树有且仅有一种排列方式，所以还需要除去分母部分。&lt;/p>
 &lt;p>由于除法不满足模运算的分配律，所以除去分母部分需要用到乘法逆元。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1069,10 +1581,42 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>LeetCode 第 55 场双周赛</title><link>https://blog.chenjr.top/post/leetcode-biweekly-55/</link><pubDate>Sun, 27 Jun 2021 13:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-biweekly-55/</guid><description>
-&lt;h2 id="q1-删除一个元素使数组严格递增httpsleetcode-cncomproblemsremove-one-element-to-make-the-array-strictly-increasing">Q1. &lt;a href="https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">删除一个元素使数组严格递增&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-删除一个元素使数组严格递增">
+&lt;a href="#q1-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%85%83%e7%b4%a0%e4%bd%bf%e6%95%b0%e7%bb%84%e4%b8%a5%e6%a0%bc%e9%80%92%e5%a2%9e" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 删除一个元素使数组严格递增
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>观察并分析，可以发现仅存在两种合法情况，逐一考虑即可。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1139,11 +1683,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-删除一个字符串中所有出现的给定子字符串httpsleetcode-cncomproblemsremove-all-occurrences-of-a-substring">Q2. &lt;a href="https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/">删除一个字符串中所有出现的给定子字符串&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-删除一个字符串中所有出现的给定子字符串">
+&lt;a href="#q2-%e5%88%a0%e9%99%a4%e4%b8%80%e4%b8%aa%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e6%89%80%e6%9c%89%e5%87%ba%e7%8e%b0%e7%9a%84%e7%bb%99%e5%ae%9a%e5%ad%90%e5%ad%97%e7%ac%a6%e4%b8%b2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 删除一个字符串中所有出现的给定子字符串
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/">https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>数据量较小，暴力即可。&lt;/p>
 &lt;p>(TODO: KMP)&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1182,8 +1758,31 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-最大子序列交替和httpsleetcode-cncomproblemsmaximum-alternating-subsequence-sum">Q3. &lt;a href="https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/">最大子序列交替和&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-最大子序列交替和">
+&lt;a href="#q3-%e6%9c%80%e5%a4%a7%e5%ad%90%e5%ba%8f%e5%88%97%e4%ba%a4%e6%9b%bf%e5%92%8c" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 最大子序列交替和
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/">https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>子序列问题可以考虑用动态规划来进行求解。&lt;/p>
 &lt;p>考虑前 &lt;code>i - 1&lt;/code> 个数字，维护两个值：&lt;/p>
 &lt;ul>
@@ -1192,7 +1791,16 @@ $$&lt;/p>
 &lt;/ul>
 &lt;p>那么对第 &lt;code>i&lt;/code> 个数字做决策时，可以得到前 &lt;code>i&lt;/code> 个数字对应两个值。&lt;/p>
 &lt;p>最终返回 &lt;code>max(odd, even)&lt;/code> 即可。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1217,10 +1825,42 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="nb">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">odd&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">even&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-设计电影租借系统httpsleetcode-cncomproblemsdesign-movie-rental-system">Q4. &lt;a href="https://leetcode-cn.com/problems/design-movie-rental-system/">设计电影租借系统&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-设计电影租借系统">
+&lt;a href="#q4-%e8%ae%be%e8%ae%a1%e7%94%b5%e5%bd%b1%e7%a7%9f%e5%80%9f%e7%b3%bb%e7%bb%9f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 设计电影租借系统
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/design-movie-rental-system/">https://leetcode-cn.com/problems/design-movie-rental-system/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>明确题意，模拟即可。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1332,12 +1972,53 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="注意">注意&lt;/h3>
+&lt;/div>&lt;h3 id="注意">
+&lt;a href="#%e6%b3%a8%e6%84%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+注意
+&lt;/h3>
 &lt;p>合适的变量名以及适当的注释可以让代码写起来清晰很多，思路也不容易出错。&lt;/p></description></item><item><title>LeetCode 第 246 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-246/</link><pubDate>Sun, 20 Jun 2021 13:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-246/</guid><description>
-&lt;h2 id="q1-字符串中的最大奇数httpsleetcode-cncomproblemslargest-odd-number-in-string">Q1. &lt;a href="https://leetcode-cn.com/problems/largest-odd-number-in-string/">字符串中的最大奇数&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-字符串中的最大奇数">
+&lt;a href="#q1-%e5%ad%97%e7%ac%a6%e4%b8%b2%e4%b8%ad%e7%9a%84%e6%9c%80%e5%a4%a7%e5%a5%87%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 字符串中的最大奇数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/largest-odd-number-in-string/">https://leetcode-cn.com/problems/largest-odd-number-in-string/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>从后往前找到第一个奇数即可。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1362,10 +2043,42 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-你完成的完整对局数httpsleetcode-cncomproblemsthe-number-of-full-rounds-you-have-played">Q2. &lt;a href="https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/">你完成的完整对局数&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-你完成的完整对局数">
+&lt;a href="#q2-%e4%bd%a0%e5%ae%8c%e6%88%90%e7%9a%84%e5%ae%8c%e6%95%b4%e5%af%b9%e5%b1%80%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 你完成的完整对局数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/">https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>模拟即可。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1435,11 +2148,43 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-统计子岛屿httpsleetcode-cncomproblemscount-sub-islands">Q3. &lt;a href="https://leetcode-cn.com/problems/count-sub-islands/">统计子岛屿&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-统计子岛屿">
+&lt;a href="#q3-%e7%bb%9f%e8%ae%a1%e5%ad%90%e5%b2%9b%e5%b1%bf" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 统计子岛屿
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/count-sub-islands/">https://leetcode-cn.com/problems/count-sub-islands/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>用深度优先搜索可以找出 &lt;code>grid2&lt;/code> 中所有的连通块。&lt;/p>
 &lt;p>搜索的同时检查 &lt;code>grid2&lt;/code> 中的连通块在 &lt;code>grid1&lt;/code> 中是否被完全包含即可。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1510,10 +2255,42 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-查询差绝对值的最小值httpsleetcode-cncomproblemsminimum-absolute-difference-queries">Q4. &lt;a href="https://leetcode-cn.com/problems/minimum-absolute-difference-queries/">查询差绝对值的最小值&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-查询差绝对值的最小值">
+&lt;a href="#q4-%e6%9f%a5%e8%af%a2%e5%b7%ae%e7%bb%9d%e5%af%b9%e5%80%bc%e7%9a%84%e6%9c%80%e5%b0%8f%e5%80%bc" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 查询差绝对值的最小值
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-absolute-difference-queries/">https://leetcode-cn.com/problems/minimum-absolute-difference-queries/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>前缀和 + 计数排序。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1568,12 +2345,53 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="n">ans&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="注意">注意&lt;/h3>
+&lt;/div>&lt;h3 id="注意">
+&lt;a href="#%e6%b3%a8%e6%84%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+注意
+&lt;/h3>
 &lt;p>审题，注意数据范围！&lt;/p></description></item><item><title>LeetCode 第 245 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-245/</link><pubDate>Tue, 15 Jun 2021 11:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-245/</guid><description>
-&lt;h2 id="q1-重新分配字符使所有字符串都相等httpsleetcode-cncomproblemsredistribute-characters-to-make-all-strings-equal">Q1. &lt;a href="https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/">重新分配字符使所有字符串都相等&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-重新分配字符使所有字符串都相等">
+&lt;a href="#q1-%e9%87%8d%e6%96%b0%e5%88%86%e9%85%8d%e5%ad%97%e7%ac%a6%e4%bd%bf%e6%89%80%e6%9c%89%e5%ad%97%e7%ac%a6%e4%b8%b2%e9%83%bd%e7%9b%b8%e7%ad%89" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 重新分配字符使所有字符串都相等
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/">https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>字符串间的移动是任意的，那么我们只需要统计所有字符出现的次数，检查其是否为 $\texttt{words.size()}$ 的整数倍即可。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1622,12 +2440,44 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-可移除字符的最大数目httpsleetcode-cncomproblemsmaximum-number-of-removable-characters">Q2. &lt;a href="https://leetcode-cn.com/problems/maximum-number-of-removable-characters/">可移除字符的最大数目&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-可移除字符的最大数目">
+&lt;a href="#q2-%e5%8f%af%e7%a7%bb%e9%99%a4%e5%ad%97%e7%ac%a6%e7%9a%84%e6%9c%80%e5%a4%a7%e6%95%b0%e7%9b%ae" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 可移除字符的最大数目
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/maximum-number-of-removable-characters/">https://leetcode-cn.com/problems/maximum-number-of-removable-characters/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>很容易想到暴力的做法，即直接使用双指针进行模拟，时间复杂度是 $\texttt{O((s.size() + p.size()) * removable.size())}$，其计算量级会达到 $10^{10}$，显然无法通过本题。&lt;/p>
 &lt;p>观察到对于 $\texttt{removable}$ 的选择具有单调性，当我们移除前 $\texttt{x(x &amp;lt; k)}$ 个字符时，$\texttt{p}$ 一定仍然是 $\texttt{s}$ 的一个子序列；当我们移除前 $\texttt{y(y &amp;gt; k)}$ 个字符时，$\texttt{p}$ 一定不是 $\texttt{s}$ 的一个子序列。&lt;/p>
 &lt;p>那么我们可以使用二分的方法，使得时间复杂度降为 $\texttt{O((s.size() + p.size()) * log removable.size())}$，可以通过本题。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1700,11 +2550,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-合并若干三元组以形成目标三元组httpsleetcode-cncomproblemsmerge-triplets-to-form-target-triplet">Q3. &lt;a href="https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/">合并若干三元组以形成目标三元组&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-合并若干三元组以形成目标三元组">
+&lt;a href="#q3-%e5%90%88%e5%b9%b6%e8%8b%a5%e5%b9%b2%e4%b8%89%e5%85%83%e7%bb%84%e4%bb%a5%e5%bd%a2%e6%88%90%e7%9b%ae%e6%a0%87%e4%b8%89%e5%85%83%e7%bb%84" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 合并若干三元组以形成目标三元组
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/">https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>观察到 $triplets[i] = [a_i, b_i, c_i]$ 中若 $a_i &amp;gt; x$ 或 $b_i &amp;gt; y$ 或 $c_i &amp;gt; z$，那么 $triplets[i]$ 将是无效的，也即我们不需要使用到 $triplets[i]$ 以得到最终的结果。&lt;/p>
 &lt;p>而在 $\texttt{triplets}$ 剩余的三元组中，我们只需要找到三个位置的最大值，检查他们是否与 $\texttt{target}$ 一一对应即可。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1737,8 +2619,31 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">w&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">z&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-最佳运动员的比拼回合httpsleetcode-cncomproblemsthe-earliest-and-latest-rounds-where-players-compete">Q4. &lt;a href="https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/">最佳运动员的比拼回合&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-最佳运动员的比拼回合">
+&lt;a href="#q4-%e6%9c%80%e4%bd%b3%e8%bf%90%e5%8a%a8%e5%91%98%e7%9a%84%e6%af%94%e6%8b%bc%e5%9b%9e%e5%90%88" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 最佳运动员的比拼回合
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/">https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;blockquote>
 &lt;p>参考 &lt;a href="https://cp-wiki.vercel.app/tutorial/leetcode/WC245/#problem-d-%E6%9C%80%E4%BD%B3%E8%BF%90%E5%8A%A8%E5%91%98%E7%9A%84%E6%AF%94%E6%8B%BC%E5%9B%9E%E5%90%88">@吴自华&lt;/a>&lt;/p>
 &lt;/blockquote>
@@ -1750,7 +2655,16 @@ $$&lt;/p>
 &lt;p>到第四轮，此时仅有（$7 / 2 = 4$）名运动员。两个运动员可能的位置只有（$ 4 * 3 = 12$）种情况，此时状压DP的计算量级为 $12 * 2^2 &amp;lt; 1 * 10^2$。&lt;/p>
 &lt;p>到第五轮，此时仅有（$4 / 2 = 2$）名运动员。两个运动员可能的位置只有两种情况，此时状压DP的计算量级为 $2 * 2^1 &amp;lt; 1 * 10^1$。&lt;/p>
 &lt;p>由此可见，暴力枚举的计算量级在 $10^5$ 级别，可以通过本题。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1861,12 +2775,53 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="注意">注意&lt;/h3>
+&lt;/div>&lt;h3 id="注意">
+&lt;a href="#%e6%b3%a8%e6%84%8f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+注意
+&lt;/h3>
 &lt;p>运动员的编号不要弄错了&lt;/p></description></item><item><title>LeetCode 第 54 场双周赛</title><link>https://blog.chenjr.top/post/leetcode-biweekly-54/</link><pubDate>Sun, 13 Jun 2021 23:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-biweekly-54/</guid><description>
-&lt;h2 id="q1-检查是否区域内所有整数都被覆盖httpsleetcode-cncomproblemscheck-if-all-the-integers-in-a-range-are-covered">Q1. &lt;a href="https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/">检查是否区域内所有整数都被覆盖&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-检查是否区域内所有整数都被覆盖">
+&lt;a href="#q1-%e6%a3%80%e6%9f%a5%e6%98%af%e5%90%a6%e5%8c%ba%e5%9f%9f%e5%86%85%e6%89%80%e6%9c%89%e6%95%b4%e6%95%b0%e9%83%bd%e8%a2%ab%e8%a6%86%e7%9b%96" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 检查是否区域内所有整数都被覆盖
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/">https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>模拟&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1901,10 +2856,42 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="kc">True&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-找到需要补充粉笔的学生编号httpsleetcode-cncomproblemsfind-the-student-that-will-replace-the-chalk">Q2. &lt;a href="https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/">找到需要补充粉笔的学生编号&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-找到需要补充粉笔的学生编号">
+&lt;a href="#q2-%e6%89%be%e5%88%b0%e9%9c%80%e8%a6%81%e8%a1%a5%e5%85%85%e7%b2%89%e7%ac%94%e7%9a%84%e5%ad%a6%e7%94%9f%e7%bc%96%e5%8f%b7" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 找到需要补充粉笔的学生编号
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/">https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>模拟可以发现，重复的循环其实可以通过取模来简化。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1933,10 +2920,42 @@ $$&lt;/p>
 &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-最大的幻方httpsleetcode-cncomproblemslargest-magic-square">Q3. &lt;a href="https://leetcode-cn.com/problems/largest-magic-square/">最大的幻方&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-最大的幻方">
+&lt;a href="#q3-%e6%9c%80%e5%a4%a7%e7%9a%84%e5%b9%bb%e6%96%b9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 最大的幻方
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/largest-magic-square/">https://leetcode-cn.com/problems/largest-magic-square/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>前缀和。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2035,13 +3054,45 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-反转表达式值的最少操作次数httpsleetcode-cncomproblemsminimum-cost-to-change-the-final-value-of-expression">Q4. &lt;a href="https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/">反转表达式值的最少操作次数&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-反转表达式值的最少操作次数">
+&lt;a href="#q4-%e5%8f%8d%e8%bd%ac%e8%a1%a8%e8%be%be%e5%bc%8f%e5%80%bc%e7%9a%84%e6%9c%80%e5%b0%91%e6%93%8d%e4%bd%9c%e6%ac%a1%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 反转表达式值的最少操作次数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/">https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;blockquote>
 &lt;p>参考 &lt;a href="https://cp-wiki.vercel.app/tutorial/leetcode/BC54/#problem-d-%E5%8F%8D%E8%BD%AC%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%80%BC%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0">@吴自华&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>栈 + 动态规划&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2125,10 +3176,42 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>剑指 offer</title><link>https://blog.chenjr.top/post/sword-to-offer/</link><pubDate>Thu, 10 Jun 2021 23:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/sword-to-offer/</guid><description>
-&lt;h2 id="剑指-offer-03-数组中重复的数字httpsleetcode-cncomproblemsshu-zu-zhong-zhong-fu-de-shu-zi-lcof">剑指 Offer 03. &lt;a href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/">数组中重复的数字&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="剑指-offer-03-数组中重复的数字">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-03-%e6%95%b0%e7%bb%84%e4%b8%ad%e9%87%8d%e5%a4%8d%e7%9a%84%e6%95%b0%e5%ad%97" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 03. 数组中重复的数字
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/">https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>原地哈希。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2161,10 +3244,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-04-二维数组中的查找httpsleetcode-cncomproblemser-wei-shu-zu-zhong-de-cha-zhao-lcof">剑指 Offer 04. &lt;a href="https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/">二维数组中的查找&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-04-二维数组中的查找">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-04-%e4%ba%8c%e7%bb%b4%e6%95%b0%e7%bb%84%e4%b8%ad%e7%9a%84%e6%9f%a5%e6%89%be" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 04. 二维数组中的查找
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/">https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>从数组的右上或左下开始查找，可以有效地进行减治。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2217,10 +3332,42 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-05-替换空格httpsleetcode-cncomproblemsti-huan-kong-ge-lcof">剑指 Offer 05. &lt;a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/">替换空格&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-05-替换空格">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-05-%e6%9b%bf%e6%8d%a2%e7%a9%ba%e6%a0%bc" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 05. 替换空格
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/">https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>用 &lt;code>strings.Builder&lt;/code>。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2260,10 +3407,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-06-从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof">剑指 Offer 06. &lt;a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">从尾到头打印链表&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-06-从尾到头打印链表">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-06-%e4%bb%8e%e5%b0%be%e5%88%b0%e5%a4%b4%e6%89%93%e5%8d%b0%e9%93%be%e8%a1%a8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 06. 从尾到头打印链表
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>正向遍历，反转数组。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2302,10 +3481,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-09-用两个栈实现队列httpsleetcode-cncomproblemsyong-liang-ge-zhan-shi-xian-dui-lie-lcof">剑指 Offer 09. &lt;a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/">用两个栈实现队列&lt;/a>&lt;/h2>
-&lt;h3 id="思路-4">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-09-用两个栈实现队列">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-09-%e7%94%a8%e4%b8%a4%e4%b8%aa%e6%a0%88%e5%ae%9e%e7%8e%b0%e9%98%9f%e5%88%97" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 09. 用两个栈实现队列
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/">https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-4">
+&lt;a href="#%e6%80%9d%e8%b7%af-4" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>使用两个栈，交替 &lt;code>push&lt;/code> 及 &lt;code>pop&lt;/code> 实现队列。&lt;/p>
-&lt;h3 id="代码-4">代码&lt;/h3>
+&lt;h3 id="代码-4">
+&lt;a href="#%e4%bb%a3%e7%a0%81-4" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2375,10 +3586,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-11-旋转数组的最小数字httpsleetcode-cncomproblemsxuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof">剑指 Offer 11. &lt;a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/">旋转数组的最小数字&lt;/a>&lt;/h2>
-&lt;h3 id="思路-5">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-11-旋转数组的最小数字">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-11-%e6%97%8b%e8%bd%ac%e6%95%b0%e7%bb%84%e7%9a%84%e6%9c%80%e5%b0%8f%e6%95%b0%e5%ad%97" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 11. 旋转数组的最小数字
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/">https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-5">
+&lt;a href="#%e6%80%9d%e8%b7%af-5" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>二分查找，分类讨论。&lt;/p>
-&lt;h3 id="代码-5">代码&lt;/h3>
+&lt;h3 id="代码-5">
+&lt;a href="#%e4%bb%a3%e7%a0%81-5" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2481,10 +3724,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-24-反转链表httpsleetcode-cncomproblemsfan-zhuan-lian-biao-lcof">剑指 Offer 24. &lt;a href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">反转链表&lt;/a>&lt;/h2>
-&lt;h3 id="思路-6">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-24-反转链表">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-24-%e5%8f%8d%e8%bd%ac%e9%93%be%e8%a1%a8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 24. 反转链表
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/">https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-6">
+&lt;a href="#%e6%80%9d%e8%b7%af-6" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>使用辅助的指针，迭代反转。必要时可以画图，辅助理解。&lt;/p>
-&lt;h3 id="代码-6">代码&lt;/h3>
+&lt;h3 id="代码-6">
+&lt;a href="#%e4%bb%a3%e7%a0%81-6" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2517,10 +3792,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-30-包含min函数的栈httpsleetcode-cncomproblemsbao-han-minhan-shu-de-zhan-lcof">剑指 Offer 30. &lt;a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">包含min函数的栈&lt;/a>&lt;/h2>
-&lt;h3 id="思路-7">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-30-包含min函数的栈">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-30-%e5%8c%85%e5%90%abmin%e5%87%bd%e6%95%b0%e7%9a%84%e6%a0%88" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 30. 包含min函数的栈
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-7">
+&lt;a href="#%e6%80%9d%e8%b7%af-7" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>双栈思路，保持栈中每个元素在 &lt;code>min&lt;/code> 栈中对应当前最小值。&lt;/p>
-&lt;h3 id="代码-7">代码&lt;/h3>
+&lt;h3 id="代码-7">
+&lt;a href="#%e4%bb%a3%e7%a0%81-7" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2588,10 +3895,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-35-复杂链表的复制httpsleetcode-cncomproblemsfu-za-lian-biao-de-fu-zhi-lcof">剑指 Offer 35. &lt;a href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">复杂链表的复制&lt;/a>&lt;/h2>
-&lt;h3 id="思路-8">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-35-复杂链表的复制">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-35-%e5%a4%8d%e6%9d%82%e9%93%be%e8%a1%a8%e7%9a%84%e5%a4%8d%e5%88%b6" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 35. 复杂链表的复制
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/">https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-8">
+&lt;a href="#%e6%80%9d%e8%b7%af-8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>类似原地哈希。在并发的场景下，需要借助额外的空间。&lt;/p>
-&lt;h3 id="代码-8">代码&lt;/h3>
+&lt;h3 id="代码-8">
+&lt;a href="#%e4%bb%a3%e7%a0%81-8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2653,10 +3992,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-50-第一个只出现一次的字符httpsleetcode-cncomproblemsdi-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof">剑指 Offer 50. &lt;a href="https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/">第一个只出现一次的字符&lt;/a>&lt;/h2>
-&lt;h3 id="思路-9">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-50-第一个只出现一次的字符">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-50-%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%8f%aa%e5%87%ba%e7%8e%b0%e4%b8%80%e6%ac%a1%e7%9a%84%e5%ad%97%e7%ac%a6" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 50. 第一个只出现一次的字符
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/">https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-9">
+&lt;a href="#%e6%80%9d%e8%b7%af-9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>哈希表，两次遍历。&lt;/p>
-&lt;h3 id="代码-9">代码&lt;/h3>
+&lt;h3 id="代码-9">
+&lt;a href="#%e4%bb%a3%e7%a0%81-9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2696,10 +4067,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-53---i-在排序数组中查找数字-ihttpsleetcode-cncomproblemszai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">剑指 Offer 53 - I. &lt;a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/">在排序数组中查找数字 I&lt;/a>&lt;/h2>
-&lt;h3 id="思路-10">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-53---i-在排序数组中查找数字-i">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-53---i-%e5%9c%a8%e6%8e%92%e5%ba%8f%e6%95%b0%e7%bb%84%e4%b8%ad%e6%9f%a5%e6%89%be%e6%95%b0%e5%ad%97-i" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 53 - I. 在排序数组中查找数字 I
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/">https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-10">
+&lt;a href="#%e6%80%9d%e8%b7%af-10" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>二分查找。&lt;/p>
-&lt;h3 id="代码-10">代码&lt;/h3>
+&lt;h3 id="代码-10">
+&lt;a href="#%e4%bb%a3%e7%a0%81-10" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2774,10 +4177,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-53---ii-0n-1中缺失的数字httpsleetcode-cncomproblemsque-shi-de-shu-zi-lcof">剑指 Offer 53 - II. &lt;a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">0～n-1中缺失的数字&lt;/a>&lt;/h2>
-&lt;h3 id="思路-11">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-53---ii-0n-1中缺失的数字">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-53---ii-0n-1%e4%b8%ad%e7%bc%ba%e5%a4%b1%e7%9a%84%e6%95%b0%e5%ad%97" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 53 - II. 0～n-1中缺失的数字
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-11">
+&lt;a href="#%e6%80%9d%e8%b7%af-11" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>通过数字交换实现原地哈希。&lt;/p>
-&lt;h3 id="代码-11">代码&lt;/h3>
+&lt;h3 id="代码-11">
+&lt;a href="#%e4%bb%a3%e7%a0%81-11" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2818,10 +4253,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="剑指-offer-58---ii-左旋转字符串httpsleetcode-cncomproblemszuo-xuan-zhuan-zi-fu-chuan-lcof">剑指 Offer 58 - II. &lt;a href="https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">左旋转字符串&lt;/a>&lt;/h2>
-&lt;h3 id="思路-12">思路&lt;/h3>
+&lt;/div>&lt;h2 id="剑指-offer-58---ii-左旋转字符串">
+&lt;a href="#%e5%89%91%e6%8c%87-offer-58---ii-%e5%b7%a6%e6%97%8b%e8%bd%ac%e5%ad%97%e7%ac%a6%e4%b8%b2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+剑指 Offer 58 - II. 左旋转字符串
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-12">
+&lt;a href="#%e6%80%9d%e8%b7%af-12" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>切片。&lt;/p>
-&lt;h3 id="代码-12">代码&lt;/h3>
+&lt;h3 id="代码-12">
+&lt;a href="#%e4%bb%a3%e7%a0%81-12" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2840,10 +4307,42 @@ $$&lt;/p>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="jz16-合并两个排序的链表">JZ16. 合并两个排序的链表&lt;/h2>
-&lt;h3 id="思路-13">思路&lt;/h3>
+&lt;/div>&lt;h2 id="jz16-合并两个排序的链表">
+&lt;a href="#jz16-%e5%90%88%e5%b9%b6%e4%b8%a4%e4%b8%aa%e6%8e%92%e5%ba%8f%e7%9a%84%e9%93%be%e8%a1%a8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+JZ16. 合并两个排序的链表
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：[]&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-13">
+&lt;a href="#%e6%80%9d%e8%b7%af-13" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>允许对原链表进行修改的话，由于 &lt;code>next&lt;/code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。&lt;/p>
-&lt;h3 id="代码-13">代码&lt;/h3>
+&lt;h3 id="代码-13">
+&lt;a href="#%e4%bb%a3%e7%a0%81-13" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -2902,8 +4401,31 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="jz53-表示数值的字符串">JZ53. 表示数值的字符串&lt;/h2>
-&lt;h3 id="思路-14">思路&lt;/h3>
+&lt;/div>&lt;h2 id="jz53-表示数值的字符串">
+&lt;a href="#jz53-%e8%a1%a8%e7%a4%ba%e6%95%b0%e5%80%bc%e7%9a%84%e5%ad%97%e7%ac%a6%e4%b8%b2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+JZ53. 表示数值的字符串
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：[]&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-14">
+&lt;a href="#%e6%80%9d%e8%b7%af-14" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>对于这种比较复杂的状态转移，硬编码 &lt;code>if-else&lt;/code> 会使得逻辑复杂，难以扩展；更好的方式是使用确定有限状态自动机 &lt;abbr title="Deterministic finite automaton">DFA&lt;/abbr>。&lt;/p>
 &lt;p>这里我们先定义可能出现的几种符号所属类型：&lt;/p>
 &lt;table>
@@ -3013,7 +4535,16 @@ $$&lt;/p>
 &lt;li>&lt;code>0&lt;/code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。&lt;/li>
 &lt;li>&lt;code>2&lt;/code>, &lt;code>4&lt;/code>, &lt;code>7&lt;/code> 为合法的结束状态。&lt;/li>
 &lt;/ul>
-&lt;h3 id="代码-14">代码&lt;/h3>
+&lt;h3 id="代码-14">
+&lt;a href="#%e4%bb%a3%e7%a0%81-14" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3111,11 +4642,43 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>LeetCode 第 244 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-244/</link><pubDate>Wed, 09 Jun 2021 23:52:42 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-244/</guid><description>
-&lt;h2 id="q1-判断矩阵经轮转后是否一致httpsleetcode-cncomproblemsdetermine-whether-matrix-can-be-obtained-by-rotation">Q1. &lt;a href="https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/">判断矩阵经轮转后是否一致&lt;/a>&lt;/h2>
-&lt;h3 id="思路">思路&lt;/h3>
+&lt;h2 id="q1-判断矩阵经轮转后是否一致">
+&lt;a href="#q1-%e5%88%a4%e6%96%ad%e7%9f%a9%e9%98%b5%e7%bb%8f%e8%bd%ae%e8%bd%ac%e5%90%8e%e6%98%af%e5%90%a6%e4%b8%80%e8%87%b4" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q1. 判断矩阵经轮转后是否一致
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/">https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路">
+&lt;a href="#%e6%80%9d%e8%b7%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>容易发现，旋转四次 &lt;code>mat&lt;/code> 即回到了原始状态。&lt;/p>
 &lt;p>所以我们只需要至多旋转三次 &lt;code>mat&lt;/code> ，每次判断是否和 &lt;code>target&lt;/code> 一致即可。&lt;/p>
-&lt;h3 id="代码">代码&lt;/h3>
+&lt;h3 id="代码">
+&lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3174,11 +4737,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q2-使数组元素相等的减少操作次数httpsleetcode-cncomproblemsreduction-operations-to-make-the-array-elements-equal">Q2. &lt;a href="https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/">使数组元素相等的减少操作次数&lt;/a>&lt;/h2>
-&lt;h3 id="思路-1">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q2-使数组元素相等的减少操作次数">
+&lt;a href="#q2-%e4%bd%bf%e6%95%b0%e7%bb%84%e5%85%83%e7%b4%a0%e7%9b%b8%e7%ad%89%e7%9a%84%e5%87%8f%e5%b0%91%e6%93%8d%e4%bd%9c%e6%ac%a1%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q2. 使数组元素相等的减少操作次数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/">https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-1">
+&lt;a href="#%e6%80%9d%e8%b7%af-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>使用 &lt;code>map&lt;/code> 来模拟这一过程即可。&lt;/p>
 &lt;p>&lt;code>map&lt;/code> 可以带上自定义的排序规则，使用 &lt;code>greater&amp;lt;&amp;gt;&lt;/code> 使得 &lt;code>map&lt;/code> 逆序，更加方便。&lt;/p>
-&lt;h3 id="代码-1">代码&lt;/h3>
+&lt;h3 id="代码-1">
+&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3219,12 +4814,44 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q3-使二进制字符串字符交替的最少反转次数httpsleetcode-cncomproblemsminimum-number-of-flips-to-make-the-binary-string-alternating">Q3. &lt;a href="https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/">使二进制字符串字符交替的最少反转次数&lt;/a>&lt;/h2>
-&lt;h3 id="思路-2">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q3-使二进制字符串字符交替的最少反转次数">
+&lt;a href="#q3-%e4%bd%bf%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%ad%97%e7%ac%a6%e4%ba%a4%e6%9b%bf%e7%9a%84%e6%9c%80%e5%b0%91%e5%8f%8d%e8%bd%ac%e6%ac%a1%e6%95%b0" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q3. 使二进制字符串字符交替的最少反转次数
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/">https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-2">
+&lt;a href="#%e6%80%9d%e8%b7%af-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>遇到这种多种类型操作的问题，尽量地去把操作简化为一种。&lt;/p>
 &lt;p>对于类型 1 的操作，我们可以使用 &lt;code>T = S + S&lt;/code> 的方法进行模拟。&lt;/p>
 &lt;p>对于类型 2 的操作，结合最终所需要的交替字符串，很容易想到只有两种交替情况，枚举即可。&lt;/p>
-&lt;h3 id="代码-2">代码&lt;/h3>
+&lt;h3 id="代码-2">
+&lt;a href="#%e4%bb%a3%e7%a0%81-2" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3289,11 +4916,43 @@ $$&lt;/p>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="q4-装包裹的最小浪费空间httpsleetcode-cncomproblemsminimum-space-wasted-from-packaging">Q4. &lt;a href="https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/">装包裹的最小浪费空间&lt;/a>&lt;/h2>
-&lt;h3 id="思路-3">思路&lt;/h3>
+&lt;/div>&lt;h2 id="q4-装包裹的最小浪费空间">
+&lt;a href="#q4-%e8%a3%85%e5%8c%85%e8%a3%b9%e7%9a%84%e6%9c%80%e5%b0%8f%e6%b5%aa%e8%b4%b9%e7%a9%ba%e9%97%b4" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+Q4. 装包裹的最小浪费空间
+&lt;/h2>
+&lt;blockquote>
+&lt;p>来源：力扣（LeetCode）&lt;/p>
+&lt;p>链接：&lt;a href="https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/">https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/&lt;/a>&lt;/p>
+&lt;p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="思路-3">
+&lt;a href="#%e6%80%9d%e8%b7%af-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+思路
+&lt;/h3>
 &lt;p>遍历每个供应商，将其提供的箱子进行排序，贪心选择尽可能小的箱子装包裹。&lt;/p>
 &lt;p>在遍历之前，我们提前计算好 &lt;code>packages&lt;/code> 的前缀和；遍历过程中，借助前缀和计算浪费的空间即可。&lt;/p>
-&lt;h3 id="代码-3">代码&lt;/h3>
+&lt;h3 id="代码-3">
+&lt;a href="#%e4%bb%a3%e7%a0%81-3" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+代码
+&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -3362,29 +5021,92 @@ $$&lt;/p>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>2019年计算机专业保研夏令营经历</title><link>https://blog.chenjr.top/post/summer-camp/</link><pubDate>Sun, 06 Jun 2021 17:39:06 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/summer-camp/</guid><description>
-&lt;h2 id="前期准备">前期准备&lt;/h2>
+&lt;h2 id="前期准备">
+&lt;a href="#%e5%89%8d%e6%9c%9f%e5%87%86%e5%a4%87" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+前期准备
+&lt;/h2>
 &lt;p>准备的内容其实无非也就是面试、机试：&lt;/p>
 &lt;ol>
 &lt;li>面试部分主要围绕英语口语以及听力、数学课、专业课和项目展开。具体的内容比较个性化，准备的话我推荐看一些市面上 &lt;strong>关于程序员面试类的书籍&lt;/strong> ，可以覆盖很大一部分关键的专业课知识，当然如果基础比较扎实的话，把自己学过的知识重新复习一遍是最好的啦。&lt;/li>
 &lt;li>机试部分主要就是算法题啦。我参考的书是 &lt;strong>《王道论坛计算机考研机试指南》&lt;/strong>，这本书特别适合拿来入门机试，从头到尾刷完这本书的话应付大部分院校的机试基本没有什么问题了。另外可以提前去考一些院校认可的证书，在机试时可以抵分，比如 &lt;strong>CSP&lt;/strong> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>、 &lt;strong>PAT&lt;/strong> &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。&lt;/li>
 &lt;/ol>
 &lt;p>另外关于保研的资料搜集，也是很重要的工作，几个大的问题大概提一下：&lt;/p>
-&lt;h3 id="方向选择">方向选择&lt;/h3>
+&lt;h3 id="方向选择">
+&lt;a href="#%e6%96%b9%e5%90%91%e9%80%89%e6%8b%a9" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+方向选择
+&lt;/h3>
 &lt;p>保研可以跨保，但是我个人是没有考虑过其他专业，本文也主要围绕计算机专业展开。&lt;/p>
-&lt;h3 id="院校申请">院校申请&lt;/h3>
+&lt;h3 id="院校申请">
+&lt;a href="#%e9%99%a2%e6%a0%a1%e7%94%b3%e8%af%b7" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+院校申请
+&lt;/h3>
 &lt;p>能不能过夏令营或九推的初审，和自身的本科出身、成绩、科研、竞赛以及有否联系老师等诸多因素有关。九推难度一般会比夏令营小的多，如果夏令营被拒也不要气馁，九推还有机会，就算九推也凉，也注意留意短信电话邮件等，特别是快填系统那几天，鸽子满天飞，没有 offer 的就可以捡漏。每年的夏令营，热门院校的预录取名单都会有一部分交集，不少的人手里拿着不止一个 offer ，所以竞争就会激烈一些。我个人的建议是，拿到更好的 offer 就可以把其他的拒了，手里拿着一个保证有书读就行，太晚拒的话，对导师、学校、候补的同学、学弟学妹都会有影响。最后关于申请方面，这里列出来一些我没有通过初审的学校：&lt;/p>
 &lt;ul>
 &lt;li>清华计算机软院叉院、北大信科叉院、上交电院、南大LAMDA、中科院自动化所计算所 &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>南大计算机 &lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>复旦计算机、同济计算机、武大计算机、中科院软件所、哈工大深圳、华科计算机 &lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>&lt;/li>
 &lt;/ul>
-&lt;h3 id="联系导师">联系导师&lt;/h3>
+&lt;h3 id="联系导师">
+&lt;a href="#%e8%81%94%e7%b3%bb%e5%af%bc%e5%b8%88" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+联系导师
+&lt;/h3>
 &lt;p>我的入营除了清华深研院，其他学校都没有提前联系老师。不懒的话都提前联系一下是最好的，我就有些懒得花时间在这上面。很多学校被拒一部分原因可能就是没有提前联系老师，当然大部分原因应该还是本科出身以及自身实力不够。导师的信息可以在学校官网上找，看到合适的，可以到 &lt;strong>谷歌学术&lt;/strong> 上了解他的学术水平，在 &lt;strong>导师评价网&lt;/strong> 上了解为人，综合自己的实力选择一个合适的导师去联系。&lt;/p>
-&lt;h3 id="硕士直博">硕士／直博&lt;/h3>
+&lt;h3 id="硕士直博">
+&lt;a href="#%e7%a1%95%e5%a3%ab%e7%9b%b4%e5%8d%9a" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+硕士／直博
+&lt;/h3>
 &lt;p>我参加的夏令营全部报的都是硕士项目。需要特别提醒的是，慎报直博，除非自己有强烈的读博意愿以及确定导师的人品、学术水平等没有问题 &lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>，否则个人不是很推荐。想要了解更多的话可以参考：&lt;a href="https://www.zhihu.com/question/27479057">为什么现在有些研究生想退学？&lt;/a>。&lt;/p>
-&lt;h2 id="保研经历">保研经历&lt;/h2>
+&lt;h2 id="保研经历">
+&lt;a href="#%e4%bf%9d%e7%a0%94%e7%bb%8f%e5%8e%86" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+保研经历
+&lt;/h2>
 &lt;p>因为过审的夏令营时间都基本错开了，所以我参加的夏令营算是比较多的。&lt;/p>
-&lt;h3 id="南开大学人工智能学院-人工智能方向">南开大学人工智能学院 人工智能方向&lt;/h3>
+&lt;h3 id="南开大学人工智能学院-人工智能方向">
+&lt;a href="#%e5%8d%97%e5%bc%80%e5%a4%a7%e5%ad%a6%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e5%ad%a6%e9%99%a2-%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e6%96%b9%e5%90%91" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+南开大学人工智能学院 人工智能方向
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：6月8日 — 6月9日。&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：第一天参观，第二天面试。&lt;/li>
@@ -3399,7 +5121,16 @@ $$&lt;/p>
 &lt;/ul>
 &lt;p>这是我参加的第一个夏令营，基本费用学校都给报销，学校环境也很舒服。前一天晚上在酒店背了很久的英文介绍，没想到第二天就只用中文。考核感觉特别简单，只有面试，而且没有具体的问题，面试全程更像是在聊天，老师也很 nice ，最后给我打了个很高的面试分。问过其他一些同学的情况，还有用英文介绍项目的，黑板写公式的，就比我硬核很多，可能面试还是有点看运气吧。&lt;/p>
 &lt;p>后面需要拿着面试成绩去联系老师，我联系的老师说需要确定去才给 offer ，当时有几个夏令营也通知说过了初审，想着去南开概率也不大，在6月底就放弃了南开。&lt;/p>
-&lt;h3 id="中国人民大学高瓴人工智能学院-人工智能方向">中国人民大学高瓴人工智能学院 人工智能方向&lt;/h3>
+&lt;h3 id="中国人民大学高瓴人工智能学院-人工智能方向">
+&lt;a href="#%e4%b8%ad%e5%9b%bd%e4%ba%ba%e6%b0%91%e5%a4%a7%e5%ad%a6%e9%ab%98%e7%93%b4%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e5%ad%a6%e9%99%a2-%e4%ba%ba%e5%b7%a5%e6%99%ba%e8%83%bd%e6%96%b9%e5%90%91" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+中国人民大学高瓴人工智能学院 人工智能方向
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：7月5日 — 7月7日&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：第一天下午报道，第二天早上参观，下午笔试+机试，第三天早上面试。&lt;/li>
@@ -3430,7 +5161,16 @@ $$&lt;/p>
 &lt;/ul>
 &lt;p>夏令营体验非常棒，尽管就在一条街，也提供校内住宿，100饭卡，送了很多很好看的纪念品，特别用心。人大真的很棒，尽管学科评估计算机只是 B+ 的评级，但是经历过推免之后，感觉单看学科评估评价一个学校其实挺蠢的。高瓴有一些很厉害的导师，如果能跟到他们读研究生的话，其实还是蛮不错的啦。&lt;/p>
 &lt;p>总的来说，想去人大的话需要提前准备一下笔试（很独特的考核），机试最好满分，面试的话感觉老师都很 nice ，别有压力基本没有什么问题。大概在7月中旬出来结果，人大人工智能学院硕士只要六个外校的，我排在候补第三位，在七月下旬的时候招生办电话说候补录到我了，当时已经拿到了北航的 offer，一方面还想在九推试试其他学校（人大没有九推，接受了就提前结束保研之旅了），所以就拒了。&lt;/p>
-&lt;h3 id="北京理工大学计算机学院-计算机科学与技术">北京理工大学计算机学院 计算机科学与技术&lt;/h3>
+&lt;h3 id="北京理工大学计算机学院-计算机科学与技术">
+&lt;a href="#%e5%8c%97%e4%ba%ac%e7%90%86%e5%b7%a5%e5%a4%a7%e5%ad%a6%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%ad%a6%e9%99%a2-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6%e4%b8%8e%e6%8a%80%e6%9c%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+北京理工大学计算机学院 计算机科学与技术
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：7月8日 — 7月10日&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：第一天下午报道，第二天早上参观，下午机试，第三天早上面试。&lt;/li>
@@ -3449,7 +5189,16 @@ $$&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>面试完很多老师有和我联系，当时就和一个老师说清楚可能不会去北理，然后他也愿意给我留名额，也算是有了个保底 offer 。&lt;/p>
-&lt;h3 id="北京航空航天大学计算机学院-计算机科学与技术">北京航空航天大学计算机学院 计算机科学与技术&lt;/h3>
+&lt;h3 id="北京航空航天大学计算机学院-计算机科学与技术">
+&lt;a href="#%e5%8c%97%e4%ba%ac%e8%88%aa%e7%a9%ba%e8%88%aa%e5%a4%a9%e5%a4%a7%e5%ad%a6%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%ad%a6%e9%99%a2-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6%e4%b8%8e%e6%8a%80%e6%9c%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+北京航空航天大学计算机学院 计算机科学与技术
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：7月11日 — 7月14日&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：第一天早上报道，下午分两批机试，第二天第三天分两批面试，第三天晚上就公布优秀营员名单，第四天找自己想去的导师签字。&lt;/li>
@@ -3471,7 +5220,16 @@ $$&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>北航入营600人左右，机试刷一半人，面试再刷一半人。机试我当时第一题就花了不到二十分钟，后面一个小时四十分钟都在想第二题，顶不住代码功底太差，最后也没写出来，机试只要一题就能过，没有把握的话建议稳住第一道，别学我差点就爆零了。最后优秀营员会按机试面试加权分进行排名，如果机试 AK 的话会很有优势（我们这一届排名前40才有学硕）。面试感觉年年都是那几个问题，熟悉套路的话答起来会很轻松。所以说想去北航的话，代码能力要强，建议提前去考 &lt;code>CSP&lt;/code>，可以抵机试。&lt;/p>
-&lt;h3 id="清华大学深圳国际研究生院-计算机技术">清华大学深圳国际研究生院 计算机技术&lt;/h3>
+&lt;h3 id="清华大学深圳国际研究生院-计算机技术">
+&lt;a href="#%e6%b8%85%e5%8d%8e%e5%a4%a7%e5%ad%a6%e6%b7%b1%e5%9c%b3%e5%9b%bd%e9%99%85%e7%a0%94%e7%a9%b6%e7%94%9f%e9%99%a2-%e8%ae%a1%e7%ae%97%e6%9c%ba%e6%8a%80%e6%9c%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+清华大学深圳国际研究生院 计算机技术
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：7月15日 — 7月19日&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：第一天下午报道，第二天机试，第三天英语面试 &amp;amp; 心理测试 + 项目汇报，第四天中文面试。&lt;/li>
@@ -3499,7 +5257,16 @@ $$&lt;/p>
 &lt;/ul>
 &lt;p>清华的夏令营有很多个项目，计算机技术只收了25个人，生源特别好，清一色中上流985，甚至有清本的学生。考核项目也很多，每天都有至少两个任务并行，一天就能睡5、6个小时（仅个人情况），也有见到一些同学，即使在这样高强度的压力下，还是可以很从容地把每一件事都做得特别好，不服不行，让我看到了我和优秀营员之间很明显的差距。&lt;/p>
 &lt;p>夏令营结束大概四五天，结果出来未录取，也没有太出乎意料。后面到九月份有个老师有和我联系，但是不太喜欢他的方向，后面也就没去成清华。如果想去清华深研院的话，提前联系老师很重要，入营的基本全都提前联系过导师。另外也别光看是清华，陶瓷的时候就不关心导师的为人了（&lt;strong>导师评价网&lt;/strong>）。总的来说，这个夏令营会比较看重科研能力，有论文的话会很有优势，反而基础的计算机知识考察的不多。&lt;/p>
-&lt;h3 id="北京大学深圳研究生院-计算机应用技术">北京大学深圳研究生院 计算机应用技术&lt;/h3>
+&lt;h3 id="北京大学深圳研究生院-计算机应用技术">
+&lt;a href="#%e5%8c%97%e4%ba%ac%e5%a4%a7%e5%ad%a6%e6%b7%b1%e5%9c%b3%e7%a0%94%e7%a9%b6%e7%94%9f%e9%99%a2-%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%ba%94%e7%94%a8%e6%8a%80%e6%9c%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+北京大学深圳研究生院 计算机应用技术
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>时间&lt;/strong>：9月21日 — 9月22日&lt;/li>
 &lt;li>&lt;strong>安排&lt;/strong>：只有面试。&lt;/li>
@@ -3515,7 +5282,16 @@ $$&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>到这个时间节点就已经是九推了，北大深研院比较爱要夏令营的学生，而我当时没有联系老师没有入营，九推感觉就比较吃亏一些。关于面试的过程，一直到我回答完算法题，老师似乎都没有在听，一直都在传一些我的资料，感觉自己擅长的科目基本都被略过去了。后面那几个英文概念问题真是把我问懵了，这里就被怼了几句基础不行，当时就觉得凉了一半。后面问 offer 的事情，我也如实说了，现在看来可能有点隐瞒还会好点？当时成绩出来排在候补第十位左右，最后到9月28号我在系统上填完北航之后，学校那边才跟我说补录的事情，自然也就没有机会了。&lt;/p>
-&lt;h3 id="浙江大学计算机学院-计算机科学与技术">浙江大学计算机学院 计算机科学与技术&lt;/h3>
+&lt;h3 id="浙江大学计算机学院-计算机科学与技术">
+&lt;a href="#%e6%b5%99%e6%b1%9f%e5%a4%a7%e5%ad%a6%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%ad%a6%e9%99%a2-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a7%91%e5%ad%a6%e4%b8%8e%e6%8a%80%e6%9c%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+浙江大学计算机学院 计算机科学与技术
+&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;strong>时间&lt;/strong>：9月23日 — 9月24日&lt;/p>
@@ -3560,7 +5336,16 @@ $$&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>浙大的机试我满分出来之前看了一眼，至少已经有三四十个满分了。所以主要就是看面试，面试我答的特别差，只能说自己的基础知识还是不够扎实。最后录取名单里面不出意料我又是排在候补，也是第十位左右，九月底打电话说有专硕的名额了，但是不想对北航那边的招生造成影响，就拒掉了。&lt;/p>
-&lt;h2 id="写在最后">写在最后&lt;/h2>
+&lt;h2 id="写在最后">
+&lt;a href="#%e5%86%99%e5%9c%a8%e6%9c%80%e5%90%8e" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+写在最后
+&lt;/h2>
 &lt;p>不得不说保研路上真的有很多时候要看运气。应该说，实力决定下限，运气决定上限。努力了，不后悔，我觉得就够了。其实研究生也并不是终点，同样的道理，研究生的院校也就能决定个下限，自己的努力才能决定将来的上限。所以，尽人事，听天命吧。最后祝愿学弟学妹们都能保上自己理想的院校。&lt;/p>
 &lt;section class="footnotes" role="doc-endnotes">
 &lt;hr>

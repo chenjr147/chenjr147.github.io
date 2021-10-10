@@ -4,23 +4,42 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=theme-color content="dark">
-<title> LeetCode 第 248 场周赛 | kevin</title>
-<link rel=stylesheet href=/sass/main.min.12754930aaca2409561861a9f13c52153f073ef96d63061a9a330c250f392fcb.css>
+<title>LeetCode 第 248 场周赛 | Kevin's Blog</title>
+<meta property="og:site_name" content="Kevin's Blog">
+<meta property="og:title" content="LeetCode 第 248 场周赛 | Kevin's Blog">
+<meta itemprop=name content="LeetCode 第 248 场周赛 | Kevin's Blog">
+<meta name=twitter:title content="LeetCode 第 248 场周赛 | Kevin's Blog">
+<meta name=application-name content="LeetCode 第 248 场周赛 | Kevin's Blog">
+<meta name=description content="Kevin Chen">
+<meta name=twitter:description content="Kevin Chen">
+<meta itemprop=description content="Kevin Chen">
+<meta property="og:description" content="Kevin Chen">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="Kevin Chen">
+<meta property="og:article:published_time" content="2021-07-04T13:52:42+0800">
+<meta property="article:published_time" content="2021-07-04T13:52:42+0800">
+<meta property="og:article:author" content="Kevin">
+<meta property="article:author" content="Kevin">
+<meta name=author content="Kevin">
+<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 248 场周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-07-04","description":"","wordCount":631,"mainEntityOfPage":"True","dateModified":"2021-07-04","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
+<link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
 </head>
+<script>(function(){const b='ThemeColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.userColorScheme='dark':document.documentElement.dataset.userColorScheme='light'})()</script>
 <body class=dark>
 <nav class=navbar>
 <div class=container>
 <div class=flex>
 <div>
 <a class=brand href=/>
-<span class=emoji>
-🤪
-</span>
-kevin
+<img src=/favicon.ico>
+Kevin's Blog
 </a>
 </div>
 <div class=flex>
-<button id=dark-mode-button></button>
+<a href=/articles/>Articles</a>
+<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg>
+</button>
 </div>
 </div>
 </div>
@@ -34,7 +53,8 @@ kevin
 <h1>LeetCode 第 248 场周赛</h1>
 <div class=post-meta>
 <div>
-By kevin on <time>July 04, 2021</time>
+By kevin | <time>July 04, 2021</time>
+| 3 minutes
 </div>
 <div class=tags>
 <a href=/tags/leetcode/>LeetCode</a>
@@ -48,10 +68,27 @@ By kevin on <time>July 04, 2021</time>
 </article>
 <div class=article-post>
 <p>起晚了没赶上:(</p>
-<h2 id=q1-基于排列构建数组httpsleetcode-cncomproblemsbuild-array-from-permutation>Q1. <a href=https://leetcode-cn.com/problems/build-array-from-permutation/>基于排列构建数组</a></h2>
-<h3 id=思路>思路</h3>
+<h2 id=q1-基于排列构建数组>
+<a href=#q1-%e5%9f%ba%e4%ba%8e%e6%8e%92%e5%88%97%e6%9e%84%e5%bb%ba%e6%95%b0%e7%bb%84 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q1. 基于排列构建数组
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/build-array-from-permutation/>https://leetcode-cn.com/problems/build-array-from-permutation/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路>
+<a href=#%e6%80%9d%e8%b7%af class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>阅读理解。</p>
-<h3 id=代码>代码</h3>
+<h3 id=代码>
+<a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -86,11 +123,28 @@ By kevin on <time>July 04, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters>Q2. <a href=https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/>消灭怪物的最大数量</a></h2>
-<h3 id=思路-1>思路</h3>
+</div><h2 id=q2-消灭怪物的最大数量httpsleetcode-cncomproblemseliminate-maximum-number-of-monsters>
+<a href=#q2-%e6%b6%88%e7%81%ad%e6%80%aa%e7%89%a9%e7%9a%84%e6%9c%80%e5%a4%a7%e6%95%b0%e9%87%8fhttpsleetcode-cncomproblemseliminate-maximum-number-of-monsters class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q2. 消灭怪物的最大数量(&lt;a href="https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/">https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/&lt;/a>)
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：[]</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-1>
+<a href=#%e6%80%9d%e8%b7%af-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>在 $t_0(t_0 \in \mathbb{Z})$ 时刻，我们可以消灭到达时间为 $(t_0, \infty)$ 的怪物。</p>
 <p>只需要将怪物的到达时间向上取整并排序，贪心消灭即可。</p>
-<h3 id=代码-1>代码</h3>
+<h3 id=代码-1>
+<a href=#%e4%bb%a3%e7%a0%81-1 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -137,8 +191,21 @@ By kevin on <time>July 04, 2021</time>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers>Q3. <a href=https://leetcode-cn.com/problems/count-good-numbers/>统计好数字的数目</a></h2>
-<h3 id=思路-2>思路</h3>
+</div><h2 id=q3-统计好数字的数目httpsleetcode-cncomproblemscount-good-numbers>
+<a href=#q3-%e7%bb%9f%e8%ae%a1%e5%a5%bd%e6%95%b0%e5%ad%97%e7%9a%84%e6%95%b0%e7%9b%aehttpsleetcode-cncomproblemscount-good-numbers class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q3. 统计好数字的数目(&lt;a href="https://leetcode-cn.com/problems/count-good-numbers/">https://leetcode-cn.com/problems/count-good-numbers/&lt;/a>)
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：[]</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-2>
+<a href=#%e6%80%9d%e8%b7%af-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>奇数位置有 <code>2, 3, 5, 7</code> 四种选择，偶数位置有 <code>0, 2, 4, 6, 8</code> 五种选择。</p>
 <p>根据排列组合原理可知这是乘法关系。</p>
 <p>题目中说明可以包括前导零，所以好数字的数目即</p>
@@ -146,7 +213,11 @@ By kevin on <time>July 04, 2021</time>
 ans = 4^{\lfloor \dfrac{n}{2} \rfloor} * 5 ^{\lceil \dfrac{n}{2} \rceil}
 $$</p>
 <p>只需要简单地进行快速幂处理并取模即可。</p>
-<h3 id=代码-2>代码</h3>
+<h3 id=代码-2>
+<a href=#%e4%bb%a3%e7%a0%81-2 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -209,11 +280,28 @@ $$</p>
 <span class=p>};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id=q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath>Q4. <a href=https://leetcode-cn.com/problems/longest-common-subpath/>最长公共子路径</a></h2>
-<h3 id=思路-3>思路</h3>
+</div><h2 id=q4-最长公共子路径httpsleetcode-cncomproblemslongest-common-subpath>
+<a href=#q4-%e6%9c%80%e9%95%bf%e5%85%ac%e5%85%b1%e5%ad%90%e8%b7%af%e5%be%84httpsleetcode-cncomproblemslongest-common-subpath class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+Q4. 最长公共子路径(&lt;a href="https://leetcode-cn.com/problems/longest-common-subpath/">https://leetcode-cn.com/problems/longest-common-subpath/&lt;/a>)
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：[]</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-3>
+<a href=#%e6%80%9d%e8%b7%af-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
 <p>滚动哈希，二分查找。但是可能会有碰撞，导致答案错误。</p>
 <p>更好的解法是后缀数组(TODO)。</p>
-<h3 id=代码-3>代码</h3>
+<h3 id=代码-3>
+<a href=#%e4%bb%a3%e7%a0%81-3 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
 <div class=highlight><div class=chroma>
 <table class=lntable><tr><td class=lntd>
 <pre tabindex=0 class=chroma><code><span class=lnt> 1
@@ -338,18 +426,18 @@ LeetCode 第 56 场双周赛
 </nav>
 </div>
 <div class=container>
-<script src=https://utteranc.es/client.js repo=kevinchen147/kevinchen147.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
+<script src=https://giscus.app/client.js data-repo=kevinchen147/kevinchen147.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI=" data-category=General data-category-id=DIC_kwDODLdYXs4B_XnR data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script>
+<script>function setGiscusTeheme(b){let a=document.querySelector('.giscus iframe');a&&a.contentWindow.postMessage({giscus:{setConfig:{theme:b}}},'https://giscus.app')}addEventListener('message',a=>{if(a.origin!=='https://giscus.app')return;setGiscusTeheme(document.documentElement.dataset.userColorScheme)}),window.addEventListener('onColorSchemeChange',a=>{setGiscusTeheme(a.detail)})</script>
 </div>
 </main>
 </main>
 <footer class="footer flex">
 <section class=container>
 <nav class=footer-links>
+<a href=/index.xml>RSS</a>
 </nav>
 </section>
-<script type=text/javascript>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}}</script>
-<script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script>
-<script async src=/js/features.min.cb54200d744e5e9da0fa39e8ed570c19eac326f18a67904837ffada21795dfe2.js data-enable-footnotes=true></script>
+<script defer src=/ts/features.c81551cd4dbef120af278f16966a41142c02be9ff5d6a669be09820fbf047456.js data-enable-footnotes=true></script>
 </footer>
 </body>
 </html>
