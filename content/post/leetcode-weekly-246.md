@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [字符串中的最大奇数](https://leetcode-cn.com/problems/largest-odd-number-in-string/)
+## Q1. 字符串中的最大奇数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/largest-odd-number-in-string/](https://leetcode-cn.com/problems/largest-odd-number-in-string/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -30,7 +36,13 @@ class Solution:
         return ""
 ```
 
-## Q2. [你完成的完整对局数](https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/)
+## Q2. 你完成的完整对局数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/](https://leetcode-cn.com/problems/the-number-of-full-rounds-you-have-played/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -74,7 +86,13 @@ class Solution:
 ```
 
 
-## Q3. [统计子岛屿](https://leetcode-cn.com/problems/count-sub-islands/)
+## Q3. 统计子岛屿
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/count-sub-islands/](https://leetcode-cn.com/problems/count-sub-islands/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -120,7 +138,13 @@ public:
 ```
 
 
-## Q4. [查询差绝对值的最小值](https://leetcode-cn.com/problems/minimum-absolute-difference-queries/)
+## Q4. 查询差绝对值的最小值
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-absolute-difference-queries/](https://leetcode-cn.com/problems/minimum-absolute-difference-queries/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

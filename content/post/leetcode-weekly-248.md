@@ -12,7 +12,13 @@ mathjax: true
 
 起晚了没赶上:(
 
-## Q1. [基于排列构建数组](https://leetcode-cn.com/problems/build-array-from-permutation/)
+## Q1. 基于排列构建数组
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/build-array-from-permutation/](https://leetcode-cn.com/problems/build-array-from-permutation/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -39,7 +45,13 @@ public:
 
 
 
-## Q2. [消灭怪物的最大数量](https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/)
+## Q2. 消灭怪物的最大数量(https://leetcode-cn.com/problems/eliminate-maximum-number-of-monsters/)
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[]
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -73,7 +85,13 @@ public:
 ```
 
 
-## Q3. [统计好数字的数目](https://leetcode-cn.com/problems/count-good-numbers/)
+## Q3. 统计好数字的数目(https://leetcode-cn.com/problems/count-good-numbers/)
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[]
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -123,7 +141,13 @@ public:
 ```
 
 
-## Q4. [最长公共子路径](https://leetcode-cn.com/problems/longest-common-subpath/)
+## Q4. 最长公共子路径(https://leetcode-cn.com/problems/longest-common-subpath/)
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[]
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

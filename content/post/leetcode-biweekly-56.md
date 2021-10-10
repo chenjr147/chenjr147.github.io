@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [统计平方和三元组的数目](https://leetcode-cn.com/problems/count-square-sum-triples/)
+## Q1. 统计平方和三元组的数目
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/count-square-sum-triples/](https://leetcode-cn.com/problems/count-square-sum-triples/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -45,7 +51,13 @@ class Solution:
 
 
 
-## Q2. [迷宫中离入口最近的出口](https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/)
+## Q2. 迷宫中离入口最近的出口
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/](https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -94,7 +106,13 @@ public:
 ```
 
 
-## Q3. [求和游戏](https://leetcode-cn.com/problems/sum-game/)
+## Q3. 求和游戏
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/sum-game/](https://leetcode-cn.com/problems/sum-game/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -141,7 +159,13 @@ class Solution:
 ```
 
 
-## Q4. [规定时间内到达终点的最小花费](https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/)
+## Q4. 规定时间内到达终点的最小花费
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/](https://leetcode-cn.com/problems/minimum-cost-to-reach-destination-in-time/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

@@ -1,6 +1,6 @@
 ---
 author: "kevin"
-title: "LeetCode 第  场周赛"
+title: "LeetCode 第 262 场周赛"
 date: 2021-10-10T17:23:21+08:00
 tags: [
     "LeetCode",
@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [至少在两个数组中出现的值](https://leetcode-cn.com/problems/two-out-of-three/)
+## Q1. 至少在两个数组中出现的值
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/two-out-of-three/](https://leetcode-cn.com/problems/two-out-of-three/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -28,7 +34,13 @@ class Solution:
         return list((s1 & s2) | (s2 & s3) | (s1 & s3))
 ```
 
-## Q2. [获取单值网格的最小操作数](https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/)
+## Q2. 获取单值网格的最小操作数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/](https://leetcode-cn.com/problems/minimum-operations-to-make-a-uni-value-grid/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -55,7 +67,13 @@ class Solution:
 ```
 
 
-## Q3. [股票价格波动](https://leetcode-cn.com/problems/stock-price-fluctuation/)
+## Q3. 股票价格波动
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/stock-price-fluctuation/](https://leetcode-cn.com/problems/stock-price-fluctuation/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -96,7 +114,13 @@ class StockPrice {
 ```
 
 
-## Q4. [将数组分成两个数组并最小化数组和的差](https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/)
+## Q4. 将数组分成两个数组并最小化数组和的差
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/](https://leetcode-cn.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

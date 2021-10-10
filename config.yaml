@@ -1,16 +1,64 @@
 baseurl: "https://blog.chenjr.top"
 languageCode: "zh-cn"
-title: "kevin"
-theme: "tania"
+title: "Kevin's Blog"
+theme: "hugo-tania"
 paginate: 6
-disqusShortname: kevinchen147
 
 params:
-  titleEmoji: '🤪'
-  socialOptions:
-    github: https://github.com/kevinchen147
-    email: xxgj@outlook.com
+  # Emoji will show before the blog title on site navbar.
+  titleEmoji:
+
+  # Logo will show before the blog title on site navbar.
+  titleLogo: favicon.ico
+  
+  # Enable float footnotes.
+  # Default to true
   enableFootnotes: true
+  
+  siteName: "Kevin's Blog"
+  siteDesc: "Kevin Chen"
+  author: "Kevin Chen"
+
+
+  # Limit how many categories filter show above search input.
+  # Default to 5
+  maxCategoryToShow: 10
+
+  # Show your socail information with icon on index bio with `_index.md` content.
+  socialOptions:
+    dev-to:
+    email: xxgj@outlook.com
+    facebook:
+    github: https://github.com/kevinchen147
+    instagram:
+    linkedin:
+    medium:
+    stack-overflow:
+    steam:
+    telegram:
+    twitter:
+    twitch:
+    whatsapp:
+  
+  # Comments settings
+  comments:
+    enabled: true
+    provider: giscus
+
+    giscus:
+      repo: kevinchen147/kevinchen147.github.io
+      id: MDEwOlJlcG9zaXRvcnkyMTMzNDIzMDI=
+      category:
+        name: General
+        id: DIC_kwDODLdYXs4B_XnR
+
+menu:
+  header:
+    - name: Articles
+      url: "/articles/"
+  footer:
+    - name: RSS
+      url: "/index.xml"
 
 markup:
   highlight:
@@ -19,3 +67,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]

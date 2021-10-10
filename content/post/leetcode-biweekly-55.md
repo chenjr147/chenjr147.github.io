@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [删除一个元素使数组严格递增](https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/)
+## Q1. 删除一个元素使数组严格递增
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/](https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -54,7 +60,13 @@ public:
 
 
 
-## Q2. [删除一个字符串中所有出现的给定子字符串](https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/)
+## Q2. 删除一个字符串中所有出现的给定子字符串
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/](https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -84,7 +96,13 @@ public:
 ```
 
 
-## Q3. [最大子序列交替和](https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/)
+## Q3. 最大子序列交替和
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/](https://leetcode-cn.com/problems/maximum-alternating-subsequence-sum/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -114,7 +132,13 @@ class Solution:
 ```
 
 
-## Q4. [设计电影租借系统](https://leetcode-cn.com/problems/design-movie-rental-system/)
+## Q4. 设计电影租借系统
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/design-movie-rental-system/](https://leetcode-cn.com/problems/design-movie-rental-system/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

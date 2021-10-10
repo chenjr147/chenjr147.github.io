@@ -9,7 +9,13 @@ tags: [
 ]
 ---
 
-## Q1. [判断矩阵经轮转后是否一致](https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
+## Q1. 判断矩阵经轮转后是否一致
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/](https://leetcode-cn.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -50,7 +56,13 @@ public:
 
 
 
-## Q2. [使数组元素相等的减少操作次数](https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/)
+## Q2. 使数组元素相等的减少操作次数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/](https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -81,7 +93,13 @@ public:
 ```
 
 
-## Q3. [使二进制字符串字符交替的最少反转次数](https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/)
+## Q3. 使二进制字符串字符交替的最少反转次数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/](https://leetcode-cn.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -126,7 +144,13 @@ public:
 ```
 
 
-## Q4. [装包裹的最小浪费空间](https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/)
+## Q4. 装包裹的最小浪费空间
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/](https://leetcode-cn.com/problems/minimum-space-wasted-from-packaging/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

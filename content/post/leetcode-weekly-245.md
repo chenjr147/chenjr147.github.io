@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [重新分配字符使所有字符串都相等](https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/)
+## Q1. 重新分配字符使所有字符串都相等
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/](https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -44,7 +50,13 @@ public:
 
 
 
-## Q2. [可移除字符的最大数目](https://leetcode-cn.com/problems/maximum-number-of-removable-characters/)
+## Q2. 可移除字符的最大数目
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/maximum-number-of-removable-characters/](https://leetcode-cn.com/problems/maximum-number-of-removable-characters/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -93,7 +105,13 @@ public:
 ```
 
 
-## Q3. [合并若干三元组以形成目标三元组](https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/)
+## Q3. 合并若干三元组以形成目标三元组
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/](https://leetcode-cn.com/problems/merge-triplets-to-form-target-triplet/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -120,7 +138,13 @@ class Solution:
 ```
 
 
-## Q4. [最佳运动员的比拼回合](https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
+## Q4. 最佳运动员的比拼回合
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/](https://leetcode-cn.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

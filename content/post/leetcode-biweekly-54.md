@@ -9,7 +9,13 @@ tags: [
 ]
 ---
 
-## Q1. [检查是否区域内所有整数都被覆盖](https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/)
+## Q1. 检查是否区域内所有整数都被覆盖
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/](https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -36,7 +42,13 @@ class Solution:
 
 
 
-## Q2. [找到需要补充粉笔的学生编号](https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/)
+## Q2. 找到需要补充粉笔的学生编号
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/](https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -59,7 +71,13 @@ class Solution:
 ```
 
 
-## Q3. [最大的幻方](https://leetcode-cn.com/problems/largest-magic-square/)
+## Q3. 最大的幻方
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/largest-magic-square/](https://leetcode-cn.com/problems/largest-magic-square/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -117,7 +135,13 @@ public:
 ```
 
 
-## Q4. [反转表达式值的最少操作次数](https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/)
+## Q4. 反转表达式值的最少操作次数
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/](https://leetcode-cn.com/problems/minimum-cost-to-change-the-final-value-of-expression/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 

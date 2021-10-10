@@ -10,7 +10,13 @@ tags: [
 mathjax: true
 ---
 
-## Q1. [两个数对之间的最大乘积差](https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/)
+## Q1. 两个数对之间的最大乘积差
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/](https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -30,7 +36,13 @@ class Solution:
 
 
 
-## Q2. [循环轮转矩阵](https://leetcode-cn.com/problems/cyclically-rotating-a-grid/)
+## Q2. 循环轮转矩阵
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/cyclically-rotating-a-grid/](https://leetcode-cn.com/problems/cyclically-rotating-a-grid/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -72,7 +84,13 @@ class Solution:
 ```
 
 
-## Q3. [最美子字符串的数目](https://leetcode-cn.com/problems/number-of-wonderful-substrings/)
+## Q3. 最美子字符串的数目
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/number-of-wonderful-substrings/](https://leetcode-cn.com/problems/number-of-wonderful-substrings/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
@@ -108,7 +126,13 @@ public:
 ```
 
 
-## Q4. [统计为蚁群构筑房间的不同顺序](https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/)
+## Q4. 统计为蚁群构筑房间的不同顺序
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/](https://leetcode-cn.com/problems/count-ways-to-build-rooms-in-an-ant-colony/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 ### 思路
 
