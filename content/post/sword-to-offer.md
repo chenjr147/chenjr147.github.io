@@ -7,6 +7,63 @@ tags: [
 ]
 ---
 
+## 剑指 Offer 03. [数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
+
+### 思路
+
+原地哈希。
+
+### 代码
+```Go
+// Algorithm: hash in-place
+// Time Complexity: O(n), n = len(nums)
+// Space Complexity: O(1)
+func findRepeatNumber(nums []int) int {
+	n := len(nums)
+	for i := range nums {
+		if nums[nums[i]%n] >= n {
+			return nums[i] % n
+		}
+		nums[nums[i]%n] += n
+	}
+	return -1
+}
+```
+
+## 剑指 Offer 04. [二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)
+
+### 思路
+
+从数组的右上或左下开始查找，可以有效地进行减治。
+
+### 代码
+
+```Go
+class Solution {
+public:
+    bool Find(int target, vector<vector<int>> array) {
+        // Corner Case:
+        if (array.empty() or array.front().empty()) {
+            return false;
+        }
+        // Normal Case:
+        int n = static_cast<int>(array.size());
+        int x = 0, y = n - 1;
+        while (x < n and y >= 0) {
+            if (array[x][y] == target) {
+                return true;
+            }
+            if (array[x][y] < target) {
+                x += 1;
+            } else {
+                y -= 1;
+            }
+        }
+        return false;
+    }
+};
+```
+
 ## 剑指 Offer 05. [替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
 
 ### 思路
@@ -108,6 +165,67 @@ func (this *CQueue) DeleteHead() int {
 }
 ```
 
+## 剑指 Offer 11. [旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
+
+### 思路
+
+二分查找，分类讨论。
+
+### 代码
+
+```Go
+// Algorithm: binary search
+// Time Complexity: n = len(nums)
+//		Average: O(log n)
+//		Worst:   O(n)
+// Space Complexity: n = len(nums)
+//		Average: O(1)
+//		Worst:   O(log n)
+func minArray(nums []int) int {
+	var search func(left, right int) int
+	search = func(left, right int) int {
+		// Corner Case
+		if left > right {
+			return math.MaxInt32
+		}
+
+		if left == right || nums[left] < nums[right] {
+			// return first element
+			return nums[left]
+		}
+
+		mid := left + (right-left)/2
+		if nums[left] == nums[right] {
+			if nums[mid] == nums[left] {
+				// nums[left] == nums[mid] == nums[right]
+				minimum := nums[mid]
+				if lhs := search(left, mid-1); lhs < minimum {
+					minimum = lhs
+				}
+				if rhs := search(mid+1, right); rhs < minimum {
+					minimum = rhs
+				}
+				return minimum
+			}
+
+			if nums[mid] < nums[left] {
+				// nums[mid] < nums[left] == nums[right]
+				return search(left, mid)
+			}
+			// nums[left] == nums[right] < nums[mid]
+			return search(mid+1, right)
+		}
+
+		// nums[left] > nums[right]
+		if nums[mid] >= nums[left] {
+			return search(mid+1, right)
+		}
+		return search(left, mid)
+	}
+	return search(0, len(nums)-1)
+}
+```
+
 ## 剑指 Offer 24. [反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)
 
 ### 思路
@@ -129,46 +247,6 @@ func reverseList(head *ListNode) *ListNode {
 		head = next
 	}
 	return prev
-}
-```
-
-## 剑指 Offer 35. [复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
-
-### 思路
-
-类似原地哈希。在并发的场景下，需要借助额外的空间。
-
-### 代码
-
-```Go
-// Algorithm: hash in place
-// Time Complexity: O(n), n = len(List)
-// Space Complexity: O(1)
-func copyRandomList(head *Node) *Node {
-	// Copy each node(without `random`) in place
-	for curr := head; curr != nil; curr = curr.Next.Next {
-		duplicate := Node{Val: curr.Val, Next: curr.Next}
-		curr.Next = &duplicate
-	}
-
-	// Copy `random`
-	for curr := head; curr != nil; curr = curr.Next.Next {
-		if curr.Random != nil {
-			curr.Next.Random = curr.Random.Next
-		}
-	}
-
-	// Separate
-	dummy := Node{}
-	curr := &dummy
-	for head != nil {
-		curr.Next = head.Next
-		head.Next = head.Next.Next
-		curr = curr.Next
-		head = head.Next
-	}
-
-	return dummy.Next
 }
 ```
 
@@ -216,7 +294,149 @@ func (this *MinStack) Min() int {
 }
 ```
 
-## 剑指 Offer 58 - [II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
+## 剑指 Offer 35. [复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
+
+### 思路
+
+类似原地哈希。在并发的场景下，需要借助额外的空间。
+
+### 代码
+
+```Go
+// Algorithm: hash in place
+// Time Complexity: O(n), n = len(List)
+// Space Complexity: O(1)
+func copyRandomList(head *Node) *Node {
+	// Copy each node(without `random`) in place
+	for curr := head; curr != nil; curr = curr.Next.Next {
+		duplicate := Node{Val: curr.Val, Next: curr.Next}
+		curr.Next = &duplicate
+	}
+
+	// Copy `random`
+	for curr := head; curr != nil; curr = curr.Next.Next {
+		if curr.Random != nil {
+			curr.Next.Random = curr.Random.Next
+		}
+	}
+
+	// Separate
+	dummy := Node{}
+	curr := &dummy
+	for head != nil {
+		curr.Next = head.Next
+		head.Next = head.Next.Next
+		curr = curr.Next
+		head = head.Next
+	}
+
+	return dummy.Next
+}
+```
+
+## 剑指 Offer 50. [第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
+
+### 思路
+
+哈希表，两次遍历。
+
+### 代码
+```Go
+// Algorithm: hash table
+// Time Complexity: O(n), n = len(s)
+// Space Complexity: O(1)
+func firstUniqChar(s string) byte {
+	cnt := [26]int{}
+
+	for i := range s {
+		cnt[s[i]-'a'] += 1
+	}
+
+	for i := range s {
+		if cnt[s[i]-'a'] == 1 {
+			return s[i]
+		}
+	}
+
+	return ' '
+}
+```
+
+## 剑指 Offer 53 - I. [在排序数组中查找数字 I](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
+
+### 思路
+
+二分查找。
+
+### 代码
+```Go
+// Algorithm: binary search
+// Time Complexity: O(log n), n = len(nums)
+// Space Complexity: O(1)
+func search(nums []int, target int) int {
+	binarySearch := func(lower bool) int {
+		low, high := 0, len(nums)-1
+
+		for low < high {
+			mid := (low + high + 1) / 2
+			if lower {
+				mid = (low + high) / 2
+			}
+			if nums[mid] == target {
+				if lower {
+					high = mid
+				} else {
+					low = mid
+				}
+			} else if nums[mid] < target {
+				low = mid + 1
+			} else {
+				high = mid - 1
+			}
+		}
+
+		return low
+	}
+
+	left := binarySearch(true)
+	if left >= len(nums) || nums[left] != target {
+		return 0
+	}
+
+	right := binarySearch(false)
+	return right - left + 1
+}
+```
+
+## 剑指 Offer 53 - II. [0～n-1中缺失的数字](https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/)
+
+### 思路
+
+通过数字交换实现原地哈希。
+
+### 代码
+```Go
+// Algorithm: hash in-place
+// Time Complexity: O(n), n = len(nums)
+// Space Complexity: O(1)
+func missingNumber(nums []int) int {
+	for i := range nums {
+		for nums[i] != i && nums[i] != len(nums) {
+			nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+		}
+	}
+
+	for i := range nums {
+		if nums[i] != i {
+			return i
+		}
+	}
+
+	return len(nums)
+}
+```
+
+## 剑指 Offer 58 - II. [左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
 
 ### 思路
 
@@ -230,43 +450,6 @@ func (this *MinStack) Min() int {
 func reverseLeftWords(s string, n int) string {
 	return s[n:] + s[:n]
 }
-```
-
-## JZ1. 二维数组中的查找
-
-### 思路
-
-从数组的右上或左下开始查找，可以有效地进行减治。
-
-### 代码
-
-```c++
-class Solution {
-public:
-    bool Find(int target, vector<vector<int>> array) {
-        // Algorithm: decrease and conquer
-        // Time Complexity: O(n), n = array.size()
-        // Space Complexity: O(1)
-        // Corner Case:
-        if (array.empty() or array.front().empty()) {
-            return false;
-        }
-        // Normal Case:
-        int n = static_cast<int>(array.size());
-        int x = 0, y = n - 1;
-        while (x < n and y >= 0) {
-            if (array[x][y] == target) {
-                return true;
-            }
-            if (array[x][y] < target) {
-                x += 1;
-            } else {
-                y -= 1;
-            }
-        }
-        return false;
-    }
-};
 ```
 
 ## JZ16. 合并两个排序的链表 
