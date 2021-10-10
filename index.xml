@@ -1,16 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kevin's Blog</title><link>https://blog.chenjr.top/</link><description>Recent content on Kevin's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 22:12:40 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/index.xml" rel="self" type="application/rss+xml"/><item><title>博客部署</title><link>https://blog.chenjr.top/post/question/</link><pubDate>Sun, 10 Oct 2021 22:12:40 +0800</pubDate><guid>https://blog.chenjr.top/post/question/</guid><description>
-&lt;h2 id="疑惑">
-&lt;a href="#%e7%96%91%e6%83%91" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-疑惑
-&lt;/h2>
-&lt;p>本地部署博客时，&lt;code>mathjax&lt;/code> 无法加载。推送到 &lt;code>GitHub Pages&lt;/code> 上，也是错误。&lt;/p>
-&lt;p>测试发现只要在 &lt;code>post&lt;/code> 中新加文件，就可以正常加载公式。这是为什么呢？&lt;/p></description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kevin's Blog</title><link>https://blog.chenjr.top/</link><description>Recent content on Kevin's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:23:21 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><author>kevin</author><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>
 &lt;h2 id="q1-至少在两个数组中出现的值">
 &lt;a href="#q1-%e8%87%b3%e5%b0%91%e5%9c%a8%e4%b8%a4%e4%b8%aa%e6%95%b0%e7%bb%84%e4%b8%ad%e5%87%ba%e7%8e%b0%e7%9a%84%e5%80%bc" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
