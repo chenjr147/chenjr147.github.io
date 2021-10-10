@@ -3,6 +3,8 @@ author: "kevin"
 title: "2019年计算机专业保研夏令营经历"
 mathjax: true
 date: 2021-06-06T17:39:06+08:00
+categories:
+- 保研
 tags: [
     "保研",
 ]

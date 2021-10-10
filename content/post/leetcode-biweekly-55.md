@@ -2,6 +2,8 @@
 author: "kevin"
 title: "LeetCode 第 55 场双周赛"
 date: 2021-06-27T13:52:42+08:00
+categories:
+- 周赛
 tags: [
     "LeetCode",
     "Competitive Programming",

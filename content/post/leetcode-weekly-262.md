@@ -2,6 +2,8 @@
 author: "kevin"
 title: "LeetCode 第 262 场周赛"
 date: 2021-10-10T17:23:21+08:00
+categories:
+- 周赛
 tags: [
     "LeetCode",
     "Competitive Programming",
