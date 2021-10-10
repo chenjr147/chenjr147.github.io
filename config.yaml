@@ -51,6 +51,9 @@ params:
       category:
         name: General
         id: DIC_kwDODLdYXs4B_XnR
+  
+  # Mathjax
+  mathjax: true
 
 menu:
   header:
