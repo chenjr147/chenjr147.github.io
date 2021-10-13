@@ -294,6 +294,113 @@ func reverseList(head *ListNode) *ListNode {
 }
 ```
 
+## 剑指 Offer 26. 树的子结构
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+$O(n^2)$ 搜索。
+
+### 代码
+
+```Go
+// Algorithm: dfs
+// Time Complexity: O(n^2), n = tree.size()
+// Space Complexity: O(log n)
+func check(A, B *TreeNode) bool {
+	if B == nil {
+		return true
+	}
+	if A == nil || A.Val != B.Val {
+		return false
+	}
+	return check(A.Left, B.Left) && check(A.Right, B.Right)
+}
+
+func isSubStructure(A, B *TreeNode) bool {
+	if A == nil || B == nil {
+		return false
+	}
+	if check(A, B) {
+		return true
+	}
+	return isSubStructure(A.Left, B) || isSubStructure(A.Right, B)
+}
+```
+
+## 剑指 Offer 27. 二叉树的镜像
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+深搜。
+
+### 代码
+
+```Go
+// Algorithm: dfs
+// Time Complexity: O(n), n = tree.size()
+// Space Complexity: O(log n)
+func mirrorTree(root *TreeNode) *TreeNode {
+	if root != nil {
+		root.Left, root.Right = root.Right, root.Left
+		mirrorTree(root.Left)
+		mirrorTree(root.Right)
+	}
+	return root
+}
+```
+
+## 剑指 Offer 28. 对称的二叉树
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+深搜。
+
+### 代码
+```Go
+// Algorithm: dfs
+// Time Complexity: O(n), n = tree.size()
+// Space Complexity: O(log n)
+func isSymmetric(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+
+	var check func(a, b *TreeNode) bool
+	check = func(a, b *TreeNode) bool {
+		if (a == nil) != (b == nil) {
+			return false
+		}
+		if a == nil {
+			return true
+		}
+		if a.Val != b.Val {
+			return false
+		}
+		return check(a.Left, b.Right) && check(a.Right, b.Left)
+	}
+
+	return check(root.Left, root.Right)
+}
+```
+
 ## 剑指 Offer 30. 包含min函数的栈
 
 > 来源：力扣（LeetCode）
@@ -341,6 +448,144 @@ func (this *MinStack) Top() int {
 
 func (this *MinStack) Min() int {
 	return this.min[len(this.min)-1]
+}
+```
+
+## 剑指 Offer 32 - I. 从上到下打印二叉树
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+层序遍历。
+
+### 代码
+
+```Go
+// Algorithm: level order traverse
+// Time Complexity: O(n), n = tree.size()
+// Space Complexity: O(n)
+func levelOrder(root *TreeNode) []int {
+	ans := []int{}
+
+	q := []*TreeNode{}
+	if root != nil {
+		q = append(q, root)
+	}
+
+	for len(q) > 0 {
+		for _, cur := range q {
+			q = q[1:]
+			ans = append(ans, cur.Val)
+			if cur.Left != nil {
+				q = append(q, cur.Left)
+			}
+			if cur.Right != nil {
+				q = append(q, cur.Right)
+			}
+		}
+	}
+
+	return ans
+}
+```
+
+## 剑指 Offer 32 - II. 从上到下打印二叉树 II
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+层序遍历。
+
+### 代码
+
+```Go
+// Algorithm: level order traverse
+// Time Complexity: O(n), n = tree.size()
+// Space Complexity: O(n)
+func levelOrder(root *TreeNode) [][]int {
+	ans := [][]int{}
+
+	q := []*TreeNode{}
+	if root != nil {
+		q = append(q, root)
+	}
+
+	for len(q) > 0 {
+		res := []int{}
+		for _, cur := range q {
+			q = q[1:]
+			res = append(res, cur.Val)
+			if cur.Left != nil {
+				q = append(q, cur.Left)
+			}
+			if cur.Right != nil {
+				q = append(q, cur.Right)
+			}
+		}
+		ans = append(ans, res)
+	}
+
+	return ans
+}
+```
+
+## 剑指 Offer 32 - III. 从上到下打印二叉树 III
+
+> 来源：力扣（LeetCode）
+>
+> 链接：[https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/)
+>
+> 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+### 思路
+
+层序遍历。
+
+### 代码
+
+```Go
+// Algorithm: level order traverse
+// Time Complexity: O(n), n = tree.size()
+// Space Complexity: O(n)
+func levelOrder(root *TreeNode) [][]int {
+	ans := [][]int{}
+
+	q := []*TreeNode{}
+	if root != nil {
+		q = append(q, root)
+	}
+
+	for len(q) > 0 {
+		res := []int{}
+		for _, cur := range q {
+			q = q[1:]
+			res = append(res, cur.Val)
+			if cur.Left != nil {
+				q = append(q, cur.Left)
+			}
+			if cur.Right != nil {
+				q = append(q, cur.Right)
+			}
+		}
+		if len(ans)&1 > 0 {
+			for i, j := 0, len(res)-1; i < j; i, j = i+1, j-1 {
+				res[i], res[j] = res[j], res[i]
+			}
+		}
+		ans = append(ans, res)
+	}
+
+	return ans
 }
 ```
 
