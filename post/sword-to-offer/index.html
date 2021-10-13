@@ -21,7 +21,7 @@
 <meta property="og:article:author" content="Kevin">
 <meta property="article:author" content="Kevin">
 <meta name=author content="Kevin">
-<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"剑指 offer","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-06-10","description":"","wordCount":1890,"mainEntityOfPage":"True","dateModified":"2021-06-10","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
+<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"剑指 offer","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-06-10","description":"","wordCount":2583,"mainEntityOfPage":"True","dateModified":"2021-06-10","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
 </head>
@@ -54,7 +54,7 @@ Kevin's Blog
 <div class=post-meta>
 <div>
 By kevin | <time>June 10, 2021</time>
-| 9 minutes
+| 13 minutes
 </div>
 <div class=tags>
 <a href=/tags/algorithm/>Algorithm</a>
@@ -588,6 +588,201 @@ By kevin | <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id=剑指-offer-26-树的子结构>
+<a href=#%e5%89%91%e6%8c%87-offer-26-%e6%a0%91%e7%9a%84%e5%ad%90%e7%bb%93%e6%9e%84 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 26. 树的子结构
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/>https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-7>
+<a href=#%e6%80%9d%e8%b7%af-7 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>$O(n^2)$ 搜索。</p>
+<h3 id=代码-7>
+<a href=#%e4%bb%a3%e7%a0%81-7 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: dfs
+</span><span class=c1>// Time Complexity: O(n^2), n = tree.size()
+</span><span class=c1>// Space Complexity: O(log n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>check</span><span class=p>(</span><span class=nx>A</span><span class=p>,</span> <span class=nx>B</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=kt>bool</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=nx>B</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=kc>true</span>
+	<span class=p>}</span>
+	<span class=k>if</span> <span class=nx>A</span> <span class=o>==</span> <span class=kc>nil</span> <span class=o>||</span> <span class=nx>A</span><span class=p>.</span><span class=nx>Val</span> <span class=o>!=</span> <span class=nx>B</span><span class=p>.</span><span class=nx>Val</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=kc>false</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nf>check</span><span class=p>(</span><span class=nx>A</span><span class=p>.</span><span class=nx>Left</span><span class=p>,</span> <span class=nx>B</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span> <span class=o>&amp;&amp;</span> <span class=nf>check</span><span class=p>(</span><span class=nx>A</span><span class=p>.</span><span class=nx>Right</span><span class=p>,</span> <span class=nx>B</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+<span class=p>}</span>
+
+<span class=kd>func</span> <span class=nf>isSubStructure</span><span class=p>(</span><span class=nx>A</span><span class=p>,</span> <span class=nx>B</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=kt>bool</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=nx>A</span> <span class=o>==</span> <span class=kc>nil</span> <span class=o>||</span> <span class=nx>B</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=kc>false</span>
+	<span class=p>}</span>
+	<span class=k>if</span> <span class=nf>check</span><span class=p>(</span><span class=nx>A</span><span class=p>,</span> <span class=nx>B</span><span class=p>)</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=kc>true</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nf>isSubStructure</span><span class=p>(</span><span class=nx>A</span><span class=p>.</span><span class=nx>Left</span><span class=p>,</span> <span class=nx>B</span><span class=p>)</span> <span class=o>||</span> <span class=nf>isSubStructure</span><span class=p>(</span><span class=nx>A</span><span class=p>.</span><span class=nx>Right</span><span class=p>,</span> <span class=nx>B</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-27-二叉树的镜像>
+<a href=#%e5%89%91%e6%8c%87-offer-27-%e4%ba%8c%e5%8f%89%e6%a0%91%e7%9a%84%e9%95%9c%e5%83%8f class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 27. 二叉树的镜像
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/>https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-8>
+<a href=#%e6%80%9d%e8%b7%af-8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>深搜。</p>
+<h3 id=代码-8>
+<a href=#%e4%bb%a3%e7%a0%81-8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: dfs
+</span><span class=c1>// Time Complexity: O(n), n = tree.size()
+</span><span class=c1>// Space Complexity: O(log n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>mirrorTree</span><span class=p>(</span><span class=nx>root</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=o>*</span><span class=nx>TreeNode</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=nx>root</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>root</span><span class=p>.</span><span class=nx>Left</span><span class=p>,</span> <span class=nx>root</span><span class=p>.</span><span class=nx>Right</span> <span class=p>=</span> <span class=nx>root</span><span class=p>.</span><span class=nx>Right</span><span class=p>,</span> <span class=nx>root</span><span class=p>.</span><span class=nx>Left</span>
+		<span class=nf>mirrorTree</span><span class=p>(</span><span class=nx>root</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span>
+		<span class=nf>mirrorTree</span><span class=p>(</span><span class=nx>root</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+	<span class=p>}</span>
+	<span class=k>return</span> <span class=nx>root</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-28-对称的二叉树>
+<a href=#%e5%89%91%e6%8c%87-offer-28-%e5%af%b9%e7%a7%b0%e7%9a%84%e4%ba%8c%e5%8f%89%e6%a0%91 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 28. 对称的二叉树
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/>https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-9>
+<a href=#%e6%80%9d%e8%b7%af-9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>深搜。</p>
+<h3 id=代码-9>
+<a href=#%e4%bb%a3%e7%a0%81-9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: dfs
+</span><span class=c1>// Time Complexity: O(n), n = tree.size()
+</span><span class=c1>// Space Complexity: O(log n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>isSymmetric</span><span class=p>(</span><span class=nx>root</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=kt>bool</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=nx>root</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=k>return</span> <span class=kc>true</span>
+	<span class=p>}</span>
+
+	<span class=kd>var</span> <span class=nx>check</span> <span class=kd>func</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=kt>bool</span>
+	<span class=nx>check</span> <span class=p>=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=kt>bool</span> <span class=p>{</span>
+		<span class=k>if</span> <span class=p>(</span><span class=nx>a</span> <span class=o>==</span> <span class=kc>nil</span><span class=p>)</span> <span class=o>!=</span> <span class=p>(</span><span class=nx>b</span> <span class=o>==</span> <span class=kc>nil</span><span class=p>)</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=kc>false</span>
+		<span class=p>}</span>
+		<span class=k>if</span> <span class=nx>a</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=kc>true</span>
+		<span class=p>}</span>
+		<span class=k>if</span> <span class=nx>a</span><span class=p>.</span><span class=nx>Val</span> <span class=o>!=</span> <span class=nx>b</span><span class=p>.</span><span class=nx>Val</span> <span class=p>{</span>
+			<span class=k>return</span> <span class=kc>false</span>
+		<span class=p>}</span>
+		<span class=k>return</span> <span class=nf>check</span><span class=p>(</span><span class=nx>a</span><span class=p>.</span><span class=nx>Left</span><span class=p>,</span> <span class=nx>b</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span> <span class=o>&amp;&amp;</span> <span class=nf>check</span><span class=p>(</span><span class=nx>a</span><span class=p>.</span><span class=nx>Right</span><span class=p>,</span> <span class=nx>b</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nf>check</span><span class=p>(</span><span class=nx>root</span><span class=p>.</span><span class=nx>Left</span><span class=p>,</span> <span class=nx>root</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id=剑指-offer-30-包含min函数的栈>
 <a href=#%e5%89%91%e6%8c%87-offer-30-%e5%8c%85%e5%90%abmin%e5%87%bd%e6%95%b0%e7%9a%84%e6%a0%88 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
@@ -598,14 +793,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/>https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-7>
-<a href=#%e6%80%9d%e8%b7%af-7 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-10>
+<a href=#%e6%80%9d%e8%b7%af-10 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>双栈思路，保持栈中每个元素在 <code>min</code> 栈中对应当前最小值。</p>
-<h3 id=代码-7>
-<a href=#%e4%bb%a3%e7%a0%81-7 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-10>
+<a href=#%e4%bb%a3%e7%a0%81-10 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -681,6 +876,261 @@ By kevin | <time>June 10, 2021</time>
 <span class=p>}</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id=剑指-offer-32---i-从上到下打印二叉树>
+<a href=#%e5%89%91%e6%8c%87-offer-32---i-%e4%bb%8e%e4%b8%8a%e5%88%b0%e4%b8%8b%e6%89%93%e5%8d%b0%e4%ba%8c%e5%8f%89%e6%a0%91 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 32 - I. 从上到下打印二叉树
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/>https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-11>
+<a href=#%e6%80%9d%e8%b7%af-11 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>层序遍历。</p>
+<h3 id=代码-11>
+<a href=#%e4%bb%a3%e7%a0%81-11 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: level order traverse
+</span><span class=c1>// Time Complexity: O(n), n = tree.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>levelOrder</span><span class=p>(</span><span class=nx>root</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=p>[]</span><span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>ans</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{}</span>
+
+	<span class=nx>q</span> <span class=o>:=</span> <span class=p>[]</span><span class=o>*</span><span class=nx>TreeNode</span><span class=p>{}</span>
+	<span class=k>if</span> <span class=nx>root</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>root</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>for</span> <span class=nb>len</span><span class=p>(</span><span class=nx>q</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
+		<span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>cur</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>q</span> <span class=p>{</span>
+			<span class=nx>q</span> <span class=p>=</span> <span class=nx>q</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
+			<span class=nx>ans</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>ans</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Val</span><span class=p>)</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span>
+			<span class=p>}</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+			<span class=p>}</span>
+		<span class=p>}</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nx>ans</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-32---ii-从上到下打印二叉树-ii>
+<a href=#%e5%89%91%e6%8c%87-offer-32---ii-%e4%bb%8e%e4%b8%8a%e5%88%b0%e4%b8%8b%e6%89%93%e5%8d%b0%e4%ba%8c%e5%8f%89%e6%a0%91-ii class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 32 - II. 从上到下打印二叉树 II
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/>https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-12>
+<a href=#%e6%80%9d%e8%b7%af-12 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>层序遍历。</p>
+<h3 id=代码-12>
+<a href=#%e4%bb%a3%e7%a0%81-12 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: level order traverse
+</span><span class=c1>// Time Complexity: O(n), n = tree.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>levelOrder</span><span class=p>(</span><span class=nx>root</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=p>[][]</span><span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>ans</span> <span class=o>:=</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>{}</span>
+
+	<span class=nx>q</span> <span class=o>:=</span> <span class=p>[]</span><span class=o>*</span><span class=nx>TreeNode</span><span class=p>{}</span>
+	<span class=k>if</span> <span class=nx>root</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>root</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>for</span> <span class=nb>len</span><span class=p>(</span><span class=nx>q</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
+		<span class=nx>res</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{}</span>
+		<span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>cur</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>q</span> <span class=p>{</span>
+			<span class=nx>q</span> <span class=p>=</span> <span class=nx>q</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
+			<span class=nx>res</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>res</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Val</span><span class=p>)</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span>
+			<span class=p>}</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+			<span class=p>}</span>
+		<span class=p>}</span>
+		<span class=nx>ans</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>ans</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nx>ans</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id=剑指-offer-32---iii-从上到下打印二叉树-iii>
+<a href=#%e5%89%91%e6%8c%87-offer-32---iii-%e4%bb%8e%e4%b8%8a%e5%88%b0%e4%b8%8b%e6%89%93%e5%8d%b0%e4%ba%8c%e5%8f%89%e6%a0%91-iii class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+剑指 Offer 32 - III. 从上到下打印二叉树 III
+</h2>
+<blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href=https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/>https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/</a></p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id=思路-13>
+<a href=#%e6%80%9d%e8%b7%af-13 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+思路
+</h3>
+<p>层序遍历。</p>
+<h3 id=代码-13>
+<a href=#%e4%bb%a3%e7%a0%81-13 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+</a>
+代码
+</h3>
+<div class=highlight><div class=chroma>
+<table class=lntable><tr><td class=lntd>
+<pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td>
+<td class=lntd>
+<pre tabindex=0 class=chroma><code class=language-Go data-lang=Go><span class=c1>// Algorithm: level order traverse
+</span><span class=c1>// Time Complexity: O(n), n = tree.size()
+</span><span class=c1>// Space Complexity: O(n)
+</span><span class=c1></span><span class=kd>func</span> <span class=nf>levelOrder</span><span class=p>(</span><span class=nx>root</span> <span class=o>*</span><span class=nx>TreeNode</span><span class=p>)</span> <span class=p>[][]</span><span class=kt>int</span> <span class=p>{</span>
+	<span class=nx>ans</span> <span class=o>:=</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>{}</span>
+
+	<span class=nx>q</span> <span class=o>:=</span> <span class=p>[]</span><span class=o>*</span><span class=nx>TreeNode</span><span class=p>{}</span>
+	<span class=k>if</span> <span class=nx>root</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>root</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>for</span> <span class=nb>len</span><span class=p>(</span><span class=nx>q</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
+		<span class=nx>res</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{}</span>
+		<span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>cur</span> <span class=o>:=</span> <span class=k>range</span> <span class=nx>q</span> <span class=p>{</span>
+			<span class=nx>q</span> <span class=p>=</span> <span class=nx>q</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
+			<span class=nx>res</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>res</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Val</span><span class=p>)</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Left</span><span class=p>)</span>
+			<span class=p>}</span>
+			<span class=k>if</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+				<span class=nx>q</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>q</span><span class=p>,</span> <span class=nx>cur</span><span class=p>.</span><span class=nx>Right</span><span class=p>)</span>
+			<span class=p>}</span>
+		<span class=p>}</span>
+		<span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nx>ans</span><span class=p>)</span><span class=o>&amp;</span><span class=mi>1</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
+			<span class=k>for</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>res</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>j</span><span class=p>;</span> <span class=nx>i</span><span class=p>,</span> <span class=nx>j</span> <span class=p>=</span> <span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=nx>j</span><span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
+				<span class=nx>res</span><span class=p>[</span><span class=nx>i</span><span class=p>],</span> <span class=nx>res</span><span class=p>[</span><span class=nx>j</span><span class=p>]</span> <span class=p>=</span> <span class=nx>res</span><span class=p>[</span><span class=nx>j</span><span class=p>],</span> <span class=nx>res</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+			<span class=p>}</span>
+		<span class=p>}</span>
+		<span class=nx>ans</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>ans</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span>
+	<span class=p>}</span>
+
+	<span class=k>return</span> <span class=nx>ans</span>
+<span class=p>}</span>
+</code></pre></td></tr></table>
+</div>
 </div><h2 id=剑指-offer-35-复杂链表的复制>
 <a href=#%e5%89%91%e6%8c%87-offer-35-%e5%a4%8d%e6%9d%82%e9%93%be%e8%a1%a8%e7%9a%84%e5%a4%8d%e5%88%b6 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
@@ -691,14 +1141,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/>https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-8>
-<a href=#%e6%80%9d%e8%b7%af-8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-14>
+<a href=#%e6%80%9d%e8%b7%af-14 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>类似原地哈希。在并发的场景下，需要借助额外的空间。</p>
-<h3 id=代码-8>
-<a href=#%e4%bb%a3%e7%a0%81-8 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-14>
+<a href=#%e4%bb%a3%e7%a0%81-14 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -776,14 +1226,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/>https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-9>
-<a href=#%e6%80%9d%e8%b7%af-9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-15>
+<a href=#%e6%80%9d%e8%b7%af-15 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>哈希表，两次遍历。</p>
-<h3 id=代码-9>
-<a href=#%e4%bb%a3%e7%a0%81-9 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-15>
+<a href=#%e4%bb%a3%e7%a0%81-15 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -839,14 +1289,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/>https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-10>
-<a href=#%e6%80%9d%e8%b7%af-10 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-16>
+<a href=#%e6%80%9d%e8%b7%af-16 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>二分查找。</p>
-<h3 id=代码-10>
-<a href=#%e4%bb%a3%e7%a0%81-10 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-16>
+<a href=#%e4%bb%a3%e7%a0%81-16 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -938,14 +1388,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/>https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-11>
-<a href=#%e6%80%9d%e8%b7%af-11 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-17>
+<a href=#%e6%80%9d%e8%b7%af-17 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>通过数字交换实现原地哈希。</p>
-<h3 id=代码-11>
-<a href=#%e4%bb%a3%e7%a0%81-11 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-17>
+<a href=#%e4%bb%a3%e7%a0%81-17 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -1001,14 +1451,14 @@ By kevin | <time>June 10, 2021</time>
 <p>链接：<a href=https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/>https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/</a></p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-12>
-<a href=#%e6%80%9d%e8%b7%af-12 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-18>
+<a href=#%e6%80%9d%e8%b7%af-18 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>切片。</p>
-<h3 id=代码-12>
-<a href=#%e4%bb%a3%e7%a0%81-12 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-18>
+<a href=#%e4%bb%a3%e7%a0%81-18 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -1040,14 +1490,14 @@ JZ16. 合并两个排序的链表
 <p>链接：[]</p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-13>
-<a href=#%e6%80%9d%e8%b7%af-13 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-19>
+<a href=#%e6%80%9d%e8%b7%af-19 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
 <p>允许对原链表进行修改的话，由于 <code>next</code> 指针可以变化，那么对于已经排好序的节点我们可以不用考虑了。</p>
-<h3 id=代码-13>
-<a href=#%e4%bb%a3%e7%a0%81-13 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-19>
+<a href=#%e4%bb%a3%e7%a0%81-19 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
@@ -1119,8 +1569,8 @@ JZ53. 表示数值的字符串
 <p>链接：[]</p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h3 id=思路-14>
-<a href=#%e6%80%9d%e8%b7%af-14 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=思路-20>
+<a href=#%e6%80%9d%e8%b7%af-20 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 思路
 </h3>
@@ -1233,8 +1683,8 @@ JZ53. 表示数值的字符串
 <li><code>0</code> 为初始状态，如果从其他任意状态又回到了初始状态，我们将其标记为不合法的字符串。</li>
 <li><code>2</code>, <code>4</code>, <code>7</code> 为合法的结束状态。</li>
 </ul>
-<h3 id=代码-14>
-<a href=#%e4%bb%a3%e7%a0%81-14 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
+<h3 id=代码-20>
+<a href=#%e4%bb%a3%e7%a0%81-20 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
 代码
 </h3>
