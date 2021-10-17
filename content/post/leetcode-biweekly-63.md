@@ -29,14 +29,14 @@ mathjax: true
 方便起见，同时保证结果不受影响，我们让四个数同减去 $a$，证明如下
 
 $$
-\begin{align}
+\begin{aligned}
 |c|+|b-d| &\leqslant |d|+|b-c| \\
 c^2+2|c||b-d| +(b-d)^2 &\leqslant d^2+2|d||b-c| +(b-c)^2 \\
 |c||b-d|-bd &\leqslant |d||b-c|-bc \\
 |c||b-d| - |d||b-c| &\leqslant b(d-c) \\
 |bc-cd|-|bd-cd| &\leqslant b|d-c| \\
 |bc-cd|-|bd-cd| &\leqslant|bd-bc|
-\end{align}
+\end{aligned}
 $$
 
 此外，我们知道 
