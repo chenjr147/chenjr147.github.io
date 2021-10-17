@@ -446,14 +446,14 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>假设 $a \leqslant b$, $c \leqslant d$, 则需要证明 $|a-c| + |b-d| \leqslant |a-d| + |b-c|$。&lt;/p>
 &lt;p>方便起见，同时保证结果不受影响，我们让四个数同减去 $a$，证明如下&lt;/p>
 &lt;p>$$
-\begin{align}
+\begin{aligned}
 |c|+|b-d| &amp;amp;\leqslant |d|+|b-c| \&lt;br>
 c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \&lt;br>
 |c||b-d|-bd &amp;amp;\leqslant |d||b-c|-bc \&lt;br>
 |c||b-d| - |d||b-c| &amp;amp;\leqslant b(d-c) \&lt;br>
 |bc-cd|-|bd-cd| &amp;amp;\leqslant b|d-c| \&lt;br>
 |bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc|
-\end{align}
+\end{aligned}
 $$&lt;/p>
 &lt;p>此外，我们知道&lt;/p>
 &lt;p>$$

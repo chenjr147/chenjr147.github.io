@@ -9,12 +9,12 @@
 下面我们采用反证法进行证明，也即需要证明任意调换位置，最终的移动次数只会不变或增多。
 假设 $a \leqslant b$, $c \leqslant d$, 则需要证明 $|a-c| + |b-d| \leqslant |a-d| + |b-c|$。
 方便起见，同时保证结果不受影响，我们让四个数同减去 $a$，证明如下
-$$ \begin{align} |c|+|b-d| &amp;amp;\leqslant |d|+|b-c| \
+$$ \begin{aligned} |c|+|b-d| &amp;amp;\leqslant |d|+|b-c| \
 c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \
 |c||b-d|-bd &amp;amp;\leqslant |d||b-c|-bc \
 |c||b-d| - |d||b-c| &amp;amp;\leqslant b(d-c) \
 |bc-cd|-|bd-cd| &amp;amp;\leqslant b|d-c| \
-|bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc| \end{align} $$
+|bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc| \end{aligned} $$
 此外，我们知道
 $$ -|x| \leqslant x \leqslant |x| \</description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>Q1. 至少在两个数组中出现的值 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/two-out-of-three/
