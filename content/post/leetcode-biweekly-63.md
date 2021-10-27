@@ -28,7 +28,16 @@ mathjax: true
 
 方便起见，同时保证结果不受影响，我们让四个数同减去 $a$，证明如下
 
-$$ \begin{aligned} |c|+|b-d| &\leqslant |d|+|b-c| \\ c^2+2|c||b-d| +(b-d)^2 &\leqslant d^2+2|d||b-c| +(b-c)^2 \\ |c||b-d|-bd &\leqslant |d||b-c|-bc \\ |c||b-d| - |d||b-c| &\leqslant b(d-c) \\ |bc-cd|-|bd-cd| &\leqslant b|d-c| \\ |bc-cd|-|bd-cd| &\leqslant|bd-bc| \end{aligned} $$
+\begin{equation}
+\begin{aligned} 
+	|c|+|b-d| &\leqslant |d|+|b-c| \\\\\\\\
+	c^2+2|c||b-d| +(b-d)^2 &\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\\\\\
+	|c||b-d|-bd &\leqslant |d||b-c|-bc \\\\\\\\ 
+	|c||b-d| - |d||b-c| &\leqslant b(d-c) \\\\\\\\ 
+	|bc-cd|-|bd-cd| &\leqslant b|d-c| \\\\\\\\ 
+	|bc-cd|-|bd-cd| &\leqslant|bd-bc| 
+\end{aligned} 
+\end{equation}
 
 此外，我们知道 
 
@@ -114,7 +123,7 @@ func winnerOfGame(colors string) bool {
 
 由于图中的边权全为 $1$，故不需要进行松弛操作。我们可以通过广度优先搜索在 $\mathcal{O}(n)$ 时间内得到主服务器到各个服务器之间的最短距离。
 
-另外还需要考虑重发的情况，假设服务器 $i$ 到主服务器的最短距离为 $distance[i]$，那么需要 $2*distance[i]$ 的时间得到回复。所以在 $2*distance[i]-1$ 的时间内，服务器 $i$ 会进行重试，简单计算可知，其最后一条发送的信息会在 $\lfloor \frac{2*distance[i]-1}{patient[i]} \rfloor * patient[i]$ 后收到，则总时间为$2*distance[i] + \lfloor \frac{2*distance[i]-1}{patient[i]} \rfloor * patient[i]$ 。
+另外还需要考虑重发的情况，假设服务器 $i$ 到主服务器的最短距离为 $distance\[i\]$，那么需要 $2 \times distance\[i\]$ 的时间得到回复。所以在 $ 2\times distance\[i\]-1 $ 的时间内，服务器 $i$ 会进行重试，简单计算可知，其最后一条发送的信息会在 $\lfloor \frac{2\times distance\[i\]-1}{patient\[i\]} \rfloor \times  patient\[i\]$ 后收到，则总时间为$2\times distance\[i\] + \lfloor \frac{2\times distance\[i\]-1}{patient\[i\]} \rfloor \times  patient\[i\]$ 。
 
 ### 代码
 
