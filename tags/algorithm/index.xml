@@ -13,7 +13,7 @@
 c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\
 |c||b-d|-bd &amp;amp;\leqslant |d||b-c|-bc \\\\ |c||b-d| - |d||b-c| &amp;amp;\leqslant b(d-c) \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant b|d-c| \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc| \end{aligned} \end{equation}
 此外，我们知道
-$$ -|x| \leqslant x \leqslant |x| , -|y| \leqslant y \leqslant |y| $$</description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>Q1. 至少在两个数组中出现的值 来源：力扣（LeetCode）
+\begin{equation} \begin{aligned} |x| = |(x-y)+y| &amp;amp;\leqslant |x-y|+|y| \\\\</description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>Q1. 至少在两个数组中出现的值 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/two-out-of-three/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 思路 集合。

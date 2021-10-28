@@ -456,11 +456,13 @@ c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\&lt;br>
 \end{aligned}
 \end{equation}&lt;/p>
 &lt;p>此外，我们知道&lt;/p>
-&lt;p>$$
--|x| \leqslant x \leqslant |x| , -|y| \leqslant y \leqslant |y|
-$$&lt;/p>
-&lt;p>相加可得 $-(|x|+|y|) \leqslant x + y \leqslant |x|+|y|$，可得 $x+y \leqslant |x+y| \leqslant ||x|+|y||$。故 $|x+y|\leqslant|x|+|y|$；令$x=x-y$，可得$|x|\leqslant|x-y|+|y|$，也即 $|x|-|y|\leqslant|x-y|$。&lt;/p>
-&lt;p>那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|$，得证。&lt;/p>
+&lt;p>\begin{equation}
+\begin{aligned}
+|x| = |(x-y)+y| &amp;amp;\leqslant |x-y|+|y| \\\\&lt;br>
+|x|-|y| &amp;amp;\leqslant |x-y|
+\end{aligned}
+\end{equation}&lt;/p>
+&lt;p>那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|=|bd-bc| $，得证。&lt;/p>
 &lt;h3 id="代码">
 &lt;a href="#%e4%bb%a3%e7%a0%81" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">

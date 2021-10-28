@@ -21,7 +21,7 @@
 <meta property="og:article:author" content="Kevin">
 <meta property="article:author" content="Kevin">
 <meta name=author content="Kevin">
-<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 63 场双周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-10-17","description":"","wordCount":687,"mainEntityOfPage":"True","dateModified":"2021-10-17","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
+<script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"LeetCode 第 63 场双周赛","author":{"@type":"Person","name":"Kevin Chen"},"datePublished":"2021-10-17","description":"","wordCount":673,"mainEntityOfPage":"True","dateModified":"2021-10-17","publisher":{"@type":"Organization","name":"Kevin Chen","logo":{"@type":"imageObject","url":"https:\/\/blog.chenjr.top\/favicon.ico"}}}</script>
 <link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
 <link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css>
 </head>
@@ -97,11 +97,13 @@ c^2+2|c||b-d| +(b-d)^2 &\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\<br>
 \end{aligned}
 \end{equation}</p>
 <p>此外，我们知道</p>
-<p>$$
--|x| \leqslant x \leqslant |x| , -|y| \leqslant y \leqslant |y|
-$$</p>
-<p>相加可得 $-(|x|+|y|) \leqslant x + y \leqslant |x|+|y|$，可得 $x+y \leqslant |x+y| \leqslant ||x|+|y||$。故 $|x+y|\leqslant|x|+|y|$；令$x=x-y$，可得$|x|\leqslant|x-y|+|y|$，也即 $|x|-|y|\leqslant|x-y|$。</p>
-<p>那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|$，得证。</p>
+<p>\begin{equation}
+\begin{aligned}
+|x| = |(x-y)+y| &\leqslant |x-y|+|y| \\\\<br>
+|x|-|y| &\leqslant |x-y|
+\end{aligned}
+\end{equation}</p>
+<p>那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|=|bd-bc| $，得证。</p>
 <h3 id=代码>
 <a href=#%e4%bb%a3%e7%a0%81 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg>
 </a>
