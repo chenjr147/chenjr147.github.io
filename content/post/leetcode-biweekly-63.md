@@ -41,13 +41,14 @@ mathjax: true
 
 此外，我们知道 
 
-$$
--|x| \leqslant x \leqslant |x| , -|y| \leqslant y \leqslant |y|
- $$
- 
- 相加可得 $-(|x|+|y|) \leqslant x + y \leqslant |x|+|y|$，可得 $x+y \leqslant |x+y| \leqslant ||x|+|y||$。故 $|x+y|\leqslant|x|+|y|$；令$x=x-y$，可得$|x|\leqslant|x-y|+|y|$，也即 $|x|-|y|\leqslant|x-y|$。
+\begin{equation}
+\begin{aligned} 
+	|x| = |(x-y)+y| &\leqslant |x-y|+|y| \\\\\\\\
+	|x|-|y| &\leqslant |x-y|
+\end{aligned} 
+\end{equation}
 
-那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|$，得证。
+那么可以得到 $|bc-cd|-|bd-cd|\leqslant|bc-bd|=|bd-bc| $，得证。
  
 
 ### 代码
