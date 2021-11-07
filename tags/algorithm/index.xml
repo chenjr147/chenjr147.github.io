@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Kevin's Blog</title><link>https://blog.chenjr.top/tags/algorithm/</link><description>Recent content in Algorithm on Kevin's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Oct 2021 21:16:58 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode 第 263 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-263/</link><pubDate>Sun, 17 Oct 2021 21:16:58 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-263/</guid><description>Q1. 检查句子中的数字是否递增 来源：力扣（LeetCode）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Kevin's Blog</title><link>https://blog.chenjr.top/tags/algorithm/</link><description>Recent content in Algorithm on Kevin's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Nov 2021 22:28:57 +0800</lastBuildDate><atom:link href="https://blog.chenjr.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode 第 266 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-266/</link><pubDate>Sun, 07 Nov 2021 22:28:57 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-266/</guid><description>Q1. 统计字符串中的元音子字符串 来源：力扣（LeetCode）
+链接： https://leetcode-cn.com/problems/count-vowel-substrings-of-a-string/
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+思路 双指针。
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // Algorithm: two pointers // Time Complexity: O(n), n = len(word) // Space Complexity: O(n) func countVowelSubstrings(word string) int { ans := 0 for _, s := range strings.</description></item><item><title>LeetCode 第 263 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-263/</link><pubDate>Sun, 17 Oct 2021 21:16:58 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-263/</guid><description>Q1. 检查句子中的数字是否递增 来源：力扣（LeetCode）
 链接： https://leetcode-cn.com/problems/check-if-numbers-are-ascending-in-a-sentence/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 思路 模拟。
@@ -9,11 +13,9 @@
 下面我们采用反证法进行证明，也即需要证明任意调换位置，最终的移动次数只会不变或增多。
 假设 $a \leqslant b$, $c \leqslant d$, 则需要证明 $|a-c| + |b-d| \leqslant |a-d| + |b-c|$。
 方便起见，同时保证结果不受影响，我们让四个数同减去 $a$，证明如下
-\begin{equation} \begin{aligned} |c|+|b-d| &amp;amp;\leqslant |d|+|b-c| \\\\
-c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\
-|c||b-d|-bd &amp;amp;\leqslant |d||b-c|-bc \\\\ |c||b-d| - |d||b-c| &amp;amp;\leqslant b(d-c) \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant b|d-c| \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc| \end{aligned} \end{equation}
+\begin{equation} \begin{aligned} |c|+|b-d| &amp;amp;\leqslant |d|+|b-c| \\\\ c^2+2|c||b-d| +(b-d)^2 &amp;amp;\leqslant d^2+2|d||b-c| +(b-c)^2 \\\\ |c||b-d|-bd &amp;amp;\leqslant |d||b-c|-bc \\\\ |c||b-d| - |d||b-c| &amp;amp;\leqslant b(d-c) \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant b|d-c| \\\\ |bc-cd|-|bd-cd| &amp;amp;\leqslant|bd-bc| \end{aligned} \end{equation}
 此外，我们知道
-\begin{equation} \begin{aligned} |x| = |(x-y)+y| &amp;amp;\leqslant |x-y|+|y| \\\\</description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>Q1. 至少在两个数组中出现的值 来源：力扣（LeetCode）
+\begin{equation} \begin{aligned} |x| = |(x-y)+y| &amp;amp;\leqslant |x-y|+|y| \\\\ |x|-|y| &amp;amp;\leqslant |x-y| \end{aligned} \end{equation}</description></item><item><title>LeetCode 第 262 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-262/</link><pubDate>Sun, 10 Oct 2021 17:23:21 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-262/</guid><description>Q1. 至少在两个数组中出现的值 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/two-out-of-three/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 思路 集合。
