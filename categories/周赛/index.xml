@@ -15,7 +15,7 @@ Q1. 基于排列构建数组 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/build-array-from-permutation/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 思路 阅读理解。
-代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } }; Q2. 消灭怪物的最大数量(&amp;lt;a href=&amp;#34;https://leetcode-cn.</description></item><item><title>LeetCode 第 247 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-247/</link><pubDate>Thu, 01 Jul 2021 13:52:42 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-247/</guid><description>Q1. 两个数对之间的最大乘积差 来源：力扣（LeetCode）
+代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 // Algorithm: simulation // Time Complexity: O(n), n = nums.size() // Space Complexity: O(n) class Solution { public: vector&amp;lt;int&amp;gt; buildArray(vector&amp;lt;int&amp;gt; &amp;amp;nums) { int n = nums.size(); vector&amp;lt;int&amp;gt; ans(n); for (int i = 0; i &amp;lt; n; ++i) { ans[i] = nums[nums[i]]; } return ans; } }; Q2. 消灭怪物的最大数量(https://leetcode-cn.</description></item><item><title>LeetCode 第 247 场周赛</title><link>https://blog.chenjr.top/post/leetcode-weekly-247/</link><pubDate>Thu, 01 Jul 2021 13:52:42 +0800</pubDate><guid>https://blog.chenjr.top/post/leetcode-weekly-247/</guid><description>Q1. 两个数对之间的最大乘积差 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs/
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 思路 注意到数据范围 1 &amp;lt;= nums[i] &amp;lt;= 10^4，可以想到使用排序解决本问题。
